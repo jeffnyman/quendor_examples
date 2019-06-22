@@ -1,0 +1,5290 @@
+Resident data ends at 3052, program starts at 3114, file ends at ba3c
+
+Starting analysis pass at address 3052
+
+End of analysis pass, low address = 3052, high address = 9793
+
+[Start of code at 3052]
+
+Routine 3052, 1 local (0000)
+
+ 3055:  jz              g67 3061
+ 3058:  random          #64 -> sp
+ 305c:  jg              local0 sp rtrue
+ 3060:  rfalse          
+ 3061:  random          #012c -> sp
+ 3066:  jg              local0 sp rtrue
+ 306a:  rfalse          
+
+Routine 306c, 1 local (0000)
+
+ 306f:  loadw           local0 #00 -> sp
+ 3073:  random          sp -> sp
+ 3077:  loadw           local0 sp -> sp
+ 307b:  ret_popped      
+
+Routine 307c, 3 locals (0000, 0000, 0000)
+
+ 3083:  call            3090 local0 -> local2
+ 3089:  storew          local2 #01 local1
+ 308e:  ret             local2
+
+Routine 3090, 4 locals (0000, 0000, 0000, 0000)
+
+ 3099:  add             g5e #b4 -> local1
+ 309d:  add             g5e g50 -> local2
+ 30a1:  je              local2 local1 ~30b4
+ 30a5:  sub             g50 #06 -> g50
+ 30a9:  add             g5e g50 -> local3
+ 30ad:  storew          local3 #02 local0
+ 30b2:  ret             local3
+ 30b4:  loadw           local2 #02 -> sp
+ 30b8:  je              sp local0 ~30be
+ 30bc:  ret             local2
+ 30be:  add             local2 #06 -> local2
+ 30c2:  jump            30a1
+
+Routine 30c6, 4 locals (0000, 0000, 0000, 0000)
+
+ 30cf:  jz              g65 30d6
+ 30d2:  store           g65 #00
+ 30d5:  rfalse          
+ 30d6:  add             g5e g50 -> local0
+ 30da:  add             g5e #b4 -> local1
+ 30de:  je              local0 local1 ~30e4
+ 30e2:  ret             local3
+ 30e4:  loadw           local0 #00 -> sp
+ 30e8:  jz              sp 310d
+ 30eb:  loadw           local0 #01 -> local2
+ 30ef:  jz              local2 ~30f5
+ 30f2:  jump            310d
+ 30f5:  sub             local2 #01 -> sp
+ 30f9:  storew          local0 #01 sp
+ 30fe:  jg              local2 #01 310d
+ 3102:  store           local3 #01
+ 3105:  loadw           local0 #02 -> sp
+ 3109:  call            sp -> sp
+ 310d:  add             local0 #06 -> local0
+ 3111:  jump            30de
+
+Main routine 3114, 0 locals ()
+
+ 3115:  call            307c #1fd8 #ffff -> sp
+ 311e:  storew          sp #00 #01
+ 3123:  call            307c #2043 #ffff -> sp
+ 312c:  call            307c #20bf #ffff -> sp
+ 3135:  storew          sp #00 #01
+ 313a:  call            307c #21df #c8 -> sp
+ 3142:  put_prop        "inflated boat" #07 #1f
+ 3147:  add             g1d #02 -> sp
+ 314b:  storew          g51 #01 sp
+ 3150:  add             g1d #04 -> sp
+ 3154:  storew          g51 #02 sp
+ 3159:  add             g0d #02 -> sp
+ 315d:  storew          g57 #02 sp
+ 3162:  add             g0d #04 -> sp
+ 3166:  storew          g57 #03 sp
+ 316b:  add             g04 #02 -> sp
+ 316f:  storew          g5b #01 sp
+ 3174:  add             g11 #02 -> sp
+ 3178:  storew          g5b #03 sp
+ 317d:  store           g00 #16
+ 3180:  store           g14 #81
+ 3183:  store           g19 g00
+ 3186:  test_attr       g00 #1c 3190
+ 318a:  call            4838 -> sp
+ 318f:  new_line        
+ 3190:  store           g60 #01
+ 3193:  store           g22 #a7
+ 3196:  call            441c -> sp
+ 319b:  call            31a4 -> sp
+ 31a0:  jump            3115
+
+Routine 31a4, 11 locals (0000, 0000, 0000, 0000, 0000, 0000, 0000, 0000, 0000,
+                         0000, 0000)
+
+ 31bb:  store           local3 #00
+ 31be:  store           local4 #00
+ 31c1:  store           local7 #01
+ 31c4:  call            339a -> g03
+ 31c9:  jz              g03 32b5
+ 31cd:  loadw           g3a g5c -> local0
+ 31d1:  loadw           g54 g5c -> local1
+ 31d5:  jz              local1 ~31de
+ 31d8:  push            local1
+ 31db:  jump            320f
+ 31de:  jg              local1 #01 ~31f8
+ 31e2:  store           local5 g54
+ 31e5:  jz              local0 ~31ee
+ 31e8:  store           local4 #00
+ 31eb:  jump            31f2
+ 31ee:  loadw           g3a #01 -> local4
+ 31f2:  push            local1
+ 31f5:  jump            320f
+ 31f8:  jg              local0 #01 ~320c
+ 31fc:  store           local7 #00
+ 31ff:  store           local5 g3a
+ 3202:  loadw           g54 #01 -> local4
+ 3206:  push            local0
+ 3209:  jump            320f
+ 320c:  push            #01
+ 320f:  store           local2 sp
+ 3212:  jz              local4 ~321d
+ 3215:  je              local0 #01 ~321d
+ 3219:  loadw           g3a #01 -> local4
+ 321d:  je              g4a #55 ~322b
+ 3221:  call            32c0 g4a g3b -> local6
+ 3228:  jump            32a9
+ 322b:  jz              local2 ~325d
+ 322e:  loadb           g30 #00 -> sp
+ 3232:  and             sp #03 -> sp
+ 3236:  jz              sp ~3242
+ 3239:  call            32c0 g4a -> local6
+ 323f:  jump            32a9
+ 3242:  print           "I don't know what object you mean."
+ 3257:  store           local6 #00
+ 325a:  jump            32a9
+ 325d:  inc_chk         local3 local2 ~3264
+ 3261:  jump            32a3
+ 3264:  jz              local7 326e
+ 3267:  loadw           g54 local3 -> local8
+ 326b:  jump            3272
+ 326e:  loadw           g3a local3 -> local8
+ 3272:  jg              local2 #01 ~327b
+ 3276:  print_obj       local8
+ 3278:  print           ": "
+ 327b:  jz              local7 3284
+ 327e:  push            local8
+ 3281:  jump            3287
+ 3284:  push            local4
+ 3287:  store           local10 sp
+ 328a:  jz              local7 3293
+ 328d:  push            local4
+ 3290:  jump            3296
+ 3293:  push            local8
+ 3296:  call            32c0 g4a local10 sp -> local6
+ 329e:  je              local6 #02 ~325d
+ 32a3:  store           g14 local8
+ 32a6:  store           g19 g00
+ 32a9:  inc             g02
+ 32ab:  je              local6 #02 ~32b8
+ 32af:  store           g20 #00
+ 32b2:  jump            32b8
+ 32b5:  store           g20 #00
+ 32b8:  call            30c6 -> local6
+ 32bd:  jump            31bb
+
+Routine 32c0, 7 locals (0000, 0000, 0000, 0000, 0000, 0000, 0000)
+
+ 32cf:  store           local4 g4a
+ 32d2:  store           local5 g3b
+ 32d5:  store           local6 g0f
+ 32d8:  store           g4a local0
+ 32db:  je              #28 local2 local1 ~3301
+ 32e1:  je              g19 g00 3301
+ 32e5:  print           "I don't see what you are referring to."
+ 32fe:  new_line        
+ 32ff:  ret             #02
+ 3301:  je              local1 #28 ~3308
+ 3305:  store           local1 g14
+ 3308:  je              local2 #28 ~330f
+ 330c:  store           local2 g14
+ 330f:  store           g3b local1
+ 3312:  store           g0f local2
+ 3315:  je              local0 #0b 3322
+ 3319:  store           g5d local0
+ 331c:  store           g0c local1
+ 331f:  store           g59 local2
+ 3322:  get_prop        g22 #11 -> sp
+ 3326:  call            sp -> local3
+ 332a:  jz              local3 3330
+ 332d:  jump            3381
+ 3330:  get_parent      g22 -> sp
+ 3333:  get_prop        sp #11 -> sp
+ 3337:  call            sp #01 -> local3
+ 333c:  jz              local3 3342
+ 333f:  jump            3381
+ 3342:  loadw           g70 local0 -> sp
+ 3346:  call            sp -> local3
+ 334a:  jz              local3 3350
+ 334d:  jump            3381
+ 3350:  jz              local2 3361
+ 3353:  get_prop        local2 #11 -> sp
+ 3357:  call            sp -> local3
+ 335b:  jz              local3 3361
+ 335e:  jump            3381
+ 3361:  jz              local1 3376
+ 3364:  je              local0 #55 3376
+ 3368:  get_prop        local1 #11 -> sp
+ 336c:  call            sp -> local3
+ 3370:  jz              local3 3376
+ 3373:  jump            3381
+ 3376:  loadw           g6f local0 -> sp
+ 337a:  call            sp -> local3
+ 337e:  jz              local3 3381
+ 3381:  je              local3 #02 338e
+ 3385:  get_prop        g00 #11 -> sp
+ 3389:  call            sp #00 -> local3
+ 338e:  store           g4a local4
+ 3391:  store           g3b local5
+ 3394:  store           g0f local6
+ 3397:  ret             local3
+
+Routine 339a, 8 locals (0001, 0000, 0000, 0000, 0000, 0000, 0000, 0000)
+
+ 33ab:  call            37c4 -> sp
+ 33b0:  storew          g54 g5c #00
+ 33b5:  storew          g3a g5c #00
+ 33ba:  storew          g64 g5c #00
+ 33bf:  jz              g20 33cf
+ 33c2:  store           local0 g20
+ 33c5:  store           g20 #00
+ 33c8:  jz              g40 ~33dc
+ 33cb:  new_line        
+ 33cc:  jump            33dc
+ 33cf:  jz              g40 ~33d3
+ 33d2:  new_line        
+ 33d3:  print           ">"
+ 33d8:  read            g21 g2f
+ 33dc:  loadb           g2f #01 -> g0b
+ 33e0:  jz              g0b ~33f0
+ 33e3:  print           "Beg pardon?"
+ 33ee:  new_line        
+ 33ef:  rfalse          
+ 33f0:  store           local4 g0b
+ 33f3:  store           g42 #00
+ 33f6:  store           g6b #00
+ 33f9:  store           g53 #00
+ 33fc:  dec_chk         g0b #00 ~3403
+ 3400:  jump            358b
+ 3403:  loadw           g2f local0 -> local1
+ 3407:  jz              local1 357d
+ 340b:  je              local1 "then" "." ~3422
+ 3413:  jz              g0b 341a
+ 3416:  add             local0 #02 -> g20
+ 341a:  storeb          g2f #01 g0b
+ 341f:  jump            358b
+ 3422:  call            35b6 local1 #10 #03 -> local2
+ 342a:  jz              local2 346f
+ 342e:  je              local4 #01 3452
+ 3432:  je              local4 #02 ~343a
+ 3436:  je              local3 #c8 3452
+ 343a:  add             local0 #02 -> sp
+ 343e:  loadw           g2f sp -> local6
+ 3442:  je              local6 "then" "." 3452
+ 344a:  je              local6 "," "and" ~346f
+ 3452:  store           local5 local2
+ 3455:  je              local6 "," "and" ~3467
+ 345d:  add             local0 #02 -> sp
+ 3461:  storew          g2f sp "then"
+ 3467:  jg              local4 #02 3584
+ 346c:  jump            358b
+ 346f:  call            35b6 local1 #40 #01 -> local2
+ 3477:  jz              local2 34b0
+ 347a:  jz              local3 ~34b0
+ 347d:  store           local3 local2
+ 3480:  storew          g41 #00 local2
+ 3485:  storew          g41 #01 g2e
+ 348a:  storew          g2e #00 local1
+ 348f:  mul             local0 #02 -> sp
+ 3493:  add             sp #02 -> local7
+ 3497:  loadb           g2f local7 -> sp
+ 349b:  storeb          g2e #02 sp
+ 34a0:  add             local7 #01 -> sp
+ 34a4:  loadb           g2f sp -> sp
+ 34a8:  storeb          g2e #03 sp
+ 34ad:  jump            3584
+ 34b0:  call            35b6 local1 #08 #00 -> local2
+ 34b8:  jz              local2 ~34dd
+ 34bb:  je              local1 "all" "one" "a" 34da
+ 34c5:  call            35b6 local1 #20 -> sp
+ 34cc:  jz              sp ~34da
+ 34cf:  call            35b6 local1 #80 -> sp
+ 34d6:  jz              sp 3556
+ 34da:  store           local2 #00
+ 34dd:  jg              g0b #00 ~34ff
+ 34e1:  add             local0 #02 -> sp
+ 34e5:  loadw           g2f sp -> sp
+ 34e9:  je              sp "of" ~34ff
+ 34ef:  jz              local2 ~34ff
+ 34f2:  je              local1 "all" "one" "a" 34ff
+ 34fc:  jump            3584
+ 34ff:  jz              local2 3527
+ 3502:  jz              g0b 3515
+ 3505:  add             local0 #02 -> sp
+ 3509:  loadw           g2f sp -> sp
+ 350d:  je              sp "then" "." ~3527
+ 3515:  jl              g6b #02 ~3584
+ 351a:  storew          g41 #02 local2
+ 351f:  storew          g41 #03 local1
+ 3524:  jump            3584
+ 3527:  je              g6b #02 ~3542
+ 352b:  print           "Too many noun clauses??"
+ 3540:  new_line        
+ 3541:  rfalse          
+ 3542:  inc             g6b
+ 3544:  call            35dc local0 local2 local1 -> local0
+ 354c:  jz              local0 rfalse
+ 354f:  jl              local0 #00 ~3584
+ 3553:  jump            358b
+ 3556:  call            35b6 local1 #04 -> sp
+ 355d:  jz              sp 3563
+ 3560:  jump            3584
+ 3563:  print           "I can't use the word '"
+ 3572:  print_addr      local1
+ 3574:  print           "' here."
+ 357b:  new_line        
+ 357c:  rfalse          
+ 357d:  call            378e local0 -> sp
+ 3583:  rfalse          
+ 3584:  add             local0 #02 -> local0
+ 3588:  jump            33fc
+ 358b:  jz              local5 3595
+ 358e:  store           g4a #55
+ 3591:  store           g3b local5
+ 3594:  rtrue           
+ 3595:  call            37d4 -> sp
+ 359a:  jz              sp rfalse
+ 359d:  call            399c -> sp
+ 35a2:  jz              sp rfalse
+ 35a5:  call            3e18 -> sp
+ 35aa:  jz              sp rfalse
+ 35ad:  call            3eac -> sp
+ 35b2:  jz              sp rfalse
+ 35b5:  rtrue           
+
+Routine 35b6, 5 locals (0000, 0000, 0005, 0005, 0000)
+
+ 35c1:  loadb           local0 #04 -> local4
+ 35c5:  test            local4 local1 ~rfalse
+ 35c9:  jg              local2 #04 rtrue
+ 35cd:  and             local4 #03 -> local4
+ 35d1:  je              local4 local2 35d7
+ 35d5:  inc             local3
+ 35d7:  loadb           local0 local3 -> sp
+ 35db:  ret_popped      
+
+Routine 35dc, 9 locals (0000, 0000, 0000, 0000, 0000, 0000, 0000, 0000, 0000)
+
+ 35ef:  sub             g6b #01 -> sp
+ 35f3:  mul             sp #02 -> local3
+ 35f7:  jz              local1 3613
+ 35fa:  add             #02 local3 -> local4
+ 35fe:  storew          g41 local4 local1
+ 3603:  add             local4 #01 -> sp
+ 3607:  storew          g41 sp local2
+ 360c:  add             local0 #02 -> local0
+ 3610:  jump            3615
+ 3613:  inc             g0b
+ 3615:  jz              g0b ~361d
+ 3618:  dec             g6b
+ 361a:  ret             #ffff
+ 361d:  add             #06 local3 -> local4
+ 3621:  mul             local0 #02 -> sp
+ 3625:  add             g2f sp -> sp
+ 3629:  storew          g41 local4 sp
+ 362e:  dec_chk         g0b #00 ~3646
+ 3632:  add             local4 #01 -> local8
+ 3636:  mul             local0 #02 -> sp
+ 363a:  add             g2f sp -> sp
+ 363e:  storew          g41 local8 sp
+ 3643:  ret             #ffff
+ 3646:  loadw           g2f local0 -> local2
+ 364a:  jz              local2 3767
+ 364e:  jz              g0b ~3657
+ 3651:  store           local7 #00
+ 3654:  jump            365f
+ 3657:  add             local0 #02 -> sp
+ 365b:  loadw           g2f sp -> local7
+ 365f:  je              local2 "and" "," ~366d
+ 3667:  store           local5 #01
+ 366a:  jump            376e
+ 366d:  je              local2 "all" "one" ~3685
+ 3675:  je              local7 "of" ~376e
+ 367c:  dec             g0b
+ 367e:  add             local0 #02 -> local0
+ 3682:  jump            376e
+ 3685:  je              local2 "then" "." 369a
+ 368d:  call            35b6 local2 #08 -> sp
+ 3694:  jz              sp 36b3
+ 3697:  jz              local6 ~36b3
+ 369a:  inc             g0b
+ 369c:  add             local4 #01 -> local8
+ 36a0:  mul             local0 #02 -> sp
+ 36a4:  add             g2f sp -> sp
+ 36a8:  storew          g41 local8 sp
+ 36ad:  sub             local0 #02 -> sp
+ 36b1:  ret             sp
+ 36b3:  call            35b6 local2 #80 -> sp
+ 36ba:  jz              sp 3709
+ 36be:  call            35b6 local2 #20 #02 -> sp
+ 36c6:  jz              sp 36d9
+ 36c9:  jz              local7 36d9
+ 36cc:  call            35b6 local7 #80 -> sp
+ 36d3:  jz              sp 36d9
+ 36d6:  jump            376e
+ 36d9:  jz              local5 ~3703
+ 36dc:  je              local7 "but" "except" 3703
+ 36e4:  je              local7 "and" "," 3703
+ 36ec:  add             local4 #01 -> local8
+ 36f0:  add             local0 #02 -> sp
+ 36f4:  mul             sp #02 -> sp
+ 36f8:  add             g2f sp -> sp
+ 36fc:  storew          g41 local8 sp
+ 3701:  ret             local0
+ 3703:  store           local5 #00
+ 3706:  jump            376e
+ 3709:  call            35b6 local2 #20 -> sp
+ 3710:  jz              sp ~376e
+ 3714:  call            35b6 local2 #04 -> sp
+ 371b:  jz              sp 3721
+ 371e:  jump            376e
+ 3721:  jz              local5 374d
+ 3724:  call            35b6 local2 #10 -> sp
+ 372b:  jz              sp ~3738
+ 372e:  call            35b6 local2 #40 -> sp
+ 3735:  jz              sp 374d
+ 3738:  sub             local0 #04 -> local0
+ 373c:  add             local0 #02 -> sp
+ 3740:  storew          g2f sp "then"
+ 3746:  add             g0b #02 -> g0b
+ 374a:  jump            376e
+ 374d:  print           "I can't use the word '"
+ 375c:  print_addr      local2
+ 375e:  print           "' here."
+ 3765:  new_line        
+ 3766:  rfalse          
+ 3767:  call            378e local0 -> sp
+ 376d:  rfalse          
+ 376e:  store           local6 #00
+ 3771:  add             local0 #02 -> local0
+ 3775:  jump            362e
+
+Routine 3778, 2 locals (0000, 0000)
+
+ 377d:  dec_chk         local0 #00 rtrue
+ 3781:  loadb           g21 local1 -> sp
+ 3785:  print_char      sp
+ 3788:  inc             local1
+ 378a:  jump            377d
+
+Routine 378e, 3 locals (0000, 0000, 0000)
+
+ 3795:  print           "I don't know the word '"
+ 37a4:  mul             local0 #02 -> local1
+ 37a8:  add             g2f local1 -> sp
+ 37ac:  loadb           sp #02 -> local2
+ 37b0:  add             g2f local1 -> sp
+ 37b4:  loadb           sp #03 -> sp
+ 37b8:  call            3778 local2 sp -> sp
+ 37bf:  print_ret       "'."
+
+Routine 37c4, 1 local (ffff)
+
+ 37c7:  inc_chk         local0 #09 rtrue
+ 37cb:  storew          g41 local0 #00
+ 37d0:  jump            37c7
+
+Routine 37d4, 11 locals (0000, 0000, 0000, 0000, 0000, 0000, 0000, 0000, 0000,
+                         0000, 0000)
+
+ 37eb:  loadw           g41 #00 -> local7
+ 37ef:  jz              local7 ~3805
+ 37f2:  print           "You must supply a verb!"
+ 3803:  new_line        
+ 3804:  rfalse          
+ 3805:  sub             #ff local7 -> sp
+ 3809:  loadw           g71 sp -> local0
+ 380d:  loadb           local0 #00 -> local1
+ 3811:  add             #01 local0 -> local0
+ 3815:  loadb           local0 #00 -> sp
+ 3819:  and             sp #03 -> local2
+ 381d:  jl              local2 #01 3839
+ 3821:  jz              g6b ~3839
+ 3824:  loadw           g41 #02 -> local6
+ 3828:  jz              local6 3833
+ 382b:  loadb           local0 #01 -> sp
+ 382f:  je              local6 sp ~3839
+ 3833:  store           local4 local0
+ 3836:  jump            3866
+ 3839:  loadb           local0 #01 -> local10
+ 383d:  loadw           g41 #02 -> sp
+ 3841:  je              local10 sp ~3866
+ 3845:  je              local2 #02 ~3853
+ 3849:  je              g6b #01 ~3853
+ 384d:  store           local5 local0
+ 3850:  jump            3866
+ 3853:  loadb           local0 #02 -> local10
+ 3857:  loadw           g41 #04 -> sp
+ 385b:  je              local10 sp ~3866
+ 385f:  call            38fc local0 -> sp
+ 3865:  rtrue           
+ 3866:  dec_chk         local1 #01 ~388c
+ 386a:  jz              local4 ~3893
+ 386d:  jz              local5 3873
+ 3870:  jump            3893
+ 3873:  print           "I don't understand that sentence."
+ 388a:  new_line        
+ 388b:  rfalse          
+ 388c:  add             local0 #08 -> local0
+ 3890:  jump            3815
+ 3893:  jz              local4 38be
+ 3896:  loadb           local4 #03 -> local9
+ 389a:  loadb           local4 #05 -> local10
+ 389e:  loadb           local4 #01 -> sp
+ 38a2:  call            3908 local9 local10 sp -> local3
+ 38aa:  jz              local3 38be
+ 38ad:  storew          g54 g5c #01
+ 38b2:  storew          g54 #01 local3
+ 38b7:  call            38fc local4 -> sp
+ 38bd:  ret_popped      
+ 38be:  jz              local5 38e9
+ 38c1:  loadb           local5 #04 -> local9
+ 38c5:  loadb           local5 #06 -> local10
+ 38c9:  loadb           local5 #02 -> sp
+ 38cd:  call            3908 local9 local10 sp -> local3
+ 38d5:  jz              local3 38e9
+ 38d8:  storew          g3a g5c #01
+ 38dd:  storew          g3a #01 local3
+ 38e2:  call            38fc local5 -> sp
+ 38e8:  ret_popped      
+ 38e9:  print           "You must supply a noun!"
+ 38fa:  new_line        
+ 38fb:  rfalse          
+
+Routine 38fc, 1 local (0000)
+
+ 38ff:  store           g30 local0
+ 3902:  loadb           local0 #07 -> g4a
+ 3906:  ret             g4a
+
+Routine 3908, 4 locals (0000, 0000, 0000, 0000)
+
+ 3911:  je              local0 #1f ~3917
+ 3915:  ret             #4c
+ 3917:  store           g4f local0
+ 391a:  store           g13 local1
+ 391d:  storew          g26 g5c #00
+ 3922:  call            3b88 g26 #00 -> sp
+ 3929:  jz              sp 3972
+ 392d:  store           g4f #00
+ 3930:  loadw           g26 g5c -> sp
+ 3934:  je              sp #01 ~rfalse
+ 3938:  loadw           g26 #01 -> local3
+ 393c:  print           "("
+ 393f:  jz              local2 3964
+ 3942:  call            3976 local2 -> sp
+ 3948:  print_addr      sp
+ 394a:  je              local3 #0000 ~395f
+ 3950:  print           " your hands)"
+ 395b:  new_line        
+ 395c:  jump            3964
+ 395f:  print           " the "
+ 3964:  je              local3 #0000 3970
+ 396a:  print_obj       local3
+ 396c:  print           ")"
+ 396f:  new_line        
+ 3970:  ret             local3
+ 3972:  store           g4f #00
+ 3975:  rfalse          
+
+Routine 3976, 3 locals (0000, 0000, 0000)
+
+ 397d:  loadw           g6e #00 -> sp
+ 3981:  mul             sp #02 -> local2
+ 3985:  inc_chk         local1 local2 rfalse
+ 3989:  loadw           g6e local1 -> sp
+ 398d:  je              sp local0 ~3985
+ 3992:  sub             local1 #01 -> sp
+ 3996:  loadw           g6e sp -> sp
+ 399a:  ret             sp
+
+Routine 399c, 1 local (0000)
+
+ 399f:  loadw           g41 #06 -> local0
+ 39a3:  jz              local0 39c6
+ 39a6:  loadb           g30 #05 -> g13
+ 39aa:  loadw           g41 #07 -> sp
+ 39ae:  call            3a4c local0 sp g54 -> sp
+ 39b6:  jz              sp rfalse
+ 39b9:  loadw           g64 g5c -> sp
+ 39bd:  jz              sp 39c6
+ 39c0:  call            39fe g54 -> g54
+ 39c6:  loadw           g41 #08 -> local0
+ 39ca:  jz              local0 rtrue
+ 39cd:  loadb           g30 #06 -> g13
+ 39d1:  loadw           g41 #09 -> sp
+ 39d5:  call            3a4c local0 sp g3a -> sp
+ 39dd:  jz              sp rfalse
+ 39e0:  loadw           g64 g5c -> sp
+ 39e4:  jz              sp rtrue
+ 39e7:  loadw           g3a g5c -> sp
+ 39eb:  je              sp #01 ~39f6
+ 39ef:  call            39fe g54 -> g54
+ 39f5:  rtrue           
+ 39f6:  call            39fe g3a -> g3a
+ 39fc:  rtrue           
+
+Routine 39fe, 7 locals (0000, 0000, 0000, 0001, 0000, 0000, 0000)
+
+ 3a0d:  loadw           local0 g5c -> local1
+ 3a11:  storew          g26 g5c #00
+ 3a16:  dec_chk         local1 #00 ~3a1d
+ 3a1a:  jump            3a3e
+ 3a1d:  loadw           local0 local3 -> local5
+ 3a21:  call            3f1e local5 g64 -> sp
+ 3a28:  jz              sp 3a2e
+ 3a2b:  jump            3a39
+ 3a2e:  add             local4 #01 -> sp
+ 3a32:  storew          g26 sp local5
+ 3a37:  inc             local4
+ 3a39:  inc             local3
+ 3a3b:  jump            3a16
+ 3a3e:  storew          g26 g5c local4
+ 3a43:  store           local6 g26
+ 3a46:  store           g26 local0
+ 3a49:  ret             local6
+
+Routine 3a4c, 9 locals (0000, 0000, 0000, 0000, 0000, 0000, 0000, 0000, 0000)
+
+ 3a5f:  store           g53 #00
+ 3a62:  storew          g64 g5c #00
+ 3a67:  storew          local2 g5c #00
+ 3a6c:  loadw           local0 #00 -> local7
+ 3a70:  je              local0 local1 ~3a88
+ 3a74:  jz              local4 3a7d
+ 3a77:  push            local4
+ 3a7a:  jump            3a80
+ 3a7d:  push            local2
+ 3a80:  call            3b88 sp -> sp
+ 3a86:  ret             sp
+ 3a88:  loadw           local0 #02 -> local8
+ 3a8c:  je              local7 "all" ~3aa3
+ 3a92:  store           g53 #01
+ 3a95:  je              local8 "of" ~3b78
+ 3a9c:  add             local0 #04 -> local0
+ 3aa0:  jump            3b78
+ 3aa3:  je              local7 "but" "except" ~3acb
+ 3aab:  jz              local4 3ab4
+ 3aae:  push            local4
+ 3ab1:  jump            3ab7
+ 3ab4:  push            local2
+ 3ab7:  call            3b88 sp -> sp
+ 3abd:  jz              sp rfalse
+ 3ac0:  store           local4 g64
+ 3ac3:  storew          local4 g5c #00
+ 3ac8:  jump            3b78
+ 3acb:  je              local7 "a" "one" ~3b05
+ 3ad3:  jz              g4e ~3ae7
+ 3ad6:  store           g53 #02
+ 3ad9:  je              local8 "of" ~3b78
+ 3ae0:  add             local0 #04 -> local0
+ 3ae4:  jump            3b78
+ 3ae7:  store           g55 g49
+ 3aea:  jz              local4 3af3
+ 3aed:  push            local4
+ 3af0:  jump            3af6
+ 3af3:  push            local2
+ 3af6:  call            3b88 sp -> sp
+ 3afc:  jz              sp rfalse
+ 3aff:  jz              local8 rtrue
+ 3b02:  jump            3b78
+ 3b05:  je              local7 "and" "," ~3b2c
+ 3b0d:  je              local8 "and" "," 3b2c
+ 3b15:  jz              local4 3b1e
+ 3b18:  push            local4
+ 3b1b:  jump            3b21
+ 3b1e:  push            local2
+ 3b21:  call            3b88 sp -> sp
+ 3b27:  jz              sp ~3b78
+ 3b2b:  rfalse          
+ 3b2c:  call            35b6 local7 #04 -> sp
+ 3b33:  jz              sp 3b39
+ 3b36:  jump            3b78
+ 3b39:  je              local7 "and" "," ~3b44
+ 3b41:  jump            3b78
+ 3b44:  je              local7 "of" ~3b53
+ 3b4a:  jz              g53 ~3b78
+ 3b4d:  store           g53 #04
+ 3b50:  jump            3b78
+ 3b53:  call            35b6 local7 #20 #02 -> local6
+ 3b5b:  jz              local6 3b67
+ 3b5e:  store           g4e local6
+ 3b61:  store           g0a local7
+ 3b64:  jump            3b78
+ 3b67:  call            35b6 local7 #80 #00 -> sp
+ 3b6f:  jz              sp 3b78
+ 3b72:  store           g55 local7
+ 3b75:  store           g49 local7
+ 3b78:  je              local0 local1 3a70
+ 3b7d:  add             local0 #04 -> local0
+ 3b81:  store           local7 local8
+ 3b84:  jump            3a70
+
+Routine 3b88, 7 locals (0000, 0001, 0000, 0000, 0000, 0000, 0000)
+
+ 3b97:  store           local4 g13
+ 3b9a:  loadw           local0 g5c -> local5
+ 3b9e:  test            g53 #04 rtrue
+ 3ba2:  jz              g55 ~3bb9
+ 3ba5:  jz              g4e 3bb9
+ 3ba8:  call            35b6 g0a #80 #00 -> sp
+ 3bb0:  jz              sp 3bb9
+ 3bb3:  store           g55 g0a
+ 3bb6:  store           g4e #00
+ 3bb9:  jz              g55 ~3bde
+ 3bbc:  jz              g4e ~3bde
+ 3bbf:  je              g53 #01 3bde
+ 3bc3:  jz              g4f ~3bde
+ 3bc6:  jz              local1 rfalse
+ 3bc9:  print           "There is a noun missing."
+ 3bdc:  new_line        
+ 3bdd:  rfalse          
+ 3bde:  je              g53 #01 ~3be5
+ 3be2:  jz              g13 ~3bea
+ 3be5:  store           g13 #ffff
+ 3bea:  store           g27 local0
+ 3bed:  jz              local6 3bf9
+ 3bf0:  call            3cc0 local0 -> sp
+ 3bf6:  jump            3c0c
+ 3bf9:  jz              g60 3c04
+ 3bfc:  call            3d72 g00 #10 #20 -> sp
+ 3c04:  call            3d72 g22 #80 #40 -> sp
+ 3c0c:  loadw           local0 g5c -> sp
+ 3c10:  sub             sp local5 -> local3
+ 3c14:  test            g53 #01 ~3c1b
+ 3c18:  jump            3cb5
+ 3c1b:  jg              local3 #01 3c29
+ 3c1f:  jz              local3 ~3c63
+ 3c23:  je              g13 #ffff 3c63
+ 3c29:  je              g13 #ffff ~3c42
+ 3c2f:  store           g13 local4
+ 3c32:  loadw           local0 g5c -> sp
+ 3c36:  sub             sp local3 -> sp
+ 3c3a:  storew          local0 g5c sp
+ 3c3f:  jump            3bed
+ 3c42:  jz              local1 3c5c
+ 3c45:  print           "Specify which "
+ 3c50:  print_addr      g55
+ 3c52:  print           " you mean."
+ 3c5b:  new_line        
+ 3c5c:  store           g55 #00
+ 3c5f:  store           g4e #00
+ 3c62:  rfalse          
+ 3c63:  jz              local3 ~3cac
+ 3c67:  jz              local6 3cac
+ 3c6b:  jz              local1 3ca5
+ 3c6e:  jz              g60 3c95
+ 3c71:  print           "I can't see any"
+ 3c7c:  jz              g4e 3c84
+ 3c7f:  print           " "
+ 3c82:  print_addr      g0a
+ 3c84:  jz              g55 3c8c
+ 3c87:  print           " "
+ 3c8a:  print_addr      g55
+ 3c8c:  print           " here."
+ 3c91:  new_line        
+ 3c92:  jump            3ca5
+ 3c95:  print           "It's too dark to see."
+ 3ca4:  new_line        
+ 3ca5:  store           g55 #00
+ 3ca8:  store           g4e #00
+ 3cab:  rfalse          
+ 3cac:  jz              local3 ~3cb5
+ 3caf:  store           local6 #01
+ 3cb2:  jump            3bed
+ 3cb5:  store           g4e #00
+ 3cb8:  store           g55 #00
+ 3cbb:  store           g13 local4
+ 3cbe:  rtrue           
+
+Routine 3cc0, 7 locals (0000, 0000, 0000, 0000, 0000, 0000, 0000)
+
+ 3ccf:  store           local5 g13
+ 3cd2:  get_prop_addr   g00 #06 -> local1
+ 3cd6:  jz              local1 3cfa
+ 3cd9:  get_prop_len    local1 -> sp
+ 3cdc:  sub             sp #01 -> local2
+ 3ce0:  loadb           local1 local3 -> local4
+ 3ce4:  call            4370 local4 local0 -> sp
+ 3ceb:  jz              sp 3cf5
+ 3cee:  call            3dfa local4 local0 -> sp
+ 3cf5:  inc_chk         local3 local2 ~3ce0
+ 3cfa:  get_prop_addr   g00 #05 -> local1
+ 3cfe:  jz              local1 3d56
+ 3d02:  get_prop_len    local1 -> sp
+ 3d05:  div             sp #04 -> sp
+ 3d09:  sub             sp #01 -> local2
+ 3d0d:  store           local3 #00
+ 3d10:  mul             local3 #02 -> sp
+ 3d14:  loadw           local1 sp -> sp
+ 3d18:  je              g55 sp ~3d51
+ 3d1c:  mul             local3 #02 -> sp
+ 3d20:  add             sp #01 -> sp
+ 3d24:  loadw           local1 sp -> sp
+ 3d28:  put_prop        "pseudo" #11 sp
+ 3d2d:  get_prop_addr   "pseudo" #11 -> sp
+ 3d31:  sub             sp #05 -> local6
+ 3d35:  loadw           g55 #00 -> sp
+ 3d39:  storew          local6 #00 sp
+ 3d3e:  loadw           g55 #01 -> sp
+ 3d42:  storew          local6 #01 sp
+ 3d47:  call            3dfa #3f local0 -> sp
+ 3d4e:  jump            3d56
+ 3d51:  inc_chk         local3 local2 ~3d10
+ 3d56:  loadw           local0 g5c -> sp
+ 3d5a:  jz              sp ~rfalse
+ 3d5d:  store           g13 #ffff
+ 3d62:  store           g27 local0
+ 3d65:  call            3d72 #10 #01 #01 -> sp
+ 3d6d:  store           g13 local5
+ 3d70:  rtrue           
+
+Routine 3d72, 4 locals (0000, 0000, 0000, 0000)
+
+ 3d7b:  add             local1 local2 -> sp
+ 3d7f:  test            g13 sp ~3d8c
+ 3d83:  call            3da6 local0 g27 #01 -> sp
+ 3d8b:  ret_popped      
+ 3d8c:  test            g13 local1 ~3d99
+ 3d90:  call            3da6 local0 g27 #00 -> sp
+ 3d98:  ret_popped      
+ 3d99:  test            g13 local2 ~rtrue
+ 3d9d:  call            3da6 local0 g27 #02 -> sp
+ 3da5:  ret_popped      
+
+Routine 3da6, 5 locals (0000, 0000, 0000, 0000, 0000)
+
+ 3db1:  get_child       local0 -> local0 ~rfalse
+ 3db5:  je              local2 #02 3dca
+ 3db9:  call            4370 local0 local1 -> sp
+ 3dc0:  jz              sp 3dca
+ 3dc3:  call            3dfa local0 local1 -> sp
+ 3dca:  je              local2 #00 ~3dd2
+ 3dce:  test_attr       local0 #0b ~3df3
+ 3dd2:  get_child       local0 -> local4 ~3df3
+ 3dd6:  test_attr       local0 #0e 3dde
+ 3dda:  test_attr       local0 #10 ~3df3
+ 3dde:  test_attr       local0 #0b ~3de8
+ 3de2:  push            #01
+ 3de5:  jump            3deb
+ 3de8:  push            #00
+ 3deb:  call            3da6 local0 local1 sp -> local3
+ 3df3:  get_sibling     local0 -> local0 3db5
+ 3df8:  rtrue           
+
+Routine 3dfa, 3 locals (0000, 0000, 0000)
+
+ 3e01:  loadw           local1 g5c -> local2
+ 3e05:  add             local2 #01 -> sp
+ 3e09:  storew          local1 sp local0
+ 3e0e:  add             local2 #01 -> sp
+ 3e12:  storew          local1 g5c sp
+ 3e17:  rtrue           
+
+Routine 3e18, 0 locals ()
+
+ 3e19:  loadb           g30 #05 -> sp
+ 3e1d:  call            3e34 g54 sp -> sp
+ 3e24:  jz              sp rfalse
+ 3e27:  loadb           g30 #06 -> sp
+ 3e2b:  call            3e34 g3a sp -> sp
+ 3e32:  ret_popped      
+
+Routine 3e34, 5 locals (0000, 0000, 0000, 0000, 0000)
+
+ 3e3f:  loadw           local0 g5c -> local2
+ 3e43:  jz              local2 rtrue
+ 3e46:  test            local1 #08 ~rtrue
+ 3e4a:  dec_chk         local2 #00 rtrue
+ 3e4e:  add             local2 #01 -> sp
+ 3e52:  loadw           local0 sp -> local3
+ 3e56:  je              local3 #28 ~3e5d
+ 3e5a:  store           local3 g14
+ 3e5d:  jin             local3 g22 3e4a
+ 3e62:  store           g3b local3
+ 3e65:  test_attr       local3 #0d ~3e6f
+ 3e69:  store           local4 #01
+ 3e6c:  jump            3e82
+ 3e6f:  call            4d4e #00 -> sp
+ 3e75:  je              sp #01 ~3e7f
+ 3e79:  store           local4 #00
+ 3e7c:  jump            3e82
+ 3e7f:  store           local4 #01
+ 3e82:  jz              local4 3e9b
+ 3e85:  test            local1 #02 ~3e9b
+ 3e89:  print           "You don't have the "
+ 3e94:  print_obj       local3
+ 3e96:  print           "."
+ 3e99:  new_line        
+ 3e9a:  rfalse          
+ 3e9b:  jz              local4 ~3e4a
+ 3e9f:  print           "(Taken)"
+ 3ea8:  new_line        
+ 3ea9:  jump            3e4a
+
+Routine 3eac, 3 locals (0000, 0000, 0000)
+
+ 3eb3:  loadw           g54 g5c -> sp
+ 3eb7:  jg              sp #01 ~3ec9
+ 3ebb:  loadb           g30 #05 -> sp
+ 3ebf:  test            sp #04 3ec9
+ 3ec3:  store           local0 #01
+ 3ec6:  jump            3edc
+ 3ec9:  loadw           g3a g5c -> sp
+ 3ecd:  jg              sp #01 ~3edc
+ 3ed1:  loadb           g30 #06 -> sp
+ 3ed5:  test            sp #04 3edc
+ 3ed9:  store           local0 #02
+ 3edc:  jz              local0 rtrue
+ 3edf:  print           "You can't use multiple objects with '"
+ 3ef8:  loadw           g41 #01 -> local1
+ 3efc:  jz              g68 3f08
+ 3eff:  loadw           local1 #00 -> sp
+ 3f03:  print_addr      sp
+ 3f05:  jump            3f17
+ 3f08:  loadb           local1 #02 -> local2
+ 3f0c:  loadb           local1 #03 -> sp
+ 3f10:  call            3778 local2 sp -> sp
+ 3f17:  print           "'."
+ 3f1c:  new_line        
+ 3f1d:  rfalse          
+
+Routine 3f1e, 4 locals (0000, 0000, ffff, 0001)
+
+ 3f27:  jz              local1 rfalse
+ 3f2a:  jl              local2 #00 3f34
+ 3f2e:  store           local3 #00
+ 3f31:  jump            3f38
+ 3f34:  loadw           local1 #00 -> local2
+ 3f38:  loadw           local1 local3 -> sp
+ 3f3c:  je              local0 sp rtrue
+ 3f40:  inc_chk         local3 local2 ~3f38
+ 3f45:  rfalse          
+
+Routine 3f46, 4 locals (0000, 0000, 0000, 0000)
+
+ 3f4f:  loadb           local1 local3 -> sp
+ 3f53:  je              local0 sp rtrue
+ 3f57:  inc_chk         local3 local2 ~3f4f
+ 3f5c:  rfalse          
+
+Routine 3f5e, 3 locals (0000, 0000, 0000)
+
+ 3f65:  store           g4f #03
+ 3f68:  store           local1 g00
+ 3f6b:  store           g00 local0
+ 3f6e:  test_attr       local0 #03 3f75
+ 3f72:  jz              g32 3f7b
+ 3f75:  store           local2 #01
+ 3f78:  jump            3fa7
+ 3f7b:  storew          g26 g5c #00
+ 3f80:  store           g27 g26
+ 3f83:  store           g13 #ffff
+ 3f88:  je              local1 local0 ~3f94
+ 3f8c:  call            3d72 g22 #01 #01 -> sp
+ 3f94:  call            3d72 local0 #01 #01 -> sp
+ 3f9c:  loadw           g27 g5c -> sp
+ 3fa0:  jg              sp #00 ~3fa7
+ 3fa4:  store           local2 #01
+ 3fa7:  store           g00 local1
+ 3faa:  store           g4f #00
+ 3fad:  ret             local2
+
+Routine 3fb0, 6 locals (0000, 0000, 0000, 0000, 0000, 0000)
+
+ 3fbd:  loadw           g1b #00 -> local1
+ 3fc1:  jz              g52 ~rtrue
+ 3fc4:  store           local2 #00
+ 3fc7:  inc             local2
+ 3fc9:  je              local2 local1 ~3fd0
+ 3fcd:  jump            4059
+ 3fd0:  loadw           g1b local2 -> local3
+ 3fd4:  loadw           local3 #00 -> local4
+ 3fd8:  jin             local4 g00 ~4032
+ 3fdd:  je              local4 #69 ~3fea
+ 3fe1:  jz              g47 3fea
+ 3fe4:  store           g47 #00
+ 3fe7:  jump            3fc7
+ 3fea:  get_prop        local4 #0f -> sp
+ 3fee:  jl              sp #00 ~401b
+ 3ff2:  loadw           local3 #03 -> local5
+ 3ff6:  jz              local5 400f
+ 3ff9:  random          #64 -> sp
+ 3ffd:  jg              local5 sp ~400f
+ 4001:  storew          local3 #03 #00
+ 4006:  call            4064 local4 -> sp
+ 400c:  jump            3fc7
+ 400f:  add             local5 #19 -> sp
+ 4013:  storew          local3 #03 sp
+ 4018:  jump            3fc7
+ 401b:  test_attr       local4 #1b 402c
+ 401f:  get_prop        local4 #11 -> sp
+ 4023:  call            sp #05 -> sp
+ 4028:  jz              sp 3fc7
+ 402c:  store           local0 #01
+ 402f:  jump            3fc7
+ 4032:  test_attr       local4 #1b ~4040
+ 4036:  get_prop        local4 #11 -> sp
+ 403a:  call            sp #0000 -> sp
+ 4040:  je              local4 #69 ~4047
+ 4044:  store           g47 #00
+ 4047:  clear_attr      g22 #1a
+ 404a:  clear_attr      local4 #1a
+ 404d:  clear_attr      local4 #1b
+ 4050:  call            4064 local4 -> sp
+ 4056:  jump            3fc7
+ 4059:  jz              local0 rtrue
+ 405c:  call            9230 local1 -> sp
+ 4062:  ret_popped      
+
+Routine 4064, 2 locals (0000, 0000)
+
+ 4069:  get_prop        local0 #0f -> local1
+ 406d:  jl              local1 #00 ~rtrue
+ 4071:  sub             #00 local1 -> sp
+ 4075:  put_prop        local0 #0f sp
+ 407a:  get_prop        local0 #11 -> sp
+ 407e:  call            sp #0000 -> sp
+ 4084:  rtrue           
+
+Routine 4086, 6 locals (0000, 0000, 0000, 0000, 0000, 0000)
+
+ 4093:  call            3090 #2043 -> local0
+ 409a:  get_prop        "sword" #0c -> local1
+ 409e:  jin             "sword" "cretin" ~415e
+ 40a3:  call            4164 g00 -> sp
+ 40a9:  jz              sp 40b2
+ 40ac:  store           local2 #02
+ 40af:  jump            40e4
+ 40b2:  store           local3 #00
+ 40b5:  get_next_prop   g00 local3 -> local3
+ 40b9:  jz              local3 ~40bf
+ 40bc:  jump            40e4
+ 40bf:  jl              local3 g35 40b5
+ 40c4:  get_prop_addr   g00 local3 -> local4
+ 40c8:  get_prop_len    local4 -> local5
+ 40cb:  je              local5 #01 #04 #05 ~40b5
+ 40d3:  loadb           local4 #00 -> sp
+ 40d7:  call            4164 sp -> sp
+ 40dd:  jz              sp 40b5
+ 40e1:  store           local2 #01
+ 40e4:  je              local2 local1 ~40eb
+ 40e8:  jump            4158
+ 40eb:  je              local2 #02 ~4112
+ 40ef:  print           "Your sword has begun to glow very brightly."
+ 410e:  new_line        
+ 410f:  jump            4158
+ 4112:  je              local2 #01 ~413b
+ 4116:  print           "Your sword is glowing with a faint blue glow."
+ 4137:  new_line        
+ 4138:  jump            4158
+ 413b:  jz              local2 ~4158
+ 413e:  print           "Your sword is no longer glowing."
+ 4157:  new_line        
+ 4158:  put_prop        "sword" #0c local2
+ 415d:  rtrue           
+ 415e:  storew          local0 #00 #00
+ 4163:  rtrue           
+
+Routine 4164, 2 locals (0000, 0000)
+
+ 4169:  get_child       local0 -> local1 416d
+ 416d:  jz              local1 rfalse
+ 4170:  test_attr       local1 #15 ~4178
+ 4174:  test_attr       local1 #1d ~rtrue
+ 4178:  get_sibling     local1 -> local1 416d
+ 417d:  rfalse          
+
+Routine 417e, 4 locals (0000, 0000, 0000, 0000)
+
+ 4187:  get_parent      "thief" -> local0
+ 418a:  test_attr       "thief" #1d 4194
+ 418e:  push            #01
+ 4191:  jump            4197
+ 4194:  push            #00
+ 4197:  store           local2 sp
+ 419a:  jz              local2 41a0
+ 419d:  get_parent      "thief" -> local0
+ 41a0:  je              local0 #0e ~41bc
+ 41a4:  je              local0 g00 41bc
+ 41a8:  jz              local2 41b3
+ 41ab:  call            7b9c -> sp
+ 41b0:  store           local2 #00
+ 41b3:  call            7bb4 #0e -> sp
+ 41b9:  jump            41fa
+ 41bc:  je              local0 g00 ~41c9
+ 41c0:  call            7aac local2 -> sp
+ 41c6:  jump            41fa
+ 41c9:  jin             "thief" local0 ~41d7
+ 41cd:  test_attr       "thief" #1d 41d7
+ 41d1:  set_attr        "thief" #1d
+ 41d4:  store           local2 #00
+ 41d7:  test_attr       local0 #1c ~41fa
+ 41db:  call            4324 local0 #69 #4b -> sp
+ 41e3:  test_attr       local0 #00 ~41f4
+ 41e7:  test_attr       g00 #00 ~41f4
+ 41eb:  call            7bde local0 -> sp
+ 41f1:  jump            41fa
+ 41f4:  call            42b2 local0 -> sp
+ 41fa:  jz              local3 ~4203
+ 41fd:  push            #01
+ 4200:  jump            4206
+ 4203:  push            #00
+ 4206:  store           local3 sp
+ 4209:  jz              local3 4233
+ 420c:  jz              local2 ~4233
+ 420f:  jz              local0 4219
+ 4212:  get_sibling     local0 -> local0 ~4219
+ 4216:  jump            421d
+ 4219:  get_child       #4c -> local0 421d
+ 421d:  test_attr       local0 #14 420f
+ 4222:  test_attr       local0 #02 ~420f
+ 4227:  insert_obj      "thief" local0
+ 422a:  clear_attr      "thief" #1b
+ 422d:  set_attr        "thief" #1d
+ 4230:  jump            418a
+ 4233:  je              local0 #0e rfalse
+ 4237:  call            423e local0 -> sp
+ 423d:  ret_popped      
+
+Routine 423e, 3 locals (0000, 0000, 0000)
+
+ 4245:  get_child       "thief" -> local1 4249
+ 4249:  jz              local1 rtrue
+ 424c:  get_sibling     local1 -> local2 4250
+ 4250:  je              local1 #9d ~4257
+ 4254:  jump            42ab
+ 4257:  get_prop        local1 #0c -> sp
+ 425b:  jz              sp ~42ab
+ 425f:  call            3052 #1e -> sp
+ 4265:  jz              sp 42ab
+ 4269:  clear_attr      local1 #1d
+ 426c:  insert_obj      local1 local0
+ 426f:  je              local0 g00 ~42ab
+ 4273:  print           "The robber, rummaging through his bag, dropped a few
+items he found valueless."
+ 42aa:  new_line        
+ 42ab:  store           local1 local2
+ 42ae:  jump            4249
+
+Routine 42b2, 3 locals (0000, 0000, 0000)
+
+ 42b9:  get_child       local0 -> local1 42bd
+ 42bd:  jz              local1 rtrue
+ 42c0:  get_sibling     local1 -> local2 42c4
+ 42c4:  get_prop        local1 #0c -> sp
+ 42c8:  jz              sp ~431e
+ 42cc:  test_attr       local1 #12 ~431e
+ 42d1:  test_attr       local1 #14 431e
+ 42d6:  test_attr       local1 #1d 431e
+ 42db:  je              local1 #9d 42e8
+ 42df:  call            3052 #0a -> sp
+ 42e5:  jz              sp 431e
+ 42e8:  insert_obj      local1 "thief"
+ 42eb:  set_attr        local1 #1c
+ 42ee:  set_attr        local1 #1d
+ 42f1:  je              local1 #72 ~42f8
+ 42f5:  store           g5f #00
+ 42f8:  je              local0 g00 ~rtrue
+ 42fc:  print           "You suddenly notice that the "
+ 4311:  print_obj       local1
+ 4313:  print           " vanished."
+ 431c:  new_line        
+ 431d:  rtrue           
+ 431e:  store           local1 local2
+ 4321:  jump            42bd
+
+Routine 4324, 6 locals (0000, 0000, 0000, 0000, 0000, 0000)
+
+ 4331:  get_child       local0 -> local4 4335
+ 4335:  jz              local4 ~433a
+ 4338:  ret             local5
+ 433a:  get_sibling     local4 -> local3 433e
+ 433e:  test_attr       local4 #1d 4369
+ 4342:  test_attr       local4 #14 4369
+ 4346:  get_prop        local4 #0c -> sp
+ 434a:  jg              sp #00 ~4369
+ 434e:  jz              local2 4359
+ 4351:  random          #64 -> sp
+ 4355:  jg              local2 sp ~4369
+ 4359:  insert_obj      local4 local1
+ 435c:  set_attr        local4 #1c
+ 435f:  je              local1 local1 ~4366
+ 4363:  set_attr        local4 #1d
+ 4366:  store           local5 #01
+ 4369:  store           local4 local3
+ 436c:  jump            4335
+
+Routine 4370, 4 locals (0000, 0000, 0000, 0000)
+
+ 4379:  test_attr       local0 #1d rfalse
+ 437d:  jz              g55 439a
+ 4380:  get_prop_addr   local0 #12 -> local2
+ 4384:  get_prop_len    local2 -> sp
+ 4387:  div             sp #02 -> sp
+ 438b:  sub             sp #01 -> sp
+ 438f:  call            3f1e g55 local2 sp -> sp
+ 4397:  jz              sp rfalse
+ 439a:  jz              g4e 43b6
+ 439d:  get_prop_addr   local0 #10 -> local2
+ 43a1:  jz              local2 rfalse
+ 43a4:  get_prop_len    local2 -> sp
+ 43a7:  sub             sp #01 -> sp
+ 43ab:  call            3f46 g4e local2 sp -> sp
+ 43b3:  jz              sp rfalse
+ 43b6:  jz              g4f rtrue
+ 43b9:  test_attr       local0 g4f rtrue
+ 43bd:  rfalse          
+
+Routine 43be, 0 locals ()
+
+ 43bf:  call            8044 #82 #21df #17 -> sp
+ 43c8:  ret_popped      
+
+Routine 43ca, 0 locals ()
+
+ 43cb:  set_attr        #0000 #1c
+ 43d0:  ret_popped      
+
+Routine 43d2, 0 locals ()
+
+ 43d3:  store           g09 #01
+ 43d6:  store           g40 #00
+ 43d9:  print_ret       "Maximum verbosity."
+
+Routine 43ea, 0 locals ()
+
+ 43eb:  store           g09 #00
+ 43ee:  store           g40 #00
+ 43f1:  print_ret       "Brief descriptions."
+
+Routine 4402, 0 locals ()
+
+ 4403:  store           g40 #01
+ 4406:  print_ret       "Super-brief descriptions."
+
+Routine 441c, 0 locals ()
+
+ 441d:  call            4474 #01 -> sp
+ 4423:  jz              sp rfalse
+ 4426:  call            4510 #01 -> sp
+ 442c:  ret_popped      
+
+Routine 442e, 0 locals ()
+
+ 442f:  call            4474 -> sp
+ 4434:  jz              sp rfalse
+ 4437:  jz              g40 ~rfalse
+ 443a:  call            4510 -> sp
+ 443f:  ret_popped      
+
+Routine 4440, 0 locals ()
+
+ 4441:  get_prop        g3b #08 -> sp
+ 4445:  jz              sp 4450
+ 4448:  get_prop        g3b #08 -> sp
+ 444c:  print_paddr     sp
+ 444e:  new_line        
+ 444f:  rtrue           
+ 4450:  test_attr       g3b #0f 4458
+ 4454:  test_attr       g3b #16 ~445e
+ 4458:  call            57f4 -> sp
+ 445d:  ret_popped      
+ 445e:  print_ret       "There's nothing unusual about it."
+
+Routine 4474, 3 locals (0000, 0000, 0000)
+
+ 447b:  jz              local0 4484
+ 447e:  push            local0
+ 4481:  jump            4487
+ 4484:  push            g09
+ 4487:  pull            local1
+ 448a:  jz              g60 ~44bc
+ 448d:  print           "It is pitch black. You are likely to be eaten by a
+grue."
+ 44ba:  new_line        
+ 44bb:  rfalse          
+ 44bc:  test_attr       g00 #1c ~44c4
+ 44c0:  test_attr       g00 #00 ~44ca
+ 44c4:  set_attr        g00 #1c
+ 44c7:  store           local1 #01
+ 44ca:  print_obj       g00
+ 44cc:  new_line        
+ 44cd:  jz              local0 ~44d3
+ 44d0:  jz              g40 ~rtrue
+ 44d3:  get_parent      g22 -> sp
+ 44d6:  test_attr       sp #05 ~44f2
+ 44da:  print           "(You are in the "
+ 44e7:  get_parent      g22 -> sp
+ 44ea:  print_obj       sp
+ 44ec:  print           ".)"
+ 44f1:  new_line        
+ 44f2:  jz              local1 4501
+ 44f5:  get_prop        g00 #11 -> sp
+ 44f9:  call            sp #03 -> sp
+ 44fe:  jz              sp ~rtrue
+ 4501:  jz              local1 rtrue
+ 4504:  get_prop        g00 #0b -> local2
+ 4508:  jz              local2 rtrue
+ 450b:  print_paddr     local2
+ 450d:  new_line        
+ 450e:  rtrue           
+
+Routine 4510, 1 local (0000)
+
+ 4513:  jz              g60 4533
+ 4516:  get_child       g00 -> sp ~rfalse
+ 451a:  jz              local0 4523
+ 451d:  push            local0
+ 4520:  jump            4526
+ 4523:  push            g09
+ 4526:  pull            local0
+ 4529:  call            45be g00 local0 #ffff -> sp
+ 4532:  ret_popped      
+ 4533:  print_ret       "I can't see in the dark."
+
+Routine 4542, 5 locals (0000, 0000, 0000, 0000, 0000)
+
+ 454d:  jz              local2 ~457a
+ 4550:  test_attr       local0 #1c 455b
+ 4554:  get_prop        local0 #0e -> local3
+ 4558:  jz              local3 ~4562
+ 455b:  get_prop        local0 #0b -> local3
+ 455f:  jz              local3 4567
+ 4562:  print_paddr     local3
+ 4564:  jump            4585
+ 4567:  print           "There is a "
+ 4570:  print_obj       local0
+ 4572:  print           " here."
+ 4577:  jump            4585
+ 457a:  loadw           g08 local2 -> sp
+ 457e:  print_paddr     sp
+ 4580:  print           "A "
+ 4583:  print_obj       local0
+ 4585:  jz              local2 ~45a6
+ 4588:  get_parent      g22 -> local4
+ 458b:  jz              local4 45a6
+ 458e:  test_attr       local4 #05 ~45a6
+ 4592:  jin             local0 g00 ~45a6
+ 4596:  print           " (outside the "
+ 45a1:  print_obj       local4
+ 45a3:  print           ")"
+ 45a6:  new_line        
+ 45a7:  call            5882 local0 -> sp
+ 45ad:  jz              sp rfalse
+ 45b0:  get_child       local0 -> sp ~rfalse
+ 45b4:  call            45be local0 local1 local2 -> sp
+ 45bc:  ret_popped      
+
+Routine 45be, 9 locals (0000, 0000, 0000, 0000, 0000, 0000, 0000, 0000, 0000)
+
+ 45d1:  get_child       local0 -> local3 ~rtrue
+ 45d5:  get_parent      g22 -> local5
+ 45d8:  jz              local5 45e2
+ 45db:  test_attr       local5 #05 ~45e2
+ 45df:  jump            45e5
+ 45e2:  store           local5 #00
+ 45e5:  store           local4 #01
+ 45e8:  get_parent      local0 -> sp
+ 45eb:  je              g22 local0 sp ~45f7
+ 45f1:  store           local8 #01
+ 45f4:  jump            4640
+ 45f7:  jz              local3 ~45fd
+ 45fa:  jump            4640
+ 45fd:  je              local3 local5 ~4607
+ 4601:  store           local7 #01
+ 4604:  jump            4639
+ 4607:  je              local3 g22 ~460e
+ 460b:  jump            4639
+ 460e:  test_attr       local3 #1d 4639
+ 4612:  test_attr       local3 #1c 4639
+ 4616:  get_prop        local3 #0e -> local6
+ 461a:  jz              local6 4639
+ 461d:  test_attr       local3 #19 4624
+ 4621:  print_paddr     local6
+ 4623:  new_line        
+ 4624:  call            5882 local3 -> sp
+ 462a:  jz              sp 4639
+ 462d:  get_child       local3 -> sp ~4639
+ 4631:  call            45be local3 local1 #00 -> sp
+ 4639:  get_sibling     local3 -> local3 463d
+ 463d:  jump            45f7
+ 4640:  get_child       local0 -> local3 4644
+ 4644:  jz              local3 ~4668
+ 4647:  jz              local7 465b
+ 464a:  jz              local5 465b
+ 464d:  get_child       local5 -> sp ~465b
+ 4651:  inc             local2
+ 4653:  call            45be local5 local1 local2 -> sp
+ 465b:  jz              local4 ~4663
+ 465e:  push            #01
+ 4661:  ret             sp
+ 4663:  push            #00
+ 4666:  ret             sp
+ 4668:  je              local3 local5 #a7 ~4671
+ 466e:  jump            46b0
+ 4671:  test_attr       local3 #1d 46b0
+ 4676:  jz              local8 ~4684
+ 4679:  test_attr       local3 #1c 4684
+ 467d:  get_prop        local3 #0e -> sp
+ 4681:  jz              sp ~46b0
+ 4684:  test_attr       local3 #19 46a2
+ 4688:  jz              local4 4697
+ 468b:  call            46b8 local0 local2 -> sp
+ 4692:  inc             local2
+ 4694:  store           local4 #00
+ 4697:  call            4542 local3 local1 local2 -> sp
+ 469f:  jump            46b0
+ 46a2:  get_child       local3 -> sp ~46b0
+ 46a6:  inc             local2
+ 46a8:  call            45be local3 local1 local2 -> sp
+ 46b0:  get_sibling     local3 -> local3 46b4
+ 46b4:  jump            4644
+
+Routine 46b8, 2 locals (0000, 0000)
+
+ 46bd:  je              local0 #76 ~46d2
+ 46c1:  print_ret       "Your treasures are:"
+ 46d2:  je              local0 g22 ~46e5
+ 46d6:  print_ret       "You are carrying:"
+ 46e5:  jin             local0 #4c rfalse
+ 46e9:  jg              local1 #00 ~46f3
+ 46ed:  loadw           g08 local1 -> sp
+ 46f1:  print_paddr     sp
+ 46f3:  test_attr       local0 #0b ~4709
+ 46f7:  print           "Sitting on the "
+ 4702:  print_obj       local0
+ 4704:  print_ret       " is: "
+ 4709:  print           "The "
+ 470e:  print_obj       local0
+ 4710:  print_ret       " contains:"
+
+Routine 471a, 1 local (0000)
+
+ 471d:  add             g6a local0 -> g6a
+ 4721:  add             g01 local0 -> g01
+ 4725:  jl              g01 g45 rtrue
+ 4729:  jz              g1a ~rtrue
+ 472c:  store           g1a #01
+ 472f:  clear_attr      "ancient map" #1d
+ 4732:  clear_attr      "West of House" #1c
+ 4735:  print_ret       "An almost inaudible voice whispers in your ear, ~Look
+to your treasures for the final secret.~"
+
+Routine 477a, 2 locals (0000, 0000)
+
+ 477f:  get_prop        local0 #0d -> local1
+ 4783:  jg              local1 #00 ~rfalse
+ 4787:  call            471a local1 -> sp
+ 478d:  put_prop        local0 #0d #00
+ 4792:  rtrue           
+
+Routine 4794, 1 local (0001)
+
+ 4797:  print           "Your score is "
+ 47a2:  print_num       g01
+ 47a5:  print           " (total of "
+ 47b0:  print_num       g45
+ 47b3:  print           " points), in "
+ 47be:  print_num       g02
+ 47c1:  je              g02 #01 ~47cf
+ 47c5:  print           " move."
+ 47cc:  jump            47d6
+ 47cf:  print           " moves."
+ 47d6:  new_line        
+ 47d7:  rtrue           
+
+Routine 47d8, 0 locals ()
+
+ 47d9:  call            4794 -> sp
+ 47de:  quit            
+
+Routine 47e0, 2 locals (0001, 0000)
+
+ 47e5:  call            4794 -> sp
+ 47ea:  jz              local0 4816
+ 47ed:  print           "Do you wish to leave the game? (Y/N): "
+ 480e:  call            4820 -> sp
+ 4813:  jz              sp ~4819
+ 4816:  jz              local0 ~481b
+ 4819:  quit            
+ 481a:  rtrue           
+ 481b:  print_ret       "Ok."
+
+Routine 4820, 0 locals ()
+
+ 4821:  print           ">"
+ 4826:  read            g21 g2f
+ 482a:  loadw           g2f #01 -> sp
+ 482e:  je              sp "yes" "y" ~rfalse
+ 4836:  rtrue           
+
+Routine 4838, 1 local (0011)
+
+ 483b:  print           "ZORK: The Great Underground Empire^Copyright "
+ 4860:  print_num       g25
+ 4863:  print           " by Infocom, Inc.^All rights reserved.^ZORK is a
+trademark of Infocom, Inc.^Release "
+ 48ac:  loadw           #00 #01 -> sp
+ 48b0:  and             sp #07ff -> sp
+ 48b6:  print_num       sp
+ 48b9:  new_line        
+ 48ba:  rtrue           
+
+Routine 48bc, 1 local (0000)
+
+ 48bf:  jz              g0c 48ce
+ 48c2:  get_parent      g0c -> sp
+ 48c5:  jz              sp ~48ce
+ 48c8:  push            g0c
+ 48cb:  jump            48e0
+ 48ce:  jz              g59 48dd
+ 48d1:  get_parent      g59 -> sp
+ 48d4:  jz              sp ~48dd
+ 48d7:  push            g59
+ 48da:  jump            48e0
+ 48dd:  push            #00
+ 48e0:  store           local0 sp
+ 48e3:  jz              local0 48fd
+ 48e6:  print           "I can't see the "
+ 48ef:  print_obj       local0
+ 48f1:  print           " anymore."
+ 48fa:  new_line        
+ 48fb:  ret             #02
+ 48fd:  call            32c0 g5d g0c g59 -> sp
+ 4905:  ret_popped      
+
+Routine 4906, 2 locals (0000, 0000)
+
+ 490b:  print_paddr     local0
+ 490d:  new_line        
+ 490e:  call            471a #fff6 -> sp
+ 4915:  print           " ^   ****  You have died  **** ^^"
+ 493e:  jl              g63 #02 49a5
+ 4943:  print           "You clearly are a suicidal maniac. We don't allow
+psychotics in the cave, since they may harm other adventurers. Sorry."
+ 499e:  new_line        
+ 499f:  call            47d8 -> sp
+ 49a4:  ret_popped      
+ 49a5:  inc             g63
+ 49a7:  insert_obj      g22 g00
+ 49aa:  print           "Now, let's take a look here...^Well, you probably
+deserve another chance. I can't quite fix you up completely, but you can't have
+everything."
+ 4a0b:  new_line        
+ 4a0c:  clear_attr      "trap door" #1c
+ 4a0f:  store           g20 #00
+ 4a12:  call            4a68 -> sp
+ 4a17:  call            4a1e -> sp
+ 4a1c:  ret_popped      
+
+Routine 4a1e, 0 locals ()
+
+ 4a1f:  call            3090 #374b -> sp
+ 4a26:  storew          sp #00 #00
+ 4a2b:  call            3090 #3771 -> sp
+ 4a32:  storew          sp #00 #00
+ 4a37:  call            3090 #3c4a -> sp
+ 4a3e:  storew          sp #00 #00
+ 4a43:  call            3090 #21df -> sp
+ 4a4a:  storew          sp #00 #00
+ 4a4f:  call            3090 #2043 -> sp
+ 4a56:  storew          sp #00 #00
+ 4a5b:  call            3090 #4737 -> sp
+ 4a62:  storew          sp #00 #00
+ 4a67:  rtrue           
+
+Routine 4a68, 4 locals (0000, 0000, 0000, 0000)
+
+ 4a71:  jin             "lamp" g22 ~4a78
+ 4a75:  insert_obj      "lamp" "Living Room"
+ 4a78:  jin             "gold coffin" g22 ~4a7f
+ 4a7c:  insert_obj      "gold coffin" "Egyptian Room"
+ 4a7f:  put_prop        "sword" #0c #00
+ 4a84:  get_child       g22 -> local2 4a88
+ 4a88:  loadw           g3c #00 -> local3
+ 4a8c:  store           local1 local2
+ 4a8f:  jz              local1 rtrue
+ 4a92:  get_sibling     local1 -> local2 4a96
+ 4a96:  get_prop        local1 #0c -> sp
+ 4a9a:  jg              sp #00 ~4ac2
+ 4a9e:  jz              local0 ~4aa5
+ 4aa1:  get_child       #4c -> local0 4aa5
+ 4aa5:  test_attr       local0 #02 ~4abb
+ 4aa9:  test_attr       local0 #03 4abb
+ 4aad:  random          #64 -> sp
+ 4ab1:  jg              #32 sp ~4abb
+ 4ab5:  insert_obj      local1 local0
+ 4ab8:  jump            4a8c
+ 4abb:  get_sibling     local0 -> local0 4abf
+ 4abf:  jump            4a9e
+ 4ac2:  random          local3 -> sp
+ 4ac6:  loadw           g3c sp -> sp
+ 4aca:  insert_obj      local1 sp
+ 4acd:  jump            4a8c
+
+orphan code fragment:
+
+ 4ad0:  call            3090 #0000 -> sp
+ 4ad7:  storew          sp #00 #00
+ 4adc:  call            3090 #0000 -> sp
+ 4ae3:  storew          sp #00 #00
+ 4ae8:  call            3090 #0000 -> sp
+ 4aef:  storew          sp #00 #00
+ 4af4:  call            3090 #21df -> sp
+ 4afb:  storew          sp #00 #00
+ 4b00:  call            3090 #21e5 -> sp
+ 4b07:  storew          sp #00 #00
+ 4b0c:  call            3090 #2043 -> sp
+ 4b13:  storew          sp #00 #00
+ 4b18:  call            3090 #0000 -> sp
+ 4b1f:  storew          sp #00 #00
+ 4b24:  rtrue           
+
+Routine 4b26, 0 locals ()
+
+ 4b27:  restore         ~4b35
+ 4b29:  print           "Ok."
+ 4b2e:  new_line        
+ 4b2f:  call            442e -> sp
+ 4b34:  ret_popped      
+ 4b35:  print_ret       "Failed."
+
+Routine 4b3e, 0 locals ()
+
+ 4b3f:  save            ~4b46
+ 4b41:  print_ret       "Ok."
+ 4b46:  print_ret       "Failed."
+
+Routine 4b50, 0 locals ()
+
+ 4b51:  call            4794 #01 -> sp
+ 4b57:  print           "Are you sure (Y/N): "
+ 4b6a:  call            4820 -> sp
+ 4b6f:  jz              sp rfalse
+ 4b72:  restart         
+ 4b73:  rtrue           
+
+Routine 4b74, 0 locals ()
+
+ 4b75:  print_ret       "Use directions to move."
+
+Routine 4b88, 0 locals ()
+
+ 4b89:  call            4b90 -> sp
+ 4b8e:  ret_popped      
+
+Routine 4b90, 0 locals ()
+
+ 4b91:  call            306c g4c -> sp
+ 4b97:  print_paddr     sp
+ 4b99:  new_line        
+ 4b9a:  rtrue           
+
+Routine 4b9c, 2 locals (0000, 0000)
+
+ 4ba1:  call            4bb2 g00 local0 -> local1
+ 4ba8:  jz              local1 rfalse
+ 4bab:  call            530a local1 -> sp
+ 4bb1:  ret_popped      
+
+Routine 4bb2, 4 locals (0000, 0000, 0000, 0000)
+
+ 4bbb:  loadw           local1 #00 -> local3
+ 4bbf:  inc_chk         local2 local3 rfalse
+ 4bc3:  loadw           local1 local2 -> sp
+ 4bc7:  je              sp local0 ~4bbf
+ 4bcc:  je              local2 local3 rfalse
+ 4bd0:  add             local2 #01 -> sp
+ 4bd4:  loadw           local1 sp -> sp
+ 4bd8:  ret             sp
+
+Routine 4bda, 5 locals (0000, 0000, 0000, 0000, 0000)
+
+ 4be5:  get_prop_addr   g00 g3b -> local0
+ 4be9:  jz              local0 4c8d
+ 4bed:  get_prop_len    local0 -> local1
+ 4bf0:  je              local1 #01 ~4bff
+ 4bf4:  loadb           local0 #00 -> sp
+ 4bf8:  call            530a sp -> sp
+ 4bfe:  ret_popped      
+ 4bff:  je              local1 #02 ~4c0c
+ 4c03:  loadw           local0 #00 -> sp
+ 4c07:  print_paddr     sp
+ 4c09:  new_line        
+ 4c0a:  ret             #02
+ 4c0c:  je              local1 #03 ~4c24
+ 4c10:  loadw           local0 #00 -> sp
+ 4c14:  call            sp -> local4
+ 4c18:  jz              local4 4c22
+ 4c1b:  call            530a local4 -> sp
+ 4c21:  ret_popped      
+ 4c22:  ret             #02
+ 4c24:  je              local1 #04 ~4c59
+ 4c28:  loadb           local0 #01 -> sp
+ 4c2c:  load            [sp] -> sp
+ 4c2f:  jz              sp 4c3d
+ 4c32:  loadb           local0 #00 -> sp
+ 4c36:  call            530a sp -> sp
+ 4c3c:  ret_popped      
+ 4c3d:  loadw           local0 #01 -> local2
+ 4c41:  jz              local2 4c49
+ 4c44:  print_paddr     local2
+ 4c46:  new_line        
+ 4c47:  ret             #02
+ 4c49:  print           "You can't go that way."
+ 4c56:  new_line        
+ 4c57:  ret             #02
+ 4c59:  je              local1 #05 ~rfalse
+ 4c5d:  loadb           local0 #01 -> local3
+ 4c61:  test_attr       local3 #0e ~4c70
+ 4c65:  loadb           local0 #00 -> sp
+ 4c69:  call            530a sp -> sp
+ 4c6f:  ret_popped      
+ 4c70:  loadw           local0 #01 -> local2
+ 4c74:  jz              local2 4c7c
+ 4c77:  print_paddr     local2
+ 4c79:  new_line        
+ 4c7a:  ret             #02
+ 4c7c:  print           "The "
+ 4c81:  print_obj       local3
+ 4c83:  print           " is closed."
+ 4c8a:  new_line        
+ 4c8b:  ret             #02
+ 4c8d:  jz              g60 ~4ca0
+ 4c90:  random          #64 -> sp
+ 4c94:  jg              #4b sp ~4ca0
+ 4c98:  call            4906 s100 -> sp
+ 4c9f:  ret_popped      
+ 4ca0:  print           "You can't go that way."
+ 4cad:  new_line        
+ 4cae:  ret             #02
+
+Routine 4cb0, 0 locals ()
+
+ 4cb1:  get_child       g22 -> sp ~4cbc
+ 4cb5:  call            45be g22 -> sp
+ 4cbb:  ret_popped      
+ 4cbc:  print_ret       "You are empty handed."
+
+Routine 4cd0, 0 locals ()
+
+ 4cd1:  jin             g3b g22 ~4ce6
+ 4cd5:  print_ret       "You already have it."
+ 4ce6:  get_parent      g3b -> sp
+ 4ce9:  test_attr       sp #0f ~4d01
+ 4ced:  get_parent      g3b -> sp
+ 4cf0:  test_attr       sp #0e 4d01
+ 4cf4:  print_ret       "I can't reach that."
+ 4d01:  jz              g0f 4d28
+ 4d04:  je              g0f #3e ~4d10
+ 4d08:  jin             g3b g00 ~4d10
+ 4d0c:  store           g0f #00
+ 4d0f:  rfalse          
+ 4d10:  get_parent      g3b -> sp
+ 4d13:  je              g0f sp 4d24
+ 4d17:  print_ret       "It's not in that!"
+ 4d24:  store           g0f #00
+ 4d27:  rfalse          
+ 4d28:  get_parent      g22 -> sp
+ 4d2b:  je              g3b sp ~rfalse
+ 4d2f:  print_ret       "You're in it!"
+
+Routine 4d3c, 0 locals ()
+
+ 4d3d:  call            4d4e -> sp
+ 4d42:  je              sp #01 ~rfalse
+ 4d46:  print_ret       "Taken."
+
+Routine 4d4e, 4 locals (0001, 0000, 0000, 0000)
+
+ 4d57:  test_attr       g3b #12 4d64
+ 4d5b:  jz              local0 rfalse
+ 4d5e:  call            4b90 -> sp
+ 4d63:  rfalse          
+ 4d64:  get_parent      g3b -> sp
+ 4d67:  jin             sp g22 4dc4
+ 4d6c:  call            50f6 g3b -> local3
+ 4d72:  call            50f6 g22 -> sp
+ 4d78:  add             local3 sp -> sp
+ 4d7c:  jg              sp g24 ~4dc4
+ 4d81:  jz              local0 4dc2
+ 4d85:  print           "Your load is too heavy"
+ 4d98:  jl              g24 g15 ~4dbe
+ 4d9c:  print           ", especially in light of your condition."
+ 4dbb:  jump            4dc1
+ 4dbe:  print           "."
+ 4dc1:  new_line        
+ 4dc2:  ret             #02
+ 4dc4:  call            50e2 g22 -> local1
+ 4dca:  jg              local1 #07 ~4e2f
+ 4dcf:  mul             local1 #08 -> local3
+ 4dd3:  random          #64 -> sp
+ 4dd7:  jg              local3 sp ~4e2f
+ 4ddc:  get_child       g22 -> local2 4de0
+ 4de0:  get_sibling     local2 -> local2 4de4
+ 4de4:  print           "Oh, no. The "
+ 4df1:  print_obj       local2
+ 4df3:  print           " slips from your arms while taking the "
+ 4e0e:  print_obj       g3b
+ 4e10:  print           " and both tumble to the ground."
+ 4e25:  new_line        
+ 4e26:  call            32c0 #1b local2 -> sp
+ 4e2d:  ret             #02
+ 4e2f:  insert_obj      g3b g22
+ 4e32:  set_attr        g3b #1c
+ 4e35:  call            477a g3b -> sp
+ 4e3b:  rtrue           
+
+Routine 4e3c, 0 locals ()
+
+ 4e3d:  jin             g3b #10 4e45
+ 4e41:  test_attr       g3b #12 rfalse
+ 4e45:  call            4b90 -> sp
+ 4e4a:  ret_popped      
+
+Routine 4e4c, 1 local (0000)
+
+ 4e4f:  test_attr       g0f #0e 4e6d
+ 4e53:  test_attr       g0f #16 4e5b
+ 4e57:  test_attr       g0f #0f 4e6d
+ 4e5b:  test_attr       g0f #05 ~4e62
+ 4e5f:  jump            4e6d
+ 4e62:  print_ret       "I can't do that."
+ 4e6d:  test_attr       g0f #0e 4e81
+ 4e71:  print           "The "
+ 4e76:  print_obj       g0f
+ 4e78:  print_ret       " isn't open."
+ 4e81:  je              g0f g3b ~4e8b
+ 4e85:  call            4b90 -> sp
+ 4e8a:  ret_popped      
+ 4e8b:  jin             g3b g0f ~4ea0
+ 4e8f:  print_ret       "It's already there!"
+ 4ea0:  call            50f6 g0f -> local0
+ 4ea6:  get_prop        g0f #09 -> sp
+ 4eaa:  sub             local0 sp -> local0
+ 4eae:  call            50f6 g3b -> sp
+ 4eb4:  add             local0 sp -> local0
+ 4eb8:  get_prop        g0f #0a -> sp
+ 4ebc:  jg              local0 sp ~4ecb
+ 4ec0:  print_ret       "There's no room."
+ 4ecb:  call            8b88 g3b -> sp
+ 4ed1:  jz              sp ~4ee8
+ 4ed4:  test_attr       g3b #0d ~4ee8
+ 4ed8:  print           "You don't have the "
+ 4ee3:  print_obj       g3b
+ 4ee5:  print_ret       "."
+ 4ee8:  call            8b88 g3b -> sp
+ 4eee:  jz              sp ~4ef9
+ 4ef1:  call            4d4e -> sp
+ 4ef6:  jz              sp rtrue
+ 4ef9:  call            477a g3b -> sp
+ 4eff:  insert_obj      g3b g0f
+ 4f02:  set_attr        g3b #1c
+ 4f05:  print_ret       "Done."
+
+Routine 4f0a, 0 locals ()
+
+ 4f0b:  get_parent      g22 -> sp
+ 4f0e:  je              g3b sp ~rfalse
+ 4f12:  call            32c0 #19 g3b -> sp
+ 4f19:  rtrue           
+
+Routine 4f1a, 0 locals ()
+
+ 4f1b:  test_attr       g0f #13 4f3a
+ 4f1f:  print           "You can't give a "
+ 4f2c:  print_obj       g3b
+ 4f2e:  print           " to a "
+ 4f35:  print_obj       g0f
+ 4f37:  print_ret       "!"
+ 4f3a:  call            4fa0 -> sp
+ 4f3f:  jz              sp rfalse
+ 4f42:  print_ret       "Given."
+
+Routine 4f4a, 0 locals ()
+
+ 4f4b:  call            32c0 #26 g0f g3b -> sp
+ 4f53:  ret_popped      
+
+Routine 4f54, 0 locals ()
+
+ 4f55:  call            4fa0 -> sp
+ 4f5a:  jz              sp rfalse
+ 4f5d:  print_ret       "Dropped."
+
+Routine 4f66, 0 locals ()
+
+ 4f67:  call            4fa0 -> sp
+ 4f6c:  jz              sp rfalse
+ 4f6f:  print_ret       "Thrown."
+
+Routine 4f76, 1 local (0000)
+
+ 4f79:  je              g0f #8a ~4f9b
+ 4f7d:  get_parent      g22 -> local0
+ 4f80:  test_attr       local0 #05 ~4f95
+ 4f84:  get_parent      local0 -> sp
+ 4f87:  insert_obj      g3b sp
+ 4f8a:  print_obj       g3b
+ 4f8c:  print_ret       " overboard!"
+ 4f95:  call            4b90 -> sp
+ 4f9a:  ret_popped      
+ 4f9b:  print_ret       "Huh?"
+
+Routine 4fa0, 0 locals ()
+
+ 4fa1:  jin             g3b g22 4fc6
+ 4fa5:  get_parent      g3b -> sp
+ 4fa8:  jin             sp g22 4fc6
+ 4fac:  print           "You're not carrying the "
+ 4fbf:  print_obj       g3b
+ 4fc1:  print           "."
+ 4fc4:  new_line        
+ 4fc5:  rfalse          
+ 4fc6:  jin             g3b g22 4fe1
+ 4fca:  get_parent      g3b -> sp
+ 4fcd:  test_attr       sp #0e 4fe1
+ 4fd1:  print           "The "
+ 4fd6:  print_obj       g3b
+ 4fd8:  print           " is closed."
+ 4fdf:  new_line        
+ 4fe0:  rfalse          
+ 4fe1:  get_parent      g22 -> sp
+ 4fe4:  insert_obj      g3b sp
+ 4fe7:  rtrue           
+
+Routine 4fe8, 2 locals (0000, 0000)
+
+ 4fed:  test_attr       g3b #0f 5005
+ 4ff1:  print           "How does one open a "
+ 5000:  print_obj       g3b
+ 5002:  print_ret       "?"
+ 5005:  get_prop        g3b #0a -> sp
+ 5009:  jz              sp 506f
+ 500d:  test_attr       g3b #0e ~5020
+ 5011:  print_ret       "It is already open."
+ 5020:  set_attr        g3b #0e
+ 5023:  get_child       g3b -> sp ~502b
+ 5027:  test_attr       g3b #10 ~5032
+ 502b:  print_ret       "Opened."
+ 5032:  get_child       g3b -> local0 ~5052
+ 5036:  get_sibling     local0 -> sp 5052
+ 503a:  get_prop        local0 #0e -> local1
+ 503e:  jz              local1 5052
+ 5041:  print           "The "
+ 5046:  print_obj       g3b
+ 5048:  print           " opens."
+ 504d:  new_line        
+ 504e:  print_paddr     local1
+ 5050:  new_line        
+ 5051:  rtrue           
+ 5052:  print           "Opening the "
+ 505b:  print_obj       g3b
+ 505d:  print           " reveals "
+ 5066:  call            5082 g3b -> sp
+ 506c:  print_ret       "."
+ 506f:  print           "The "
+ 5074:  print_obj       g3b
+ 5076:  print_ret       " cannot be opened."
+
+Routine 5082, 4 locals (0000, 0000, 0000, 0001)
+
+ 508b:  get_child       local0 -> local1 ~rfalse
+ 508f:  get_sibling     local1 -> local2 5093
+ 5093:  jz              local3 509c
+ 5096:  store           local3 #00
+ 5099:  jump            50a7
+ 509c:  print           ", "
+ 509f:  jz              local2 ~50a7
+ 50a2:  print           "and "
+ 50a7:  print           "a "
+ 50aa:  print_obj       local1
+ 50ac:  store           local1 local2
+ 50af:  jz              local1 ~508f
+ 50b3:  rtrue           
+
+Routine 50b4, 0 locals ()
+
+ 50b5:  test_attr       g3b #0f 50c4
+ 50b9:  print_ret       "You can't do that!"
+ 50c4:  test_attr       g3b #0e ~50d4
+ 50c8:  print           "Closed."
+ 50cf:  new_line        
+ 50d0:  clear_attr      g3b #0e
+ 50d3:  rtrue           
+ 50d4:  print_ret       "It is already."
+
+Routine 50e2, 3 locals (0000, 0000, 0000)
+
+ 50e9:  get_child       local0 -> local2 ~50f4
+ 50ed:  inc             local1
+ 50ef:  get_sibling     local2 -> local2 50ed
+ 50f4:  ret             local1
+
+Routine 50f6, 3 locals (0000, 0000, 0000)
+
+ 50fd:  get_child       local0 -> local1 ~5110
+ 5101:  call            50f6 local1 -> sp
+ 5107:  add             local2 sp -> local2
+ 510b:  get_sibling     local1 -> local1 5101
+ 5110:  get_prop        local0 #09 -> sp
+ 5114:  add             local2 sp -> sp
+ 5118:  ret_popped      
+
+Routine 511a, 0 locals ()
+
+ 511b:  jin             g3b g00 rfalse
+ 511f:  print_ret       "I don't juggle objects!"
+
+Routine 5130, 0 locals ()
+
+ 5131:  test_attr       g3b #12 ~514b
+ 5135:  print           "Moving the "
+ 513e:  print_obj       g3b
+ 5140:  print_ret       " reveals nothing."
+ 514b:  print           "You can't move the "
+ 5158:  print_obj       g3b
+ 515a:  print_ret       "."
+
+Routine 515e, 0 locals ()
+
+ 515f:  test_attr       g3b #06 ~5199
+ 5163:  test_attr       g3b #03 ~5176
+ 5167:  print_ret       "It is already on."
+ 5176:  set_attr        g3b #03
+ 5179:  print           "The "
+ 517e:  print_obj       g3b
+ 5180:  print           " is now on."
+ 5189:  new_line        
+ 518a:  jz              g60 ~rtrue
+ 518d:  call            3f5e g00 -> g60
+ 5193:  call            441c -> sp
+ 5198:  rtrue           
+ 5199:  print_ret       "You can't turn that on."
+
+Routine 51a6, 0 locals ()
+
+ 51a7:  test_attr       g3b #06 ~51f8
+ 51ac:  test_attr       g3b #03 51bf
+ 51b0:  print_ret       "It is already off."
+ 51bf:  clear_attr      g3b #03
+ 51c2:  jz              g60 51cb
+ 51c5:  call            3f5e g00 -> g60
+ 51cb:  print           "The "
+ 51d0:  print_obj       g3b
+ 51d2:  print           " is now off."
+ 51db:  new_line        
+ 51dc:  call            3f5e g00 -> g60
+ 51e2:  jz              g60 ~rtrue
+ 51e5:  print           "It is now pitch black."
+ 51f6:  new_line        
+ 51f7:  rtrue           
+ 51f8:  print_ret       "You can't turn that off."
+
+Routine 5206, 1 local (0003)
+
+ 5209:  print           "Time passes..."
+ 5218:  new_line        
+ 5219:  dec_chk         local0 #00 ~5220
+ 521d:  jump            5230
+ 5220:  call            30c6 -> sp
+ 5225:  jz              sp 522b
+ 5228:  jump            5230
+ 522b:  inc             g02
+ 522d:  jump            5219
+ 5230:  store           g65 #01
+ 5233:  rtrue           
+
+Routine 5234, 1 local (0000)
+
+ 5237:  get_parent      g22 -> local0
+ 523a:  test_attr       g3b #05 ~5273
+ 523e:  jin             g3b g00 5259
+ 5242:  print           "The "
+ 5247:  print_obj       g3b
+ 5249:  print           " must be on the ground."
+ 5256:  new_line        
+ 5257:  ret             #02
+ 5259:  test_attr       local0 #05 ~rfalse
+ 525d:  print           "You are already in it!"
+ 5270:  new_line        
+ 5271:  ret             #02
+ 5273:  call            4b90 -> sp
+ 5278:  ret             #02
+
+Routine 527a, 1 local (0000)
+
+ 527d:  print           "You are now in the "
+ 528c:  print_obj       g3b
+ 528e:  print           "."
+ 5291:  new_line        
+ 5292:  insert_obj      g22 g3b
+ 5295:  get_prop        g3b #11 -> sp
+ 5299:  call            sp #02 -> sp
+ 529e:  rtrue           
+
+Routine 52a0, 0 locals ()
+
+ 52a1:  get_parent      g22 -> sp
+ 52a4:  je              sp g3b 52ba
+ 52a8:  print           "You're not in that!"
+ 52b7:  new_line        
+ 52b8:  ret             #02
+ 52ba:  test_attr       g00 #02 ~52d8
+ 52be:  print           "You are on your feet again."
+ 52d3:  new_line        
+ 52d4:  insert_obj      g22 g00
+ 52d7:  rtrue           
+ 52d8:  print           "You realize that getting out would probably be fatal."
+ 52fd:  new_line        
+ 52fe:  ret             #02
+
+Routine 5300, 0 locals ()
+
+ 5301:  call            32c0 #29 g3b #8e -> sp
+ 5309:  ret_popped      
+
+Routine 530a, 6 locals (0000, 0001, 0000, 0000, 0000, 0000)
+
+ 5317:  test_attr       local0 #02 5321
+ 531b:  push            #00
+ 531e:  jump            5324
+ 5321:  push            #01
+ 5324:  store           local2 sp
+ 5327:  get_parent      g22 -> local3
+ 532a:  store           local5 g60
+ 532d:  test_attr       local3 #05 ~5335
+ 5331:  get_prop        local3 #07 -> local4
+ 5335:  jz              local2 ~533f
+ 5338:  jz              local4 533f
+ 533b:  test_attr       local0 local4 ~5355
+ 533f:  test_attr       g00 #02 ~538c
+ 5344:  jz              local2 538c
+ 5348:  jz              local4 538c
+ 534c:  je              local4 #02 538c
+ 5351:  test_attr       local0 local4 538c
+ 5355:  jz              local4 5371
+ 5358:  print           "You can't go there in a "
+ 5369:  print_obj       local3
+ 536b:  print           "."
+ 536e:  jump            538a
+ 5371:  print           "You can't go there without a vehicle."
+ 538a:  new_line        
+ 538b:  rfalse          
+ 538c:  test_attr       local0 #1e ~5398
+ 5390:  get_prop        local0 #0b -> sp
+ 5394:  print_paddr     sp
+ 5396:  new_line        
+ 5397:  rfalse          
+ 5398:  jz              local4 53a1
+ 539b:  insert_obj      local3 local0
+ 539e:  jump            53a4
+ 53a1:  insert_obj      g22 local0
+ 53a4:  store           g00 local0
+ 53a7:  call            3f5e g00 -> g60
+ 53ad:  jz              local5 ~53c3
+ 53b0:  jz              g60 ~53c3
+ 53b3:  random          #64 -> sp
+ 53b7:  jg              #4b sp ~53c3
+ 53bb:  call            4906 s104 -> sp
+ 53c2:  ret_popped      
+ 53c3:  jz              g60 ~53de
+ 53c6:  print           "You have moved into a dark place."
+ 53dd:  new_line        
+ 53de:  get_prop        g00 #11 -> sp
+ 53e2:  call            sp #02 -> sp
+ 53e7:  call            477a local0 -> sp
+ 53ed:  jz              local1 rtrue
+ 53f0:  call            442e -> sp
+ 53f5:  rtrue           
+
+Routine 53f6, 0 locals ()
+
+ 53f7:  je              g3b #25 rfalse
+ 53fb:  print_ret       "You can't."
+
+Routine 5402, 0 locals ()
+
+ 5403:  remove_obj      g3b
+ 5405:  test_attr       g0f #04 ~5448
+ 540a:  test_attr       g0f #03 ~5448
+ 540e:  je              g0f #92 ~5432
+ 5412:  print           "The water evaporates before it gets close."
+ 542f:  jump            5446
+ 5432:  print           "The "
+ 5437:  print_obj       g0f
+ 5439:  print           " is extinguished."
+ 5446:  new_line        
+ 5447:  rtrue           
+ 5448:  print           "The water spills over the "
+ 5459:  print_obj       g0f
+ 545b:  print_ret       " and to the floor where it evaporates."
+
+Routine 5476, 1 local (0000)
+
+ 5479:  jz              g0f ~5499
+ 547c:  get_prop_addr   g00 #06 -> local0
+ 5480:  jz              local0 5499
+ 5483:  get_prop_len    local0 -> sp
+ 5486:  call            3f46 #7a local0 sp -> sp
+ 548e:  jz              sp 5495
+ 5491:  store           g0f #7a
+ 5494:  rfalse          
+ 5495:  print_paddr     g3f
+ 5497:  new_line        
+ 5498:  rtrue           
+ 5499:  je              g0f #25 #7a rfalse
+ 549f:  call            32c0 #1c g0f g3b -> sp
+ 54a7:  rtrue           
+
+Routine 54a8, 0 locals ()
+
+ 54a9:  jz              g0f ~54c3
+ 54ac:  call            5c68 #7a g00 -> sp
+ 54b3:  jz              sp 54bf
+ 54b6:  call            32c0 #24 g3b #7a -> sp
+ 54be:  ret_popped      
+ 54bf:  print_paddr     g3f
+ 54c1:  new_line        
+ 54c2:  rtrue           
+ 54c3:  call            4b90 -> sp
+ 54c8:  ret_popped      
+
+Routine 54ca, 0 locals ()
+
+ 54cb:  je              g00 #0d ~553d
+ 54d0:  jin             "cyclops" g00 ~553d
+ 54d5:  call            3090 #3c4a -> sp
+ 54dc:  storew          sp #00 #00
+ 54e1:  store           g6d #01
+ 54e4:  print           "The cyclops, hearing the name of his father's deadly
+nemesis, flees the room by knocking down the wall on the east of the room."
+ 5533:  new_line        
+ 5534:  store           g33 #01
+ 5537:  clear_attr      "cyclops" #1b
+ 553a:  remove_obj      "cyclops"
+ 553c:  rtrue           
+ 553d:  print_ret       "Wasn't he a sailor?"
+
+Routine 5550, 0 locals ()
+
+ 5551:  je              g3b #2e ~5563
+ 5555:  print           "Ding, dong."
+ 5560:  jump            5568
+ 5563:  call            4b90 -> sp
+ 5568:  new_line        
+ 5569:  rtrue           
+
+Routine 556a, 0 locals ()
+
+ 556b:  call            5572 -> sp
+ 5570:  ret_popped      
+
+Routine 5572, 3 locals (0000, 0000, 0000)
+
+ 5579:  test_attr       g3b #11 5583
+ 557d:  push            #00
+ 5580:  jump            5586
+ 5583:  push            #01
+ 5586:  store           local0 sp
+ 5589:  jz              local0 55c5
+ 558c:  jin             g3b g22 ~55c5
+ 5590:  je              g4a #1a ~55a6
+ 5594:  print           "How can I drink that?"
+ 55a3:  jump            55c3
+ 55a6:  print           "Thank you. It really hit the spot."
+ 55c1:  remove_obj      g3b
+ 55c3:  new_line        
+ 55c4:  rtrue           
+ 55c5:  test_attr       g3b #17 55cf
+ 55c9:  push            #00
+ 55cc:  jump            55d2
+ 55cf:  push            #01
+ 55d2:  store           local1 sp
+ 55d5:  jz              local1 561d
+ 55d9:  jin             g3b #10 55eb
+ 55dd:  get_parent      g3b -> local2
+ 55e0:  jz              local2 5610
+ 55e3:  jin             local2 g22 ~5610
+ 55e7:  test_attr       local2 #0e ~5610
+ 55eb:  print           "Thank you very much. I was rather thirsty."
+ 560c:  new_line        
+ 560d:  remove_obj      g3b
+ 560f:  rtrue           
+ 5610:  print_ret       "I can't get to it."
+ 561d:  jz              local0 ~rfalse
+ 5620:  jz              local1 ~rfalse
+ 5623:  print           "I don't think the "
+ 562e:  print_obj       g3b
+ 5630:  print_ret       " would agree with you."
+
+Routine 563e, 0 locals ()
+
+ 563f:  print           "The "
+ 5644:  print_obj       g3b
+ 5646:  print_ret       " makes no sound."
+
+Routine 5654, 0 locals ()
+
+ 5655:  je              g00 #86 ~5660
+ 5659:  call            530a #00 -> sp
+ 565f:  ret_popped      
+ 5660:  print_ret       "Your prayers may be someday answered."
+
+Routine 5680, 2 locals (0000, 0000)
+
+ 5685:  jz              g3b 56c6
+ 5689:  jin             g3b g00 ~56b1
+ 568d:  test_attr       g3b #15 ~56ab
+ 5691:  print           "The "
+ 5696:  print_obj       g3b
+ 5698:  print_ret       " is too big to jump over."
+ 56ab:  call            4b90 -> sp
+ 56b0:  ret_popped      
+ 56b1:  print_ret       "That would be a good trick."
+ 56c6:  get_prop_addr   g00 #16 -> local0
+ 56ca:  jz              local0 56f9
+ 56cd:  get_prop_len    local0 -> local1
+ 56d0:  je              local1 #02 56e2
+ 56d4:  je              local1 #04 ~56f3
+ 56d8:  loadb           local0 #01 -> sp
+ 56dc:  load            [sp] -> sp
+ 56df:  jz              sp ~56f3
+ 56e2:  print_ret       "It would be suicidal."
+ 56f3:  call            0 -> sp
+ 56f8:  ret_popped      
+ 56f9:  call            0 -> sp
+ 56fe:  ret_popped      
+
+Routine 5700, 0 locals ()
+
+ 5701:  call            32c0 #55 #14 -> sp
+ 5708:  ret_popped      
+
+Routine 570a, 0 locals ()
+
+ 570b:  jz              g3b 5788
+ 570f:  je              g3b #0000 ~5748
+ 5715:  inc             g44
+ 5717:  mod             g44 #0f -> sp
+ 571b:  jz              sp ~5737
+ 571e:  print_ret       "You seem to be repeating yourself."
+ 5737:  print_ret       "Nothing happens here."
+ 5748:  test_attr       g3b #15 ~575e
+ 574c:  print           "The "
+ 5751:  print_obj       g3b
+ 5753:  print_ret       " bows to you."
+ 575e:  print           "I think only schizophrenics say 'Hello' to a "
+ 5783:  print_obj       g3b
+ 5785:  print_ret       "."
+ 5788:  print_ret       "Good day."
+
+Routine 5792, 0 locals ()
+
+ 5793:  jz              g60 ~rfalse
+ 5796:  print_ret       "You can't read in the dark."
+
+Routine 57a8, 0 locals ()
+
+ 57a9:  test_attr       g3b #0a 57c1
+ 57ad:  print           "How can I read a "
+ 57bc:  print_obj       g3b
+ 57be:  print_ret       "?"
+ 57c1:  get_prop        g3b #08 -> sp
+ 57c5:  print_paddr     sp
+ 57c7:  new_line        
+ 57c8:  rtrue           
+
+Routine 57ca, 0 locals ()
+
+ 57cb:  print_ret       "There is nothing but dust there."
+
+Routine 57de, 0 locals ()
+
+ 57df:  print           "There is nothing behind the "
+ 57ee:  print_obj       g3b
+ 57f0:  print_ret       "."
+
+Routine 57f4, 0 locals ()
+
+ 57f5:  test_attr       g3b #16 ~5834
+ 57f9:  test_attr       g3b #0e ~5824
+ 57fd:  print           "The "
+ 5802:  print_obj       g3b
+ 5804:  print           " is open, but I can't tell what's beyond it."
+ 5821:  jump            5832
+ 5824:  print           "The "
+ 5829:  print_obj       g3b
+ 582b:  print           " is closed."
+ 5832:  new_line        
+ 5833:  rtrue           
+ 5834:  test_attr       g3b #0f ~586c
+ 5838:  call            5882 g3b -> sp
+ 583e:  jz              sp 585e
+ 5841:  get_child       g3b -> sp ~584e
+ 5845:  call            45be g3b -> sp
+ 584b:  jz              sp ~rtrue
+ 584e:  print           "The "
+ 5853:  print_obj       g3b
+ 5855:  print_ret       " is empty."
+ 585e:  print           "The "
+ 5863:  print_obj       g3b
+ 5865:  print_ret       " is closed."
+ 586c:  print           "I can't look inside a "
+ 587d:  print_obj       g3b
+ 587f:  print_ret       "."
+
+Routine 5882, 1 local (0000)
+
+ 5885:  test_attr       local0 #1d rfalse
+ 5889:  test_attr       local0 #10 rtrue
+ 588d:  test_attr       local0 #0e rtrue
+ 5891:  rfalse          
+
+Routine 5892, 0 locals ()
+
+ 5893:  test_attr       g0f #04 ~589b
+ 5897:  test_attr       g0f #03 rfalse
+ 589b:  print           "With a "
+ 58a2:  print_obj       g0f
+ 58a4:  print_ret       "??!?"
+
+Routine 58ac, 0 locals ()
+
+ 58ad:  test_attr       g3b #09 ~58ef
+ 58b2:  jin             g3b g22 ~58d5
+ 58b6:  remove_obj      g3b
+ 58b8:  print           "The "
+ 58bd:  print_obj       g3b
+ 58bf:  print           " catches fire."
+ 58cc:  new_line        
+ 58cd:  call            4906 s106 -> sp
+ 58d4:  ret_popped      
+ 58d5:  remove_obj      g3b
+ 58d7:  print           "The "
+ 58dc:  print_obj       g3b
+ 58de:  print_ret       " is consumed by fire."
+ 58ef:  print           "You can't burn a "
+ 58fc:  print_obj       g3b
+ 58fe:  print_ret       "."
+
+Routine 5902, 0 locals ()
+
+ 5903:  test_attr       g3b #0c 5912
+ 5907:  print_ret       "You can't turn that!"
+ 5912:  jz              g0f ~5924
+ 5915:  print_ret       "You need a tool."
+ 5924:  test_attr       g0f #08 rfalse
+ 5928:  print           "You can't turn it with a "
+ 5937:  print_obj       g0f
+ 5939:  print_ret       "."
+
+Routine 593c, 0 locals ()
+
+ 593d:  print_ret       "This has no effect."
+
+Routine 594c, 0 locals ()
+
+ 594d:  jz              g0f 5966
+ 5950:  je              g0f #5f 5966
+ 5954:  print           "Pump it up with a "
+ 5961:  print_obj       g0f
+ 5963:  print_ret       "?"
+ 5966:  jin             "hand-held air pump" g22 ~5973
+ 596a:  call            32c0 #29 g3b #5f -> sp
+ 5972:  ret_popped      
+ 5973:  print_ret       "I really don't see how."
+
+Routine 5982, 0 locals ()
+
+ 5983:  call            4b90 -> sp
+ 5988:  ret_popped      
+
+Routine 598a, 0 locals ()
+
+ 598b:  call            4b90 -> sp
+ 5990:  ret_popped      
+
+Routine 5992, 0 locals ()
+
+ 5993:  test_attr       g3b #15 ~59a0
+ 5997:  call            32c0 #2e g3b g0f -> sp
+ 599f:  ret_popped      
+ 59a0:  test_attr       g3b #09 ~59c9
+ 59a4:  test_attr       g0f #07 ~59c9
+ 59a8:  remove_obj      g3b
+ 59aa:  print_ret       "You slice it into tiny bits which disappear!"
+ 59c9:  test_attr       g0f #07 59da
+ 59cd:  print_ret       "Not so sharp."
+ 59da:  call            4b90 -> sp
+ 59df:  ret_popped      
+
+Routine 59e0, 0 locals ()
+
+ 59e1:  call            59ea s107 -> sp
+ 59e8:  ret_popped      
+
+Routine 59ea, 1 local (0000)
+
+ 59ed:  jz              g3b ~5a00
+ 59f0:  print           "There is nothing to "
+ 59fb:  print_paddr     local0
+ 59fd:  print_ret       "."
+ 5a00:  test_attr       g3b #15 5a28
+ 5a04:  test_attr       g3b #13 5a28
+ 5a08:  print           "I've known weirdos, but fighting a "
+ 5a23:  print_obj       g3b
+ 5a25:  print_ret       "?"
+ 5a28:  jz              g0f 5a31
+ 5a2b:  je              g0f #0000 ~5a5a
+ 5a31:  print           "Trying to "
+ 5a3a:  print_paddr     local0
+ 5a3c:  print           " a "
+ 5a41:  print_obj       g3b
+ 5a43:  print_ret       " with your hands is suicidal."
+ 5a5a:  test_attr       g0f #07 5a86
+ 5a5e:  print           "Trying to "
+ 5a67:  print_paddr     local0
+ 5a69:  print           " the "
+ 5a6e:  print_obj       g3b
+ 5a70:  print           " with a "
+ 5a77:  print_obj       g0f
+ 5a79:  print_ret       " is suicidal."
+ 5a86:  call            9486 -> sp
+ 5a8b:  ret_popped      
+
+Routine 5a8c, 0 locals ()
+
+ 5a8d:  call            59ea s108 -> sp
+ 5a94:  ret_popped      
+
+Routine 5a96, 0 locals ()
+
+ 5a97:  jz              g0f ~5aa1
+ 5a9a:  print_ret       "Whoosh!"
+ 5aa1:  call            32c0 #0c g0f g3b -> sp
+ 5aa9:  ret_popped      
+
+Routine 5aaa, 0 locals ()
+
+ 5aab:  call            5b54 s109 -> sp
+ 5ab2:  ret_popped      
+
+Routine 5ab4, 0 locals ()
+
+ 5ab5:  call            5b54 s110 -> sp
+ 5abc:  ret_popped      
+
+Routine 5abe, 0 locals ()
+
+ 5abf:  call            5b54 s111 -> sp
+ 5ac6:  ret_popped      
+
+Routine 5ac8, 0 locals ()
+
+ 5ac9:  call            5b54 s111 -> sp
+ 5ad0:  ret_popped      
+
+Routine 5ad2, 0 locals ()
+
+ 5ad3:  call            5b54 s112 -> sp
+ 5ada:  ret_popped      
+
+Routine 5adc, 0 locals ()
+
+ 5add:  call            5b54 s113 -> sp
+ 5ae4:  ret_popped      
+
+Routine 5ae6, 0 locals ()
+
+ 5ae7:  test_attr       g3b #13 5af3
+ 5aeb:  call            5b54 s114 -> sp
+ 5af2:  ret_popped      
+ 5af3:  jz              g0f ~5b22
+ 5af6:  print           "Trying to destroy the "
+ 5b05:  print_obj       g3b
+ 5b07:  print_ret       " with your bare hands is suicidal."
+ 5b22:  test_attr       g0f #07 rfalse
+ 5b26:  print           "Trying to destroy the "
+ 5b35:  print_obj       g3b
+ 5b37:  print           " with a "
+ 5b3e:  print_obj       g0f
+ 5b40:  print_ret       " is useless."
+
+Routine 5b4c, 0 locals ()
+
+ 5b4d:  call            9486 -> sp
+ 5b52:  ret_popped      
+
+Routine 5b54, 1 local (0000)
+
+ 5b57:  print_paddr     local0
+ 5b59:  print_obj       g3b
+ 5b5b:  call            306c g62 -> sp
+ 5b61:  print_paddr     sp
+ 5b63:  new_line        
+ 5b64:  rtrue           
+
+Routine 5b66, 4 locals (0000, 0000, 0000, 0000)
+
+ 5b6f:  get_prop_addr   local0 #12 -> local2
+ 5b73:  get_prop_len    local2 -> sp
+ 5b76:  div             sp #02 -> sp
+ 5b7a:  sub             sp #01 -> sp
+ 5b7e:  call            3f1e local1 local2 sp -> sp
+ 5b86:  ret_popped      
+
+Routine 5b88, 0 locals ()
+
+ 5b89:  call            5b66 g3b "door" -> sp
+ 5b91:  jz              sp 5ba1
+ 5b94:  print_ret       "Nobody's home."
+ 5ba1:  call            4b90 -> sp
+ 5ba6:  ret_popped      
+
+Routine 5ba8, 0 locals ()
+
+ 5ba9:  print_ret       "Aaaarrrrgggghhhh!"
+
+Routine 5bba, 0 locals ()
+
+ 5bbb:  print_ret       "What a bizarre concept!"
+
+Routine 5bd0, 1 local (0000)
+
+ 5bd3:  test_attr       g3b #15 ~5bdd
+ 5bd7:  call            4b90 -> sp
+ 5bdc:  ret_popped      
+ 5bdd:  test_attr       g3b #12 5bec
+ 5be1:  print_ret       "You don't have it."
+ 5bec:  test_attr       g3b #0e 5c0a
+ 5bf0:  get_child       g3b -> sp ~5c0a
+ 5bf4:  print           "There's something in the "
+ 5c05:  print_obj       g3b
+ 5c07:  print_ret       "."
+ 5c0a:  test_attr       g3b #0e ~rfalse
+ 5c0e:  get_child       g3b -> sp ~rfalse
+ 5c12:  call            5d76 -> sp
+ 5c17:  ret_popped      
+
+Routine 5c18, 0 locals ()
+
+ 5c19:  jz              g0f ~5c21
+ 5c1c:  store           g0f #0000
+ 5c21:  je              g0f #45 rfalse
+ 5c25:  test_attr       g0f #08 ~5c49
+ 5c29:  print           "Digging with the "
+ 5c36:  print_obj       g0f
+ 5c38:  print_ret       " is slow and tedious."
+ 5c49:  call            4b90 -> sp
+ 5c4e:  ret_popped      
+
+Routine 5c50, 0 locals ()
+
+ 5c51:  rtrue           
+
+Routine 5c52, 0 locals ()
+
+ 5c53:  print           "It smells like a "
+ 5c62:  print_obj       g3b
+ 5c64:  print_ret       "."
+
+Routine 5c68, 3 locals (0000, 0000, 0000)
+
+ 5c6f:  get_prop_addr   local1 #06 -> local2
+ 5c73:  jz              local2 rfalse
+ 5c76:  get_prop_len    local2 -> sp
+ 5c79:  call            3f46 local0 local2 sp -> sp
+ 5c81:  ret_popped      
+
+Routine 5c82, 0 locals ()
+
+ 5c83:  print_ret       "This is an adventure, not a vacation!"
+
+Routine 5ca2, 0 locals ()
+
+ 5ca3:  je              g3b #72 rfalse
+ 5ca7:  print_ret       "It's not tied!"
+
+Routine 5cb4, 0 locals ()
+
+ 5cb5:  rtrue           
+
+Routine 5cb6, 0 locals ()
+
+ 5cb7:  je              g3b #72 5cd2
+ 5cbb:  print_ret       "How can you tie that to anything."
+ 5cd2:  je              g0f g22 ~rfalse
+ 5cd6:  print_ret       "You can't tie the rope to yourself."
+
+Routine 5cec, 0 locals ()
+
+ 5ced:  print           "You can't tie the "
+ 5cf8:  print_obj       g3b
+ 5cfa:  print_ret       " to that."
+
+Routine 5d02, 0 locals ()
+
+ 5d03:  je              g0f #72 ~5d62
+ 5d08:  test_attr       g3b #15 ~5d5c
+ 5d0d:  get_prop        g3b #0f -> sp
+ 5d11:  jl              sp #00 ~5d3e
+ 5d15:  print           "Your attempt to tie up the "
+ 5d28:  print_obj       g3b
+ 5d2a:  print           " awakens him."
+ 5d37:  call            4064 g3b -> sp
+ 5d3d:  ret_popped      
+ 5d3e:  print           "The "
+ 5d43:  print_obj       g3b
+ 5d45:  print_ret       " struggles and you cannot tie him up."
+ 5d5c:  call            5d76 -> sp
+ 5d61:  ret_popped      
+ 5d62:  print_ret       "You'd never tie it with that!"
+
+Routine 5d76, 0 locals ()
+
+ 5d77:  print_ret       "What on earth for?"
+
+Routine 5d86, 0 locals ()
+
+ 5d87:  print_ret       "It's not frozen!"
+
+Routine 5d96, 0 locals ()
+
+ 5d97:  print_ret       "I can't hear you!"
+
+Routine 5da2, 0 locals ()
+
+ 5da3:  test_attr       g3b #15 ~5df3
+ 5da8:  get_prop        g3b #0f -> sp
+ 5dac:  jl              sp #00 ~5dd0
+ 5db0:  print           "The "
+ 5db5:  print_obj       g3b
+ 5db7:  print           " is rudely awakened."
+ 5dc8:  new_line        
+ 5dc9:  call            4064 g3b -> sp
+ 5dcf:  ret_popped      
+ 5dd0:  print_ret       "He's wide awake, or haven't you noticed..."
+ 5df3:  print           "The "
+ 5df8:  print_obj       g3b
+ 5dfa:  print_ret       " isn't sleeping."
+
+Routine 5e08, 2 locals (0000, 0000)
+
+ 5e0d:  set_attr        local0 #1e
+ 5e10:  put_prop        local0 #0b local1
+ 5e15:  rtrue           
+
+Routine 5e16, 0 locals ()
+
+ 5e17:  test_attr       g3b #13 ~5e33
+ 5e1b:  print           "The "
+ 5e20:  print_obj       g3b
+ 5e22:  print_ret       " pays no attention."
+ 5e33:  print_ret       "You cannot talk to that!"
+
+Routine 5e42, 0 locals ()
+
+ 5e43:  test_attr       g3b #05 ~5e4f
+ 5e47:  call            5e70 #17 #01 -> sp
+ 5e4e:  ret_popped      
+ 5e4f:  print           "You can't climb onto the "
+ 5e60:  print_obj       g3b
+ 5e62:  print_ret       "."
+
+Routine 5e66, 0 locals ()
+
+ 5e67:  call            5e70 #17 #01 -> sp
+ 5e6e:  ret_popped      
+
+Routine 5e70, 4 locals (0017, 0000, 0000, 0000)
+
+ 5e79:  get_prop_addr   g00 local0 -> sp
+ 5e7d:  jz              sp 5e88
+ 5e80:  call            32c0 #55 local0 -> sp
+ 5e87:  rtrue           
+ 5e88:  jz              local1 ~5e98
+ 5e8b:  print_ret       "You can't go that way."
+ 5e98:  jz              local1 5ecb
+ 5e9b:  get_prop_addr   g3b #12 -> local2
+ 5e9f:  get_prop_len    local2 -> sp
+ 5ea2:  call            3f1e "wall" local2 sp -> sp
+ 5eab:  jz              sp 5ecb
+ 5eae:  print_ret       "Climbing the walls is to no avail."
+ 5ecb:  print_ret       "Bizarre!"
+
+Routine 5ed4, 0 locals ()
+
+ 5ed5:  call            5e70 #16 -> sp
+ 5edb:  ret_popped      
+
+Routine 5edc, 0 locals ()
+
+ 5edd:  print           "You cannot wind up a "
+ 5eec:  print_obj       g3b
+ 5eee:  print_ret       "."
+
+Routine 5ef2, 2 locals (0000, 0000)
+
+ 5ef7:  je              g3b #73 ~5f14
+ 5efb:  print_ret       "There are 69,105 leaves here."
+ 5f14:  call            5d76 -> sp
+ 5f19:  ret_popped      
+
+Routine 5f1a, 0 locals ()
+
+ 5f1b:  print_ret       "You can't do that."
+
+Routine 5f26, 0 locals ()
+
+ 5f27:  call            32c0 #55 #15 -> sp
+ 5f2e:  ret_popped      
+
+Routine 5f30, 1 local (0000)
+
+ 5f33:  jz              local0 ~5f42
+ 5f36:  test_attr       g3b #05 ~5f42
+ 5f3a:  call            32c0 #0d g3b -> sp
+ 5f41:  ret_popped      
+ 5f42:  jz              local0 ~5f6b
+ 5f45:  test_attr       g3b #12 5f6b
+ 5f49:  print           "You hit your head on the "
+ 5f5c:  print_obj       g3b
+ 5f5e:  print_ret       " in your attempt."
+ 5f6b:  jz              local0 5f7a
+ 5f6e:  print           "You can't do that!"
+ 5f79:  rtrue           
+ 5f7a:  jin             g3b g22 ~5f97
+ 5f7e:  print_ret       "That would be quite a contortion!"
+ 5f97:  call            4b90 -> sp
+ 5f9c:  ret_popped      
+
+Routine 5f9e, 0 locals ()
+
+ 5f9f:  print_ret       "You can't cross that!"
+
+Routine 5fac, 0 locals ()
+
+ 5fad:  print_ret       "You find nothing unusual."
+
+Routine 5fbe, 0 locals ()
+
+ 5fbf:  print_ret       "You're the adventurer."
+
+Routine 5fd2, 1 local (0000)
+
+ 5fd5:  je              local0 #03 ~rfalse
+ 5fd9:  print           "You are standing in an open field west of a white
+house, with a boarded front door."
+ 6010:  new_line        
+ 6011:  jz              g1a rfalse
+ 6014:  print_ret       "A secret path leads southwest into the forest."
+
+Routine 6030, 1 local (0000)
+
+ 6033:  je              local0 #03 ~rfalse
+ 6037:  print           "You are behind the white house, where a path enters
+the forest to the east.  In one corner of the house there is a small window
+which is "
+ 6086:  test_attr       "kitchen window" #0e ~6092
+ 608a:  print           "open."
+ 608f:  jump            609f
+ 6092:  print           "slightly ajar."
+ 609f:  new_line        
+ 60a0:  rtrue           
+
+Routine 60a2, 0 locals ()
+
+ 60a3:  je              g4a #13 #3f ~60b4
+ 60a9:  call            6114 #95 s117 s118 -> sp
+ 60b3:  ret_popped      
+ 60b4:  je              g4a #1f #55 ~60ce
+ 60ba:  je              g00 #60 ~60c6
+ 60be:  call            32c0 #55 #1e -> sp
+ 60c5:  rtrue           
+ 60c6:  call            32c0 #55 #1d -> sp
+ 60cd:  rtrue           
+ 60ce:  je              g4a #21 ~rfalse
+ 60d2:  print           "You can see "
+ 60db:  je              g00 #60 ~60fc
+ 60df:  print_ret       "a clear area leading towards a forest."
+ 60fc:  print_ret       "what appears to be a kitchen."
+
+Routine 6114, 3 locals (0000, 0000, 0000)
+
+ 611b:  je              g4a #3f ~6130
+ 611f:  test_attr       local0 #0e ~6129
+ 6123:  call            7ee6 -> sp
+ 6128:  ret_popped      
+ 6129:  print_paddr     local1
+ 612b:  new_line        
+ 612c:  set_attr        local0 #0e
+ 612f:  rtrue           
+ 6130:  je              g4a #13 ~rfalse
+ 6134:  test_attr       local0 #0e ~613f
+ 6138:  print_paddr     local2
+ 613a:  new_line        
+ 613b:  clear_attr      local0 #0e
+ 613e:  rtrue           
+ 613f:  call            7ee6 -> sp
+ 6144:  ret_popped      
+
+Routine 6146, 1 local (0000)
+
+ 6149:  je              local0 #03 ~rfalse
+ 614d:  print           "You are in the kitchen of the house, where a table has
+been used recently  to make food. A door leads to the west and, next to a small
+chimney,  a dark staircase leads up. To the east is a small window which is "
+ 61d8:  test_attr       "kitchen window" #0e ~61e1
+ 61dc:  print_ret       "open."
+ 61e1:  print_ret       "slightly ajar."
+
+Routine 61ee, 1 local (0000)
+
+ 61f1:  je              local0 #01 ~rfalse
+ 61f5:  je              g4a #1e 6209
+ 61f9:  je              g4a #55 ~6201
+ 61fd:  je              g3b #1d 6209
+ 6201:  je              g4a #1f ~rfalse
+ 6205:  je              g3b #85 ~rfalse
+ 6209:  print           "In the Barrow^The great stone door shuts behind you as
+you enter. Ahead of you is an  enormous cavern, dimly lit, and beyond a path
+leads into a dark tunnel. You hear a voice say:  All who stand within this
+barrow have completed a great  and perilous adventure which has tested your wit
+and courage."
+ 62dc:  call            47e0 #00 -> sp
+ 62e2:  ret_popped      
+
+Routine 62e4, 0 locals ()
+
+ 62e5:  je              g4a #1f ~rfalse
+ 62e9:  call            32c0 #55 #1d -> sp
+ 62f0:  ret_popped      
+
+Routine 62f2, 3 locals (0000, 0000, 0000)
+
+ 62f9:  je              local0 #03 ~6438
+ 62fe:  jz              g33 6354
+ 6302:  print           "You are in the living room. There is a door to the
+east. To the west is an old wooden door, which has a cyclops-sized hole in it,"
+ 6351:  jump            63a5
+ 6354:  print           "You are in the living room. There is a door to the
+east, a rustic wooden door to the west, which appears to be nailed shut, "
+ 63a5:  print           "a trophy case, "
+ 63b2:  store           local1 g18
+ 63b5:  jz              local1 63dc
+ 63b8:  test_attr       "trap door" #0e ~63dc
+ 63bc:  print           "and a rug lying beside an open trap-door."
+ 63d9:  jump            6436
+ 63dc:  jz              local1 63f7
+ 63df:  print           "and a closed trap-door at your feet."
+ 63f4:  jump            6436
+ 63f7:  test_attr       "trap door" #0e ~6415
+ 63fb:  print           "and an open trap-door at your feet."
+ 6412:  jump            6436
+ 6415:  print           "and a large oriental rug in the center of the room."
+ 6436:  new_line        
+ 6437:  rtrue           
+ 6438:  je              local0 #00 ~rfalse
+ 643c:  je              g4a #40 6448
+ 6440:  je              g4a #1c ~rfalse
+ 6444:  je              g0f #76 ~rfalse
+ 6448:  call            6458 -> sp
+ 644d:  add             g6a sp -> g01
+ 6451:  call            471a #00 -> sp
+ 6457:  rfalse          
+
+Routine 6458, 3 locals (0076, 0000, 0000)
+
+ 645f:  get_child       local0 -> local1 6463
+ 6463:  jz              local1 ~6468
+ 6466:  ret             local2
+ 6468:  get_prop        local1 #0c -> sp
+ 646c:  add             local2 sp -> local2
+ 6470:  get_child       local1 -> sp ~647a
+ 6474:  call            6458 local1 -> sp
+ 647a:  get_sibling     local1 -> local1 647e
+ 647e:  jump            6463
+
+Routine 6482, 0 locals ()
+
+ 6483:  je              g4a #13 #3f ~6498
+ 6489:  je              g00 #3a ~6498
+ 648d:  call            6114 g3b s119 s120 -> sp
+ 6497:  ret_popped      
+ 6498:  je              g00 #1a ~rfalse
+ 649c:  je              g4a #0000 #3f ~64be
+ 64a3:  test_attr       "trap door" #0e 64be
+ 64a7:  print_ret       "The door is latched from above."
+ 64be:  je              g4a #13 ~64e1
+ 64c2:  test_attr       "trap door" #0e 64e1
+ 64c6:  clear_attr      "trap door" #1c
+ 64c9:  clear_attr      "trap door" #0e
+ 64cc:  print_ret       "The door closes and latches."
+ 64e1:  je              g4a #13 #3f ~rfalse
+ 64e7:  call            7ee6 -> sp
+ 64ec:  ret_popped      
+
+Routine 64ee, 1 local (0000)
+
+ 64f1:  je              local0 #03 ~6547
+ 64f6:  print_ret       "You are in a dark cellar with a passages leading north
+and east. To the  west is the bottom of a steep metal ramp."
+ 6547:  je              local0 #02 ~rfalse
+ 654b:  test_attr       "trap door" #0e ~rfalse
+ 654f:  test_attr       "trap door" #1c rfalse
+ 6553:  clear_attr      "trap door" #0e
+ 6556:  set_attr        "trap door" #1c
+ 6559:  print_ret       "The trap shuts and you hear someone latching it."
+
+Routine 657a, 1 local (0000)
+
+ 657d:  get_child       g22 -> local0 65a2
+ 6581:  print           "Going up empty-handed is a bad idea."
+ 65a0:  new_line        
+ 65a1:  rfalse          
+ 65a2:  get_sibling     local0 -> local0 ~65aa
+ 65a6:  get_sibling     local0 -> sp 65b9
+ 65aa:  jin             "lamp" g22 ~65b9
+ 65ae:  test_attr       "trap door" #0e 65b7
+ 65b2:  clear_attr      "trap door" #1c
+ 65b5:  ret             #60
+ 65b7:  ret             #60
+ 65b9:  print           "You and all of your baggage won't fit."
+ 65d6:  new_line        
+ 65d7:  rfalse          
+
+Routine 65d8, 0 locals ()
+
+ 65d9:  jz              g18 65f1
+ 65dc:  test_attr       "trap door" #0e ~65e2
+ 65e0:  ret             #1a
+ 65e2:  print           "The trap door is closed."
+ 65ef:  new_line        
+ 65f0:  rfalse          
+ 65f1:  print           "You can't go that way."
+ 65fe:  new_line        
+ 65ff:  rfalse          
+
+Routine 6600, 0 locals ()
+
+ 6601:  je              g4a #46 ~6653
+ 6606:  jz              g18 661a
+ 6609:  print_ret       "The rug is too heavy."
+ 661a:  print_ret       "The rug is too heavy, but in trying to take it you
+notice something  beneath it."
+ 6653:  je              g4a #3b ~6698
+ 6658:  jz              g18 6661
+ 665b:  call            7ee6 -> sp
+ 6660:  ret_popped      
+ 6661:  print           "With effort, the rug moves to reveal the dusty cover
+of a closed  trap-door."
+ 6690:  new_line        
+ 6691:  clear_attr      "trap door" #1d
+ 6694:  store           g18 #01
+ 6697:  rtrue           
+ 6698:  je              g4a #40 ~66ab
+ 669c:  print_ret       "The rug too heavy."
+ 66ab:  je              g4a #35 ~rfalse
+ 66af:  jz              g18 ~rfalse
+ 66b2:  test_attr       "trap door" #0e rfalse
+ 66b6:  print_ret       "Underneath the rug is a closed trap door."
+
+Routine 66d0, 0 locals ()
+
+ 66d1:  jz              g23 ~rfalse
+ 66d4:  call            66e6 #78 #62 -> sp
+ 66db:  ret_popped      
+
+Routine 66dc, 0 locals ()
+
+ 66dd:  call            66e6 #9d #69 -> sp
+ 66e4:  ret_popped      
+
+Routine 66e6, 2 locals (0000, 0000)
+
+ 66eb:  jin             local1 g00 ~rfalse
+ 66ef:  je              g4a #40 ~rfalse
+ 66f3:  jin             local0 local1 ~6715
+ 66f7:  print           "The "
+ 66fc:  print_obj       local1
+ 66fe:  print_ret       " snatches it out of your reach."
+ 6715:  print           "The "
+ 671a:  print_obj       local0
+ 671c:  print           " seems white-hot. You can't hold on to it."
+ 6737:  new_line        
+ 6738:  rtrue           
+
+Routine 673a, 1 local (0000)
+
+ 673d:  je              local0 #02 ~674e
+ 6741:  insert_obj      "bloody axe" g00
+ 6744:  clear_attr      "bloody axe" #19
+ 6747:  set_attr        "bloody axe" #07
+ 674a:  store           g23 #01
+ 674d:  rtrue           
+ 674e:  je              local0 #05 ~675e
+ 6752:  random          #64 -> sp
+ 6756:  jg              #21 sp ~rfalse
+ 675a:  set_attr        "troll" #1b
+ 675d:  rtrue           
+ 675e:  jz              local0 ~rfalse
+ 6761:  je              g4a #26 #4d ~676b
+ 6767:  je              g0f #62 6773
+ 676b:  je              g4a #3d #3b #40 ~67be
+ 6773:  call            4064 #62 -> sp
+ 6779:  je              g4a #26 #4d ~679f
+ 677f:  print           "The troll grabs the "
+ 678c:  print_obj       g3b
+ 678e:  print           " and eats it."
+ 679b:  new_line        
+ 679c:  remove_obj      g3b
+ 679e:  rtrue           
+ 679f:  je              g4a #3d ~rfalse
+ 67a3:  print_ret       "The troll laughs at your puny gesture."
+ 67be:  je              g4a #33 ~67d3
+ 67c2:  print_ret       "The troll growls at you."
+ 67d3:  jz              g23 rfalse
+ 67d6:  je              g4a #28 ~rfalse
+ 67da:  print_ret       "The troll growls at you."
+
+Routine 67ec, 0 locals ()
+
+ 67ed:  test_attr       "grating" #0e rfalse
+ 67f1:  jz              g48 ~rfalse
+ 67f4:  print           "A grating appears on the ground."
+ 6807:  new_line        
+ 6808:  clear_attr      "grating" #1d
+ 680b:  store           g48 #01
+ 680e:  rfalse          
+
+Routine 6810, 0 locals ()
+
+ 6811:  je              g4a #0e ~6837
+ 6815:  call            67ec -> sp
+ 681a:  remove_obj      g3b
+ 681c:  jin             g3b g00 ~682f
+ 6820:  print_ret       "The leaves burn."
+ 682f:  call            4906 s121 -> sp
+ 6836:  ret_popped      
+ 6837:  je              g4a #40 #3b ~6853
+ 683d:  je              g4a #3b ~684d
+ 6841:  print           "Done."
+ 6846:  new_line        
+ 6847:  call            67ec -> sp
+ 684c:  rtrue           
+ 684d:  call            67ec -> sp
+ 6852:  ret_popped      
+ 6853:  je              g4a #35 ~rfalse
+ 6857:  jz              g48 ~rfalse
+ 685a:  print_ret       "Underneath the pile of leaves is a grating."
+
+Routine 687a, 0 locals ()
+
+ 687b:  je              g00 #60 #3a #83 ~68a4
+ 6882:  je              g4a #25 ~6899
+ 6886:  print_ret       "Why not find your brains?"
+ 6899:  je              g4a #56 ~rfalse
+ 689d:  call            4b9c g4b -> sp
+ 68a3:  rtrue           
+ 68a4:  je              g00 #02 #16 68fb
+ 68ab:  je              g00 #99 #66 68fb
+ 68b2:  je              g4a #25 ~68ea
+ 68b6:  je              g00 #0000 ~68cf
+ 68bc:  print_ret       "It seems to be to the west."
+ 68cf:  print_ret       "It was here just a minute ago...."
+ 68ea:  print_ret       "You're not at the house."
+ 68fb:  je              g4a #25 ~6928
+ 68ff:  print_ret       "It's right in front of you. Are you blind or
+something?"
+ 6928:  je              g4a #56 ~6933
+ 692c:  call            4b9c g5a -> sp
+ 6932:  rtrue           
+ 6933:  je              g4a #20 ~695e
+ 6937:  print_ret       "The house is painted white and seems to have been
+abandoned."
+ 695e:  je              g4a #1f ~6995
+ 6962:  je              g00 #02 ~6980
+ 6966:  test_attr       "kitchen window" #0e ~6971
+ 696a:  call            530a #60 -> sp
+ 6970:  ret_popped      
+ 6971:  print_ret       "The window is closed."
+ 6980:  print_ret       "I can't see how to get in from here."
+ 6995:  je              g4a #0e ~rfalse
+ 6999:  print_ret       "You must be joking."
+
+Routine 69a8, 1 local (0000)
+
+ 69ab:  je              local0 #02 ~69b6
+ 69af:  jz              g48 ~rfalse
+ 69b2:  set_attr        "grating" #1d
+ 69b5:  rtrue           
+ 69b6:  je              local0 #03 ~rfalse
+ 69ba:  print           "You are in a clearing within a forest. Paths lead
+south, east, and west."
+ 69eb:  test_attr       "grating" #0e ~6a10
+ 69ef:  new_line        
+ 69f0:  print           "There is an open grating, descending into darkness."
+ 6a0d:  jump            6a33
+ 6a10:  jz              g48 6a33
+ 6a13:  new_line        
+ 6a14:  print           "There is a grating securely fastened into the ground."
+ 6a33:  new_line        
+ 6a34:  rtrue           
+
+Routine 6a36, 1 local (0000)
+
+ 6a39:  je              local0 #02 ~6a41
+ 6a3d:  clear_attr      "grating" #1d
+ 6a40:  rtrue           
+ 6a41:  je              local0 #03 ~rfalse
+ 6a45:  print           "You are in a small room near the maze."
+ 6a5e:  new_line        
+ 6a5f:  test_attr       "grating" #0e ~6a87
+ 6a63:  print           "Above you is an open grating with sunlight pouring
+in."
+ 6a84:  jump            6aaf
+ 6a87:  jz              g3e 6a9c
+ 6a8a:  print           "Above you is a grating."
+ 6a99:  jump            6aaf
+ 6a9c:  print           "Above you is a locked grating."
+ 6aaf:  new_line        
+ 6ab0:  rtrue           
+
+Routine 6ab2, 0 locals ()
+
+ 6ab3:  je              g4a #3f ~6ac8
+ 6ab7:  je              g0f #0000 ~6ac8
+ 6abd:  call            32c0 #0000 #39 #0000 -> sp
+ 6ac7:  rtrue           
+ 6ac8:  je              g4a #13 #3f ~rfalse
+ 6ace:  jz              g3e 6b2a
+ 6ad2:  je              g00 #0000 ~6adf
+ 6ad8:  push            s122
+ 6adc:  jump            6ae3
+ 6adf:  push            s123
+ 6ae3:  call            6114 #39 sp s055 -> sp
+ 6aec:  test_attr       "grating" #0e ~6b26
+ 6af0:  je              g00 #0000 6b22
+ 6af6:  jz              g48 ~6b22
+ 6af9:  print           "A pile of leaves falls onto your head and to the
+ground."
+ 6b1e:  new_line        
+ 6b1f:  insert_obj      "pile of leaves" g00
+ 6b22:  set_attr        "Grating Room" #03
+ 6b25:  rtrue           
+ 6b26:  clear_attr      "Grating Room" #03
+ 6b29:  rtrue           
+ 6b2a:  print_ret       "The grating is locked."
+
+Routine 6b3a, 0 locals ()
+
+ 6b3b:  je              g4a #20 ~6b50
+ 6b3f:  print_ret       "The torch is burning."
+ 6b50:  je              g4a #23 ~rfalse
+ 6b54:  test_attr       g3b #03 ~rfalse
+ 6b58:  print_ret       "You almost burn your hand trying to extinguish the
+flame."
+
+Routine 6b82, 1 local (0000)
+
+ 6b85:  je              local0 #03 ~rfalse
+ 6b89:  print           "*****INSERT TEMPLE DESCRIPTION HERE*****."
+ 6bcc:  new_line        
+ 6bcd:  jz              g5f rfalse
+ 6bd0:  print_ret       "A piece of rope descends from the railing above,
+ending some five feet above your head."
+
+Routine 6c0e, 1 local (0000)
+
+ 6c11:  je              local0 #03 ~rfalse
+ 6c15:  print           "You are at a railing near the periphery of a large
+dome, which forms the  ceiling of another room below."
+ 6c5c:  new_line        
+ 6c5d:  jz              g5f rfalse
+ 6c60:  print_ret       "Hanging from the railing is a rope which ends about
+ten feet from the floor  below."
+
+Routine 6c96, 1 local (0000)
+
+ 6c99:  je              local0 #03 ~6d5a
+ 6c9e:  print           "You are outside a large open gateway, on which is
+inscribed^       ~Abandon every hope, all ye who enter here.~^Thousands of
+voices, lamenting some hideous fate, can be heard."
+ 6d1b:  new_line        
+ 6d1c:  jz              g3d ~rfalse
+ 6d1f:  print_ret       "The way through the gate is barred by evil spirits,
+who jeer at your attempts to pass."
+ 6d5a:  jz              local0 ~rfalse
+ 6d5d:  jz              g3d ~6dcf
+ 6d61:  je              g4a #47 ~6dcf
+ 6d66:  je              g3b #2e ~6dcf
+ 6d6b:  store           g4d #01
+ 6d6e:  print           "As the bell rings, the spirits stop their jeering and
+slowly turn to  face you, displaying a long-forgotten terror."
+ 6dbd:  new_line        
+ 6dbe:  store           g37 #01
+ 6dc1:  call            307c #3771 #03 -> sp
+ 6dc9:  storew          sp #00 #01
+ 6dce:  rtrue           
+ 6dcf:  jz              g37 6e5f
+ 6dd3:  je              g4a #37 ~6e5f
+ 6dd8:  je              g3b #49 ~6e5f
+ 6ddd:  jz              g3d ~6e5f
+ 6de1:  print           "The prayer reverberates through the hall. As the last
+word fades, a  heart-stopping scream fills the cavern, and the spirits flee
+your unearthly  power."
+ 6e4c:  new_line        
+ 6e4d:  remove_obj      "number of ghosts"
+ 6e4f:  store           g3d #01
+ 6e52:  call            3090 #3771 -> sp
+ 6e59:  storew          sp #00 #00
+ 6e5e:  rtrue           
+ 6e5f:  je              g4a #22 ~rfalse
+ 6e63:  jz              g3d ~rfalse
+ 6e66:  jin             "brass bell" g22 ~6e83
+ 6e6a:  jin             "prayer book" g22 ~6e83
+ 6e6e:  print_ret       "You must perform the ceremony."
+ 6e83:  print_ret       "You don't have the equipment."
+
+Routine 6e96, 0 locals ()
+
+ 6e97:  jz              g37 ~6ede
+ 6e9b:  je              g00 #23 ~6ede
+ 6ea0:  print           "The tension of the ceremony is broken, and the
+spirits, resume their  hideous jeering."
+ 6edd:  new_line        
+ 6ede:  store           g4d #00
+ 6ee1:  rtrue           
+
+Routine 6ee2, 0 locals ()
+
+ 6ee3:  store           g37 #00
+ 6ee6:  call            6e96 -> sp
+ 6eeb:  ret_popped      
+
+Routine 6eec, 0 locals ()
+
+ 6eed:  je              g4a #22 ~6f0e
+ 6ef1:  print_ret       "Only the ceremony itself has any effect."
+ 6f0e:  je              g0f #8d ~6f39
+ 6f12:  print           "How can you attack a spirit with material objects?"
+ 6f37:  new_line        
+ 6f38:  rfalse          
+ 6f39:  je              g3b #8d ~rfalse
+ 6f3d:  print_ret       "You seem unable to affect these spirits."
+
+Routine 6f5a, 1 local (0000)
+
+ 6f5d:  je              local0 #03 ~rfalse
+ 6f61:  print           "You are atop Flood Control Dam #3, which was once
+quite a tourist  attraction. There are paths to the north and west, and a
+scramble down."
+ 6fca:  new_line        
+ 6fcb:  jz              g66 7018
+ 6fcf:  print           "The gates are open and the water level behind the dam
+is low. Water  rushes through the dam and downstream."
+ 7014:  new_line        
+ 7015:  jump            706a
+ 7018:  print           "The sluice gates on the dam are closed. Behind the dam
+is a wide  reservoir. Water is pouring over the abandoned dam."
+ 7069:  new_line        
+ 706a:  print           "There is a control panel here. Protruding from the
+panel is a large  metal bolt."
+ 70a1:  new_line        
+ 70a2:  jz              g2d rfalse
+ 70a5:  print_ret       "The panel is emitting a low-level hum."
+
+Routine 70c4, 0 locals ()
+
+ 70c5:  je              g4a #51 ~rfalse
+ 70c9:  je              g0f #12 ~7125
+ 70ce:  jz              g2d 710c
+ 70d1:  clear_attr      "Reservoir South" #1c
+ 70d4:  jz              g66 70e6
+ 70d7:  print_ret       "Nothing happens."
+ 70e6:  store           g66 #01
+ 70e9:  print           "The sluice gates open and water pours through the
+dam."
+ 710a:  new_line        
+ 710b:  rtrue           
+ 710c:  print_ret       "The bolt won't turn with your best effort."
+ 7125:  print           "The bolt won't turn using the "
+ 7138:  print_obj       g0f
+ 713a:  print_ret       "."
+
+Routine 713e, 0 locals ()
+
+ 713f:  je              g4a #44 ~rfalse
+ 7143:  je              g3b #0000 ~716e
+ 7149:  print           "The room lights "
+ 7156:  test_attr       g00 #03 ~7164
+ 715a:  clear_attr      g00 #03
+ 715d:  print_ret       "shut off."
+ 7164:  set_attr        g00 #03
+ 7167:  print_ret       "come on."
+ 716e:  je              g3b #0000 ~7181
+ 7174:  clear_attr      "Dam" #1c
+ 7177:  store           g2d #00
+ 717a:  print_ret       "Click."
+ 7181:  je              g3b #0000 ~rfalse
+ 7187:  clear_attr      "Dam" #1c
+ 718a:  store           g2d #01
+ 718d:  print_ret       "Click."
+
+Routine 7194, 0 locals ()
+
+ 7195:  je              g4a #20 ~rfalse
+ 7199:  print_ret       "The chests are all empty."
+
+Routine 71ae, 0 locals ()
+
+ 71af:  je              g4a #13 #3f ~71d2
+ 71b5:  print_ret       "Sounds reasonable, but this isn't how."
+ 71d2:  je              g4a #0000 ~rfalse
+ 71d8:  je              g0f #0000 ~71f7
+ 71de:  print_ret       "Are you the little Dutch boy, then?"
+ 71f7:  print           "With a "
+ 71fe:  print_obj       g0f
+ 7200:  print_ret       "?  Do you know how big this dam is?"
+
+Routine 7218, 1 local (0000)
+
+ 721b:  print           "With a "
+ 7222:  print_obj       local0
+ 7224:  print_ret       "?"
+
+Routine 7228, 1 local (0000)
+
+ 722b:  je              local0 #03 ~rfalse
+ 722f:  jz              g66 728b
+ 7233:  print           "You are in a long room south of a reservoir. However,
+with the water  level lowered, there is merely a muddy stream to the north."
+ 7288:  jump            72cc
+ 728b:  print           "You are in a long room on the south shore of a large
+lake, far too deep and wide for crossing."
+ 72cc:  new_line        
+ 72cd:  print_ret       "Rocky passages head toward the south and southwest. To
+the east, a  mighty structure can be seen."
+
+Routine 730e, 1 local (0000)
+
+ 7311:  je              local0 #03 ~rfalse
+ 7315:  jz              g66 737c
+ 7319:  print           "You are in a cavernous room north of what was formerly
+a lake. However,  with the water level lowered, there is merely a muddy stream
+to the south."
+ 737c:  new_line        
+ 737d:  print_ret       "There is a grimy stairway leaving the room to the
+north."
+
+Routine 73a4, 1 local (0000)
+
+ 73a7:  je              g4a #4d ~73d5
+ 73ab:  remove_obj      g3b
+ 73ad:  store           local0 #01
+ 73b0:  print           "The bottle hits the far wall and shatters."
+ 73d1:  new_line        
+ 73d2:  jump            740c
+ 73d5:  je              g4a #3d ~7401
+ 73d9:  store           local0 #01
+ 73dc:  remove_obj      g3b
+ 73de:  print           "A brilliant maneuver destroys the bottle."
+ 73fd:  new_line        
+ 73fe:  jump            740c
+ 7401:  je              g4a #49 ~740c
+ 7405:  test_attr       g3b #0e ~740c
+ 7409:  store           local0 #01
+ 740c:  jz              local0 rfalse
+ 740f:  jin             "quantity of water" g3b ~rfalse
+ 7413:  print           "The water spills to the floor and evaporates."
+ 7434:  new_line        
+ 7435:  remove_obj      "quantity of water"
+ 7437:  rtrue           
+
+Routine 7438, 3 locals (0000, 0000, 0000)
+
+ 743f:  je              g4a #27 rfalse
+ 7443:  je              g4a #1f ~7451
+ 7447:  call            306c #0000 -> sp
+ 744e:  print_paddr     sp
+ 7450:  rtrue           
+ 7451:  je              g4a #24 ~7467
+ 7455:  store           local1 g0f
+ 7458:  store           g4a #1c
+ 745b:  store           g0f g3b
+ 745e:  store           g3b local1
+ 7461:  store           local2 #00
+ 7464:  jump            747e
+ 7467:  je              g3b #7a 746f
+ 746b:  je              g3b #25 ~7478
+ 746f:  store           local1 g3b
+ 7472:  store           local2 #00
+ 7475:  jump            747e
+ 7478:  store           local1 g0f
+ 747b:  store           local2 #01
+ 747e:  je              local1 #7a ~748d
+ 7482:  store           local1 #25
+ 7485:  je              g4a #1c #40 ~748d
+ 748b:  remove_obj      local1
+ 748d:  jz              local2 7496
+ 7490:  store           g0f local1
+ 7493:  jump            7499
+ 7496:  store           g3b local1
+ 7499:  get_parent      g22 -> local0
+ 749c:  test_attr       local0 #05 74a3
+ 74a0:  store           local0 #00
+ 74a3:  je              g4a #1c #40 ~7591
+ 74aa:  jz              local2 ~7591
+ 74ae:  jz              local0 74e5
+ 74b1:  je              local0 g0f 74bc
+ 74b5:  jz              g0f ~74e5
+ 74b8:  jin             local1 local0 74e5
+ 74bc:  print           "There is now a puddle in the bottom of the "
+ 74d9:  print_obj       local0
+ 74db:  print           "."
+ 74de:  new_line        
+ 74df:  remove_obj      g3b
+ 74e1:  insert_obj      g3b local0
+ 74e4:  rtrue           
+ 74e5:  jz              g0f 751c
+ 74e8:  je              g0f #a2 751c
+ 74ec:  print           "The water leaks out of the "
+ 74fd:  print_obj       g0f
+ 74ff:  print           " and evaporates immediately."
+ 7518:  new_line        
+ 7519:  remove_obj      local1
+ 751b:  rtrue           
+ 751c:  jin             "glass bottle" g22 ~7565
+ 7521:  test_attr       "glass bottle" #0e 7534
+ 7525:  print_ret       "The bottle is closed."
+ 7534:  get_child       "glass bottle" -> sp 7550
+ 7538:  insert_obj      "quantity of water" "glass bottle"
+ 753b:  print_ret       "The bottle is now full of water."
+ 7550:  print_ret       "The water slips through your fingers."
+ 7565:  jin             g3b "glass bottle" ~757c
+ 7569:  je              g4a #40 ~757c
+ 756d:  jz              g0f ~757c
+ 7570:  store           g3b #a2
+ 7573:  call            4d4e -> sp
+ 7578:  store           g3b local1
+ 757b:  rtrue           
+ 757c:  print_ret       "The water slips through your fingers."
+ 7591:  jz              local2 759d
+ 7594:  print_ret       "Nice try."
+ 759d:  je              g4a #26 #1b ~75ff
+ 75a4:  remove_obj      "quantity of water"
+ 75a6:  jz              local0 75d0
+ 75a9:  print           "There is now a puddle in the bottom of the "
+ 75c6:  print_obj       local0
+ 75c8:  print           "."
+ 75cb:  new_line        
+ 75cc:  insert_obj      "quantity of water" local0
+ 75cf:  rtrue           
+ 75d0:  print           "The water spills to the floor and evaporates
+immediately."
+ 75fb:  new_line        
+ 75fc:  remove_obj      "quantity of water"
+ 75fe:  rtrue           
+ 75ff:  je              g4a #4d ~rfalse
+ 7603:  print           "The water splashes on the walls and evaporates
+immediately."
+ 7630:  new_line        
+ 7631:  remove_obj      "quantity of water"
+ 7633:  rtrue           
+
+Routine 7634, 1 local (0000)
+
+ 7637:  store           local0 g2c
+ 763a:  jz              g6d 768a
+ 763e:  je              g4a #2e #3d #0e 764c
+ 7645:  je              g4a #0c #2d #54 ~rfalse
+ 764c:  print           "The cyclops yawns and stares at the thing that woke
+him up."
+ 7675:  new_line        
+ 7676:  store           g6d #00
+ 7679:  set_attr        "cyclops" #1b
+ 767c:  jl              local0 #00 ~7686
+ 7680:  sub             #00 local0 -> g2c
+ 7684:  ret             g2c
+ 7686:  store           g2c local0
+ 7689:  rtrue           
+ 768a:  je              g4a #26 ~77e7
+ 768f:  je              g0f #6a ~77e7
+ 7694:  je              g3b #57 ~7733
+ 7699:  jl              local0 #00 7724
+ 769e:  remove_obj      "lunch"
+ 76a0:  print           "The cyclops says 'Mmm Mmm. I love hot peppers!  But
+oh, could I use a drink--perhaps some blood.'  From the gleam in his eye, it is
+clear whose  blood he means."
+ 7717:  new_line        
+ 7718:  sub             #00 local0 -> sp
+ 771c:  call            8036 #ffff sp -> g2c
+ 7724:  call            307c #3c4a #ffff -> sp
+ 772d:  storew          sp #00 #01
+ 7732:  rtrue           
+ 7733:  je              g3b #25 ~77a1
+ 7738:  jl              local0 #00 ~777e
+ 773d:  remove_obj      "quantity of water"
+ 773f:  clear_attr      "cyclops" #1b
+ 7742:  print           "The cyclops yawns and falls fast asleep (what did you
+put in that drink, anyway?)."
+ 7779:  new_line        
+ 777a:  store           g6d #01
+ 777d:  rtrue           
+ 777e:  print           "The cyclops is not thirsty and refuses your offer."
+ 779f:  new_line        
+ 77a0:  rfalse          
+ 77a1:  je              g3b #75 ~77c6
+ 77a5:  print_ret       "The cyclops may be hungry, but there is a limit."
+ 77c6:  print_ret       "The cyclops is not so stupid as to eat THAT!"
+ 77e7:  je              g4a #2e 77f2
+ 77eb:  je              g4a #3d #0c #4d ~782c
+ 77f2:  call            307c #3c4a #ffff -> sp
+ 77fb:  storew          sp #00 #01
+ 7800:  print           "The cyclops shrugs and ignores your pitiful effort."
+ 7823:  new_line        
+ 7824:  je              g4a #4d ~rfalse
+ 7828:  insert_obj      g3b g00
+ 782b:  rtrue           
+ 782c:  je              g4a #40 ~7853
+ 7830:  print_ret       "The cyclops doesn't take kindly to being grabbed."
+ 7853:  je              g4a #4f ~7878
+ 7857:  print_ret       "You cannot tie the cyclops, though he is fit to be
+tied."
+ 7878:  je              g4a #33 ~rfalse
+ 787c:  print           "You can hear his stomach rumbling."
+ 7893:  rtrue           
+
+Routine 7894, 0 locals ()
+
+ 7895:  jz              g6d ~rtrue
+ 7898:  je              g00 #0d 78a9
+ 789c:  call            3090 #3c4a -> sp
+ 78a3:  storew          sp #00 #00
+ 78a8:  rtrue           
+ 78a9:  jl              g2c #00 ~78b4
+ 78ad:  sub             #00 g2c -> sp
+ 78b1:  jump            78b7
+ 78b4:  push            g2c
+ 78b7:  jg              sp #05 ~78cf
+ 78bb:  call            3090 #3c4a -> sp
+ 78c2:  storew          sp #00 #00
+ 78c7:  call            4906 s124 -> sp
+ 78ce:  ret_popped      
+ 78cf:  jl              g2c #00 ~78d8
+ 78d3:  dec             g2c
+ 78d5:  jump            78da
+ 78d8:  inc             g2c
+ 78da:  jz              g6d ~rfalse
+ 78dd:  jl              g2c #00 ~78e8
+ 78e1:  sub             #00 g2c -> sp
+ 78e5:  jump            78eb
+ 78e8:  push            g2c
+ 78eb:  sub             sp #01 -> sp
+ 78ef:  loadw           g17 sp -> sp
+ 78f3:  print_paddr     sp
+ 78f5:  new_line        
+ 78f6:  rtrue           
+
+Routine 78f8, 1 local (0000)
+
+ 78fb:  je              local0 #03 ~7a97
+ 7900:  print           "This room has an exit on the north, and a staircase
+leading up."
+ 792f:  new_line        
+ 7930:  jz              g6d 795f
+ 7933:  jz              g33 ~795f
+ 7936:  print_ret       "The cyclops is sleeping blissfully at the foot of the
+stairs."
+ 795f:  jz              g33 7991
+ 7962:  print_ret       "The east wall, previously solid, now has a
+cyclops-sized hole in it."
+ 7991:  jz              g2c ~79f8
+ 7995:  print_ret       "A hungry-looking cyclops blocks the staircase. From
+the bloodstains on the  walls you guess that he is not very friendly, though he
+likes people."
+ 79f8:  jg              g2c #00 ~7a3e
+ 79fd:  print_ret       "The cyclops is standing in the corner, eyeing you
+closely. He looks  very hungry, even for a cyclops."
+ 7a3e:  jl              g2c #00 ~rfalse
+ 7a42:  print_ret       "The cyclops, having eaten the hot peppers, appears to
+be gasping. His enflamed tongue protrudes from his man-sized mouth."
+ 7a97:  je              local0 #02 ~rfalse
+ 7a9b:  jz              g2c rtrue
+ 7a9e:  call            3090 #3c4a -> sp
+ 7aa5:  storew          sp #00 #01
+ 7aaa:  rtrue           
+
+Routine 7aac, 4 locals (0000, 0070, 0000, 0000)
+
+ 7ab5:  je              g00 #0e rtrue
+ 7ab9:  jz              local0 ~7b2b
+ 7abd:  random          #64 -> sp
+ 7ac1:  jg              #1e sp ~rfalse
+ 7ac5:  clear_attr      "thief" #1d
+ 7ac8:  print           "A thief carrying a large bag is leaning against a
+wall. He does not speak, but it is clear that the bag will be taken over his
+dead body."
+ 7b29:  new_line        
+ 7b2a:  rfalse          
+ 7b2b:  random          #64 -> sp
+ 7b2f:  jg              #1e sp ~rfalse
+ 7b33:  call            4324 g00 #69 #64 -> sp
+ 7b3b:  pull            local3
+ 7b3e:  jz              local3 7b47
+ 7b41:  push            local3
+ 7b44:  jump            7b4e
+ 7b47:  call            4324 g22 #69 -> sp
+ 7b4e:  pull            local2
+ 7b51:  jz              local2 7b77
+ 7b54:  print           "The thief just left, after robbing you blind."
+ 7b73:  new_line        
+ 7b74:  jump            7b97
+ 7b77:  print           "The thief, finding nothing of value, just left."
+ 7b96:  new_line        
+ 7b97:  set_attr        "thief" #1d
+ 7b9a:  rtrue           
+
+Routine 7b9c, 1 local (0000)
+
+ 7b9f:  set_attr        "thief" #1d
+ 7ba2:  get_child       "Thief's Den" -> local0 7ba6
+ 7ba6:  jz              local0 rtrue
+ 7ba9:  clear_attr      local0 #1d
+ 7bac:  get_sibling     local0 -> local0 7bb0
+ 7bb0:  jump            7ba6
+
+Routine 7bb4, 3 locals (0000, 0000, 0000)
+
+ 7bbb:  get_child       "thief" -> local1 7bbf
+ 7bbf:  jz              local1 rtrue
+ 7bc2:  get_sibling     local1 -> local2 7bc6
+ 7bc6:  je              local1 #9d ~7bcd
+ 7bca:  jump            7bd8
+ 7bcd:  get_prop        local1 #0c -> sp
+ 7bd1:  jg              sp #00 ~7bd8
+ 7bd5:  insert_obj      local1 local0
+ 7bd8:  store           local1 local2
+ 7bdb:  jump            7bbf
+
+Routine 7bde, 3 locals (0000, 0000, 0000)
+
+ 7be5:  get_child       local0 -> local1 7be9
+ 7be9:  jz              local1 rtrue
+ 7bec:  get_sibling     local1 -> local2 7bf0
+ 7bf0:  test_attr       local1 #12 ~7c58
+ 7bf5:  test_attr       local1 #1d 7c58
+ 7bfa:  random          #64 -> sp
+ 7bfe:  jg              #28 sp ~7c58
+ 7c03:  print           "You hear, off in the distance, someone saying ~My, I
+wonder what this fine "
+ 7c36:  print_obj       local1
+ 7c38:  print           " is doing here.~"
+ 7c45:  new_line        
+ 7c46:  random          #64 -> sp
+ 7c4a:  jg              #3c sp ~rtrue
+ 7c4e:  insert_obj      local1 "thief"
+ 7c51:  set_attr        local1 #1c
+ 7c54:  set_attr        local1 #1d
+ 7c57:  rtrue           
+ 7c58:  store           local1 local2
+ 7c5b:  jump            7be9
+
+Routine 7c5e, 4 locals (0000, 0000, 0000, 0000)
+
+ 7c67:  jz              local0 ~7d48
+ 7c6b:  je              g3b #2c ~7cbf
+ 7c70:  je              g4a #4d ~7cbf
+ 7c75:  print           "You missed. The thief doesn't take the knife, though
+it would be a fine addition to his collection."
+ 7cba:  new_line        
+ 7cbb:  set_attr        "thief" #1b
+ 7cbe:  rtrue           
+ 7cbf:  je              g4a #26 #4d ~7d36
+ 7cc6:  je              g0f #69 ~7d36
+ 7ccb:  insert_obj      g3b "thief"
+ 7cce:  get_prop        g3b #0c -> sp
+ 7cd2:  jg              sp #00 ~7d1a
+ 7cd7:  store           g47 #01
+ 7cda:  print           "The thief, surprised by your generosity, accepts the "
+ 7cff:  print_obj       g3b
+ 7d01:  print_ret       " and stops to admire its beauty."
+ 7d1a:  print           "The thief places the "
+ 7d29:  print_obj       g3b
+ 7d2b:  print_ret       " in his bag."
+ 7d36:  je              g4a #33 ~rfalse
+ 7d3a:  print           "The thief says nothing."
+ 7d47:  rtrue           
+ 7d48:  je              local0 #02 ~7dc5
+ 7d4d:  call            7bb4 g00 -> sp
+ 7d53:  je              g00 #0e ~7da8
+ 7d58:  get_child       g00 -> local2 7d5c
+ 7d5c:  jz              local2 ~7d62
+ 7d5f:  jump            7db8
+ 7d62:  je              local2 #48 #a7 7da1
+ 7d68:  clear_attr      local2 #1d
+ 7d6b:  jz              local1 ~7da1
+ 7d6e:  store           local1 #01
+ 7d71:  print           "As the thief dies, his magic wanes, and his treasures
+reappear."
+ 7da0:  new_line        
+ 7da1:  get_sibling     local2 -> local2 7da5
+ 7da5:  jump            7d5c
+ 7da8:  print           "His booty remains."
+ 7db7:  new_line        
+ 7db8:  call            3090 #20bf -> sp
+ 7dbf:  storew          sp #00 #00
+ 7dc4:  rtrue           
+ 7dc5:  je              local0 #05 ~rfalse
+ 7dc9:  jz              g2b rfalse
+ 7dcc:  random          #64 -> sp
+ 7dd0:  jg              #14 sp ~rfalse
+ 7dd4:  set_attr        "thief" #1b
+ 7dd7:  rtrue           
+
+Routine 7dd8, 4 locals (0000, 0000, 0000, 0000)
+
+ 7de1:  get_child       local0 -> local2 ~rfalse
+ 7de5:  jz              local2 rtrue
+ 7de8:  get_sibling     local2 -> local3 7dec
+ 7dec:  clear_attr      local2 #1d
+ 7def:  insert_obj      local2 local1
+ 7df2:  store           local2 local3
+ 7df5:  jump            7de5
+
+Routine 7df8, 0 locals ()
+
+ 7df9:  je              g4a #40 ~rfalse
+ 7dfd:  jin             g3b "Thief's Den" ~rfalse
+ 7e01:  jin             "thief" "Thief's Den" ~rfalse
+ 7e05:  test_attr       "thief" #1b ~rfalse
+ 7e09:  test_attr       "thief" #1d rfalse
+ 7e0d:  print_ret       "You'd be stabbed in the back!"
+
+Routine 7e24, 3 locals (0000, 0000, 0000)
+
+ 7e2b:  je              local0 #02 ~rfalse
+ 7e2f:  call            3090 #20bf -> sp
+ 7e36:  loadw           sp #00 -> sp
+ 7e3a:  je              sp #01 ~rfalse
+ 7e3e:  jz              g52 ~rfalse
+ 7e41:  jin             "thief" g00 7e4b
+ 7e45:  push            #01
+ 7e48:  jump            7e4e
+ 7e4b:  push            #00
+ 7e4e:  store           local1 sp
+ 7e51:  jz              local1 7e93
+ 7e55:  print           "You hear a scream of anguish as the thief rushes to
+defend his hideaway."
+ 7e86:  new_line        
+ 7e87:  insert_obj      "thief" g00
+ 7e8a:  set_attr        "thief" #1b
+ 7e8d:  clear_attr      "thief" #1d
+ 7e90:  jump            7e96
+ 7e93:  set_attr        "thief" #1b
+ 7e96:  call            7e9c -> sp
+ 7e9b:  ret_popped      
+
+Routine 7e9c, 2 locals (0000, 0000)
+
+ 7ea1:  get_child       g00 -> local0 7ea5
+ 7ea5:  jz              local0 7ed0
+ 7ea8:  get_sibling     local0 -> sp ~7ed0
+ 7eac:  print           "The thief gestures and all his treasures vanish."
+ 7ecf:  new_line        
+ 7ed0:  jz              local0 rtrue
+ 7ed3:  je              local0 #48 7ede
+ 7ed7:  je              local0 #69 7ede
+ 7edb:  set_attr        local0 #1d
+ 7ede:  get_sibling     local0 -> local0 7ee2
+ 7ee2:  jump            7ed0
+
+Routine 7ee6, 0 locals ()
+
+ 7ee7:  print_ret       "Look around."
+
+Routine 7ef2, 0 locals ()
+
+ 7ef3:  je              g4a #3f ~7f06
+ 7ef7:  print_ret       "The door cannot be opened."
+ 7f06:  je              g4a #0e ~7f19
+ 7f0a:  print_ret       "You cannot burn this door."
+ 7f19:  je              g4a #3d ~7f2e
+ 7f1d:  print_ret       "You cannot damage this door."
+ 7f2e:  je              g4a #36 ~rfalse
+ 7f32:  print_ret       "It won't open."
+
+Routine 7f3c, 0 locals ()
+
+ 7f3d:  je              g4a #3f ~7f54
+ 7f41:  print_ret       "The book is already open."
+ 7f54:  je              g4a #13 ~7f65
+ 7f58:  print_ret       "Oddly, you cannot."
+ 7f65:  je              g4a #0e ~rfalse
+ 7f69:  print_ret       "Sacrelige!"
+
+Routine 7f74, 0 locals ()
+
+ 7f75:  je              g4a #3d ~rfalse
+ 7f79:  put_prop        g3b #0c #00
+ 7f7e:  put_prop        g3b #0b s131
+ 7f84:  print_ret       "Great! You have ruined the painting."
+
+Routine 7fa0, 0 locals ()
+
+ 7fa1:  je              g4a #32 ~7fcb
+ 7fa5:  test_attr       "lamp" #06 7fbe
+ 7fa9:  print_ret       "A burned-out lamp won't light."
+ 7fbe:  call            3090 #21df -> sp
+ 7fc5:  storew          sp #00 #01
+ 7fca:  rfalse          
+ 7fcb:  je              g4a #23 ~7ff7
+ 7fcf:  test_attr       "lamp" #06 7fea
+ 7fd3:  print_ret       "The lamp has already burned out."
+ 7fea:  call            3090 #21df -> sp
+ 7ff1:  storew          sp #00 #00
+ 7ff6:  rfalse          
+ 7ff7:  je              g4a #20 ~rfalse
+ 7ffb:  test_attr       "lamp" #06 8013
+ 7fff:  print           "The lamp has burned out."
+ 8010:  jump            8034
+ 8013:  test_attr       "lamp" #03 ~8025
+ 8017:  print           "The lamp is on."
+ 8022:  jump            8034
+ 8025:  print           "The lamp is turned off."
+ 8034:  new_line        
+ 8035:  rtrue           
+
+Routine 8036, 2 locals (0000, 0000)
+
+ 803b:  jl              local0 local1 ~8041
+ 803f:  ret             local0
+ 8041:  ret             local1
+
+Routine 8044, 5 locals (0000, 0000, 0000, 0000, 0000)
+
+ 804f:  load            [local2] -> local3
+ 8052:  loadw           local3 #00 -> local4
+ 8056:  call            307c local1 local4 -> sp
+ 805d:  storew          sp #00 #01
+ 8062:  jz              local4 ~806b
+ 8065:  clear_attr      local0 #06
+ 8068:  clear_attr      local0 #03
+ 806b:  call            8b88 local0 -> sp
+ 8071:  jz              sp ~8078
+ 8074:  jin             local0 g00 ~8094
+ 8078:  jz              local4 ~808d
+ 807b:  print           "The "
+ 8080:  print_obj       local0
+ 8082:  print           " is out."
+ 8089:  new_line        
+ 808a:  jump            8094
+ 808d:  loadw           local3 #01 -> sp
+ 8091:  print_paddr     sp
+ 8093:  new_line        
+ 8094:  jz              local4 rfalse
+ 8097:  add             local3 #04 -> sp
+ 809b:  store           [local2] sp
+ 809e:  rtrue           
+
+Routine 80a0, 0 locals ()
+
+ 80a1:  je              g4a #40 ~rfalse
+ 80a5:  je              g22 #a7 ~rfalse
+ 80a9:  call            307c #2043 #ffff -> sp
+ 80b2:  storew          sp #00 #01
+ 80b7:  rfalse          
+
+Routine 80b8, 3 locals (0000, 0000, 0000)
+
+ 80bf:  jz              local0 ~rfalse
+ 80c2:  jin             "torch" g22 ~rfalse
+ 80c6:  print           " ** BOOOOOOM **"
+ 80df:  new_line        
+ 80e0:  call            4906 s135 -> sp
+ 80e7:  ret_popped      
+
+Routine 80e8, 1 local (0000)
+
+ 80eb:  je              local0 #03 ~815c
+ 80f0:  print           "You are in a small room which has doors only to the
+east and south."
+ 8117:  new_line        
+ 8118:  get_parent      "clove of garlic" -> sp
+ 811b:  je              sp g22 g00 ~rfalse
+ 8121:  print_ret       "In the corner of the room on the ceiling is a large
+vampire bat who is holding his nose."
+ 815c:  je              local0 #02 ~rfalse
+ 8160:  get_parent      "clove of garlic" -> sp
+ 8163:  je              sp g22 g00 rfalse
+ 8169:  call            8182 -> sp
+ 816e:  ret_popped      
+
+Routine 8170, 0 locals ()
+
+ 8171:  je              g4a #3d 817c
+ 8175:  je              g4a #2e #0c #40 ~rfalse
+ 817c:  call            8182 -> sp
+ 8181:  ret_popped      
+
+Routine 8182, 1 local (0004)
+
+ 8185:  dec_chk         local0 #01 ~818c
+ 8189:  jump            8199
+ 818c:  print           "  Fweep!"
+ 8195:  new_line        
+ 8196:  jump            8185
+ 8199:  print           "A giant vampire bat swoops down from his perch and
+lifts you away...."
+ 81ce:  new_line        
+ 81cf:  call            306c g2a -> sp
+ 81d5:  call            530a sp -> sp
+ 81db:  rtrue           
+
+Routine 81dc, 0 locals ()
+
+ 81dd:  je              g4a #46 ~8214
+ 81e1:  jz              g43 81ea
+ 81e4:  call            7ee6 -> sp
+ 81e9:  ret_popped      
+ 81ea:  insert_obj      "basket" "Shaft Room"
+ 81ed:  insert_obj      "basket" "Drafty Room"
+ 81f0:  print           "The basket is now at the top of the shaft."
+ 820f:  new_line        
+ 8210:  store           g43 #01
+ 8213:  rtrue           
+ 8214:  je              g4a #39 ~826e
+ 8219:  jz              g43 ~8222
+ 821c:  call            7ee6 -> sp
+ 8221:  ret_popped      
+ 8222:  insert_obj      "basket" "Drafty Room"
+ 8225:  insert_obj      "basket" "Shaft Room"
+ 8228:  print           "The basket is lowered to the bottom of the shaft."
+ 824b:  new_line        
+ 824c:  store           g43 #00
+ 824f:  jz              g60 rtrue
+ 8252:  call            3f5e g00 -> g60
+ 8258:  jz              g60 ~rtrue
+ 825b:  print           "It is now pitch black."
+ 826c:  new_line        
+ 826d:  rtrue           
+ 826e:  je              #3c g3b g0f ~8295
+ 8274:  print_ret       "The basket is at the other end of the chain."
+ 8295:  je              g4a #40 ~rfalse
+ 8299:  je              g3b #94 #3c ~rfalse
+ 829f:  print_ret       "The cage is securely fastened to the chain."
+
+Routine 82c0, 1 local (0000)
+
+ 82c3:  je              local0 #03 ~rfalse
+ 82c7:  print           "In one corner of this chilly room is a machine shaped
+somewhat like a clothes dryer, with a grooved switch labelled START. The switch
+is so  small that your fingers can not turn it. On top of the machine is a 
+large lid, which is "
+ 8360:  test_attr       "machine" #0e ~836c
+ 8364:  print           "open."
+ 8369:  jump            8371
+ 836c:  print           "closed."
+ 8371:  new_line        
+ 8372:  rtrue           
+
+Routine 8374, 0 locals ()
+
+ 8375:  je              g00 #93 ~rfalse
+ 8379:  je              g4a #3f ~83bd
+ 837e:  test_attr       "machine" #0e ~8388
+ 8382:  call            7ee6 -> sp
+ 8387:  ret_popped      
+ 8388:  get_child       "machine" -> sp ~83ad
+ 838c:  print           "The lid opens, revealing "
+ 839f:  call            5082 #0a -> sp
+ 83a5:  print           "."
+ 83a8:  new_line        
+ 83a9:  set_attr        "machine" #0e
+ 83ac:  rtrue           
+ 83ad:  print           "The lid opens."
+ 83b8:  new_line        
+ 83b9:  set_attr        "machine" #0e
+ 83bc:  rtrue           
+ 83bd:  je              g4a #13 ~rfalse
+ 83c1:  test_attr       "machine" #0e ~83d7
+ 83c5:  print           "The lid closes."
+ 83d2:  new_line        
+ 83d3:  clear_attr      "machine" #0e
+ 83d6:  rtrue           
+ 83d7:  call            7ee6 -> sp
+ 83dc:  ret_popped      
+
+Routine 83de, 1 local (0000)
+
+ 83e1:  je              g4a #51 ~rfalse
+ 83e5:  je              g0f #a0 ~8458
+ 83ea:  test_attr       "machine" #0e ~8409
+ 83ee:  print_ret       "The machine won't work with the lid open."
+ 8409:  print           "The machine emits a brief display of dazzling lights
+and bizarre noises."
+ 8440:  new_line        
+ 8441:  jin             "small pile of coal" "machine" ~844b
+ 8445:  remove_obj      "small pile of coal"
+ 8447:  insert_obj      "huge diamond" "machine"
+ 844a:  rtrue           
+ 844b:  get_child       "machine" -> local0 ~8454
+ 844f:  remove_obj      local0
+ 8451:  jump            844b
+ 8454:  insert_obj      "piece of vitreous slag" "machine"
+ 8457:  rtrue           
+ 8458:  print           "It seems that a "
+ 8463:  print_obj       g3b
+ 8465:  print_ret       " won't do."
+
+Routine 846c, 0 locals ()
+
+ 846d:  remove_obj      "piece of vitreous slag"
+ 846f:  print_ret       "The slag crumbles into dust at your touch."
+
+Routine 848e, 2 locals (0000, 0000)
+
+ 8493:  je              local0 #01 ~rfalse
+ 8497:  get_child       g22 -> local1 849b
+ 849b:  store           g34 #01
+ 849e:  jz              local1 ~84a4
+ 84a1:  jump            84bb
+ 84a4:  call            50f6 local1 -> sp
+ 84aa:  jg              sp #04 ~84b4
+ 84ae:  store           g34 #00
+ 84b1:  jump            84bb
+ 84b4:  get_sibling     local1 -> local1 84b8
+ 84b8:  jump            849e
+ 84bb:  je              g00 #27 ~rfalse
+ 84bf:  jz              g60 rfalse
+ 84c2:  call            471a g1f -> sp
+ 84c8:  store           g1f #00
+ 84cb:  rfalse          
+
+Routine 84cc, 1 local (0000)
+
+ 84cf:  je              local0 #01 ~rfalse
+ 84d3:  jin             "gold coffin" g22 84dd
+ 84d7:  push            #01
+ 84da:  jump            84e0
+ 84dd:  push            #00
+ 84e0:  store           g6c sp
+ 84e3:  rfalse          
+
+Routine 84e4, 1 local (0000)
+
+ 84e7:  jz              local0 ~rfalse
+ 84ea:  jin             "inflated boat" g22 ~84f2
+ 84ee:  store           g28 #00
+ 84f1:  rtrue           
+ 84f2:  store           g28 #01
+ 84f5:  rtrue           
+
+Routine 84f6, 0 locals ()
+
+ 84f7:  je              g4a #46 #57 ~rfalse
+ 84fd:  jz              g56 ~8533
+ 8500:  je              g00 #17 #08 ~8533
+ 8506:  clear_attr      "pot of gold" #1d
+ 8509:  print           "Suddenly, the rainbow appears to become solid."
+ 852e:  new_line        
+ 852f:  store           g56 #01
+ 8532:  rtrue           
+ 8533:  print_ret       "A dazzling display of color briefly emanates from the
+sceptre."
+
+Routine 8560, 1 local (0000)
+
+ 8563:  je              local0 #03 ~rfalse
+ 8567:  print           "You are near the top of Aragain Falls, an enormous
+waterfall. The only path  here is on the north end."
+ 85b2:  new_line        
+ 85b3:  jz              g56 85d0
+ 85b6:  print           "A solid rainbow spans the falls."
+ 85cd:  jump            85f5
+ 85d0:  print           "A beautiful rainbow can be seen over the falls to the
+west."
+ 85f5:  new_line        
+ 85f6:  rtrue           
+
+Routine 85f8, 0 locals ()
+
+ 85f9:  je              g4a #15 ~rfalse
+ 85fd:  jz              g56 862d
+ 8600:  je              g00 #17 ~860b
+ 8604:  call            530a #08 -> sp
+ 860a:  ret_popped      
+ 860b:  je              g00 #08 ~8616
+ 860f:  call            530a #17 -> sp
+ 8615:  ret_popped      
+ 8616:  print_ret       "You'll have to say which way..."
+ 862d:  print_ret       "I didn't know you could walk on water vapor."
+
+Routine 864c, 0 locals ()
+
+ 864d:  je              g4a #1c ~86cf
+ 8652:  je              g0f #a1 ~rfalse
+ 8656:  je              g3b #2f ~8662
+ 865a:  call            4906 s140 -> sp
+ 8661:  ret_popped      
+ 8662:  je              g3b #15 ~8683
+ 8666:  print_ret       "You should get in the boat then launch it."
+ 8683:  test_attr       g3b #09 ~86a9
+ 8687:  remove_obj      g3b
+ 8689:  print           "The "
+ 868e:  print_obj       g3b
+ 8690:  print_ret       " floats for a moment, then sinks."
+ 86a9:  remove_obj      g3b
+ 86ab:  print           "The "
+ 86b0:  print_obj       g3b
+ 86b2:  print_ret       " splashes into the water and is gone forever."
+ 86cf:  je              g4a #2c ~rfalse
+ 86d3:  print_ret       "A look before leaping reveals that the river is
+dangerous,with  swift currents and sharp rocks. You therefore decide to  forgo
+your ill-considered swim."
+
+Routine 873c, 1 local (0000)
+
+ 873f:  je              g00 #5a #8f #18 8753
+ 8746:  call            3090 #439e -> sp
+ 874d:  storew          sp #00 #00
+ 8752:  rtrue           
+ 8753:  call            4bb2 g00 g36 -> local0
+ 875a:  jz              local0 8798
+ 875d:  print           "The flow of the river carries you downstream."
+ 877c:  new_line        
+ 877d:  call            530a local0 -> sp
+ 8783:  call            4bb2 g00 g58 -> sp
+ 878a:  call            307c #439e sp -> sp
+ 8792:  storew          sp #00 #01
+ 8797:  rtrue           
+ 8798:  call            4906 s141 -> sp
+ 879f:  ret_popped      
+
+Routine 87a0, 1 local (0000)
+
+ 87a3:  je              local0 #02 rfalse
+ 87a7:  je              local0 #01 ~8803
+ 87ac:  je              g4a #55 ~87ce
+ 87b0:  je              g3b #13 #1e #1d rfalse
+ 87b7:  print_ret       "You can't control the boat with words."
+ 87ce:  je              g4a #30 ~rfalse
+ 87d2:  call            4b9c g1e -> sp
+ 87d8:  jz              sp 87f0
+ 87db:  call            4bb2 g00 g58 -> sp
+ 87e2:  call            307c #439e sp -> sp
+ 87ea:  storew          sp #00 #01
+ 87ef:  rtrue           
+ 87f0:  print_ret       "You can't launch it from here."
+ 8803:  je              g4a #30 ~8818
+ 8807:  print_ret       "You're not in the boat!"
+ 8818:  je              g4a #24 #29 ~883d
+ 881e:  print_ret       "Inflating it further would probably burst it."
+ 883d:  je              g4a #17 ~rfalse
+ 8841:  get_parent      g22 -> sp
+ 8844:  je              sp #15 ~8867
+ 8848:  print_ret       "You can't deflate the boat while you're in it."
+ 8867:  jin             "inflated boat" g00 8888
+ 886b:  print_ret       "The boat must be on the ground to be deflated."
+ 8888:  print           "The boat deflates."
+ 8897:  new_line        
+ 8898:  store           g28 #01
+ 889b:  remove_obj      "inflated boat"
+ 889d:  insert_obj      "pile of plastic" g00
+ 88a0:  rtrue           
+
+Routine 88a2, 0 locals ()
+
+ 88a3:  call            32c0 #29 g3b #8e -> sp
+ 88ab:  ret_popped      
+
+Routine 88ac, 0 locals ()
+
+ 88ad:  je              g4a #24 #29 ~rfalse
+ 88b3:  jin             "pile of plastic" g00 88d4
+ 88b7:  print_ret       "The boat must be on the ground to be inflated."
+ 88d4:  je              g0f #5f ~8922
+ 88d9:  print           "The boat inflates and appears seaworthy."
+ 88f8:  new_line        
+ 88f9:  test_attr       "tan label" #1c 8919
+ 88fd:  print           "A tan label is lying inside the boat."
+ 8918:  new_line        
+ 8919:  store           g28 #00
+ 891c:  remove_obj      "pile of plastic"
+ 891e:  insert_obj      "inflated boat" g00
+ 8921:  rtrue           
+ 8922:  je              g0f #8e ~8945
+ 8926:  print_ret       "You don't have enough lung power to inflate it."
+ 8945:  print           "With a "
+ 894c:  print_obj       g0f
+ 894e:  print_ret       "?  Surely you jest!"
+
+Routine 895e, 0 locals ()
+
+ 895f:  je              g4a #1c ~896f
+ 8963:  je              g0f #3e ~896f
+ 8967:  call            32c0 #1b g3b -> sp
+ 896e:  ret_popped      
+ 896f:  je              g00 #53 ~8979
+ 8973:  call            8998 -> sp
+ 8978:  ret_popped      
+ 8979:  je              g4a #18 ~rfalse
+ 897d:  print_ret       "The ground is too hard for digging here."
+
+Routine 8998, 0 locals ()
+
+ 8999:  je              g4a #18 ~rfalse
+ 899d:  inc             g16
+ 899f:  jg              g16 #03 ~89b7
+ 89a3:  store           g16 #ffff
+ 89a8:  jin             "scarab" g00 ~89af
+ 89ac:  set_attr        "scarab" #1d
+ 89af:  call            4906 s142 -> sp
+ 89b6:  ret_popped      
+ 89b7:  je              g16 #03 ~89df
+ 89bb:  test_attr       "scarab" #1d ~rfalse
+ 89bf:  print           "You can see a scarab here in the sand."
+ 89da:  new_line        
+ 89db:  clear_attr      "scarab" #1d
+ 89de:  rtrue           
+ 89df:  loadw           g29 g16 -> sp
+ 89e3:  print_paddr     sp
+ 89e5:  new_line        
+ 89e6:  rtrue           
+
+Routine 89e8, 0 locals ()
+
+ 89e9:  je              g4a #20 ~8a61
+ 89ee:  print_ret       "The grue is a fearsome beast who inhabits the dark
+places of the earth. Its favorite diet is adventurers, but its huge appetite is
+tempered by its fear of light."
+ 8a61:  je              g4a #25 ~8abf
+ 8a66:  print_ret       "There is no grue here, but I'm sure there is at least
+one lurking in the darkness nearby. I wouldn't let my light go out if I were
+you!"
+ 8abf:  je              g4a #33 ~rfalse
+ 8ac3:  print_ret       "It makes no sound but is always lurking in the
+darkness nearby."
+
+Routine 8aee, 0 locals ()
+
+ 8aef:  je              g4a #26 ~8aff
+ 8af3:  je              g0f #2f ~8aff
+ 8af7:  call            32c0 #40 g3b -> sp
+ 8afe:  ret_popped      
+ 8aff:  je              g4a #26 ~8b21
+ 8b03:  je              g3b #2f ~8b21
+ 8b07:  jz              g0f 8b21
+ 8b0a:  test_attr       g0f #15 ~8b21
+ 8b0e:  print_ret       "That would be suicidal."
+ 8b21:  je              g4a #3d #2e #0c ~8b4c
+ 8b28:  jz              g0f 8b37
+ 8b2b:  test_attr       g0f #07 ~8b37
+ 8b2f:  call            4906 s146 -> sp
+ 8b36:  ret_popped      
+ 8b37:  print_ret       "Suicide is not the answer."
+ 8b4c:  je              g4a #40 ~8b5d
+ 8b50:  print_ret       "How romantic!"
+ 8b5d:  je              g4a #20 ~rfalse
+ 8b61:  print_ret       "That's difficult unless your eyes are prehensile."
+
+Routine 8b88, 1 local (0000)
+
+ 8b8b:  get_parent      local0 -> local0
+ 8b8e:  jz              local0 rfalse
+ 8b91:  je              local0 g22 ~8b8b
+ 8b96:  rtrue           
+
+Routine 8b98, 2 locals (0000, 0000)
+
+ 8b9d:  je              local0 #03 ~8c1b
+ 8ba2:  print_ret       "You are about 10 feet above the ground nestled among
+some large branches. The nearest branch above you is above your reach. A bird's
+nest is tangled around a branch here."
+ 8c1b:  je              local0 #01 ~8c70
+ 8c20:  je              g4a #1b ~rfalse
+ 8c24:  call            4fa0 -> sp
+ 8c29:  jz              sp rtrue
+ 8c2c:  je              g3b #32 ~8c55
+ 8c30:  print           "The egg falls to the ground and cracks open."
+ 8c4b:  new_line        
+ 8c4c:  insert_obj      "jewel-encrusted egg" "Forest Path"
+ 8c4f:  call            8d1e -> sp
+ 8c54:  ret_popped      
+ 8c55:  je              g3b g22 #06 rfalse
+ 8c5b:  insert_obj      g3b "Forest Path"
+ 8c5e:  print           "The "
+ 8c63:  print_obj       g3b
+ 8c65:  print_ret       " falls to the ground."
+ 8c70:  je              local0 #02 ~rfalse
+ 8c74:  call            307c #4737 #ffff -> sp
+ 8c7d:  storew          sp #00 #01
+ 8c82:  rtrue           
+
+Routine 8c84, 0 locals ()
+
+ 8c85:  je              g4a #3d #3f ~8cf4
+ 8c8c:  je              g3b #32 ~8cf4
+ 8c91:  test_attr       g3b #0e ~8ca8
+ 8c95:  print_ret       "The egg is already open."
+ 8ca8:  print           "The egg is now open, but the clumsiness of your
+attempt has seriously compromised its esthetic appeal."
+ 8ced:  new_line        
+ 8cee:  call            8d1e -> sp
+ 8cf3:  ret_popped      
+ 8cf4:  je              g4a #12 ~rfalse
+ 8cf8:  print           "There is a delicate crunch from beneath you."
+ 8d17:  call            8d1e -> sp
+ 8d1c:  ret_popped      
+
+Routine 8d1e, 1 local (0000)
+
+ 8d21:  print           "Nestled inside the now broken egg is a golden
+clockwork canary."
+ 8d50:  new_line        
+ 8d51:  get_parent      "jewel-encrusted egg" -> sp
+ 8d54:  insert_obj      "broken egg" sp
+ 8d57:  insert_obj      "golden canary" "broken egg"
+ 8d5a:  remove_obj      "jewel-encrusted egg"
+ 8d5c:  rtrue           
+
+Routine 8d5e, 0 locals ()
+
+ 8d5f:  je              g4a #58 ~rfalse
+ 8d63:  jz              g61 ~8e40
+ 8d67:  call            8e62 -> sp
+ 8d6c:  jz              sp 8e40
+ 8d70:  print           "The canary chirps a beautiful song and as it does a
+lovely songbird arrives and perches above your head. As it opens its beak to
+sing, a brass bauble drops from its mouth, bounces off your head, and lands in
+the grass. When the song ends, the bird flies away."
+ 8e2b:  new_line        
+ 8e2c:  store           g61 #01
+ 8e2f:  je              g00 #05 ~8e39
+ 8e33:  push            #51
+ 8e36:  jump            8e3c
+ 8e39:  push            g00
+ 8e3c:  insert_obj      "brass bauble" sp
+ 8e3f:  rtrue           
+ 8e40:  print_ret       "The canary chirps blithely for a short time."
+
+Routine 8e62, 0 locals ()
+
+ 8e63:  je              g00 #88 rtrue
+ 8e67:  je              g00 #51 #05 rtrue
+ 8e6d:  rfalse          
+
+Routine 8e6e, 0 locals ()
+
+ 8e6f:  call            8e62 -> sp
+ 8e74:  jz              sp ~8e84
+ 8e77:  call            3090 #4737 -> sp
+ 8e7e:  storew          sp #00 #00
+ 8e83:  rtrue           
+ 8e84:  random          #64 -> sp
+ 8e88:  jg              #0f sp ~rfalse
+ 8e8c:  print_ret       "You hear in the distance the chirping of a song bird."
+
+Routine 8eb2, 1 local (0000)
+
+ 8eb5:  je              local0 #02 ~rfalse
+ 8eb9:  call            307c #4737 #ffff -> sp
+ 8ec2:  storew          sp #00 #01
+ 8ec7:  rtrue           
+
+Routine 8ec8, 0 locals ()
+
+ 8ec9:  je              g4a #56 ~rfalse
+ 8ecd:  call            4b9c g46 -> sp
+ 8ed3:  ret_popped      
+
+Routine 8ed4, 0 locals ()
+
+ 8ed5:  je              g4a #20 ~8eec
+ 8ed9:  print_ret       "I can't see any songbird here."
+ 8eec:  je              g4a #25 ~8f03
+ 8ef0:  print_ret       "The songbird is not here."
+ 8f03:  je              g4a #33 ~8f1e
+ 8f07:  print_ret       "You can't hear the songbird just now."
+ 8f1e:  je              g4a #0000 ~rfalse
+ 8f24:  print_ret       "You can't follow him."
+
+Routine 8f34, 0 locals ()
+
+ 8f35:  je              g4a #11 #10 #0f ~rfalse
+ 8f3c:  print_ret       "The cliff is too steep for climbing."
+
+Routine 8f58, 0 locals ()
+
+ 8f59:  je              g0f #04 ~rfalse
+ 8f5d:  je              g4a #1c ~rfalse
+ 8f61:  print           "The "
+ 8f66:  print_obj       g3b
+ 8f68:  print           " tumbles into the river and is gone."
+ 8f7f:  new_line        
+ 8f80:  remove_obj      g3b
+ 8f82:  rtrue           
+
+Routine 8f84, 1 local (0000)
+
+ 8f87:  je              g00 #2a 8fa3
+ 8f8b:  store           g5f #00
+ 8f8e:  je              g4a #4f ~rfalse
+ 8f92:  print_ret       "You can't tie the rope to that."
+ 8fa3:  je              g4a #4f ~8ffa
+ 8fa8:  je              g0f #07 ~rfalse
+ 8fac:  jz              g5f 8fc6
+ 8faf:  print_ret       "The rope is already tied to it."
+ 8fc6:  print           "The rope drops over the side of the railing."
+ 8fe5:  new_line        
+ 8fe6:  store           g5f #01
+ 8fe9:  set_attr        "rope" #19
+ 8fec:  get_parent      "rope" -> local0
+ 8fef:  jz              local0 8ff6
+ 8ff2:  jin             local0 #4c rtrue
+ 8ff6:  insert_obj      "rope" g00
+ 8ff9:  rtrue           
+ 8ffa:  je              g4a #52 ~902b
+ 8ffe:  jz              g5f 9016
+ 9001:  store           g5f #00
+ 9004:  clear_attr      "rope" #19
+ 9007:  print_ret       "The rope is now untied."
+ 9016:  print_ret       "It is not tied to anything."
+ 902b:  je              g4a #1b ~9056
+ 902f:  je              g00 #2a ~9056
+ 9033:  jz              g5f ~9056
+ 9036:  insert_obj      "rope" "Temple"
+ 9039:  print_ret       "The rope drops gently to the floor below."
+ 9056:  je              g4a #40 ~rfalse
+ 905a:  jz              g5f rfalse
+ 905d:  print_ret       "The rope is tied to the railing."
+
+Routine 9074, 0 locals ()
+
+ 9075:  je              g3b #72 ~9088
+ 9079:  jz              g5f 9088
+ 907c:  je              g0f #07 ~9088
+ 9080:  call            32c0 #52 g3b -> sp
+ 9087:  ret_popped      
+ 9088:  print_ret       "It's not attached to that!"
+
+Routine 909e, 0 locals ()
+
+ 909f:  je              g4a #1f 90ab
+ 90a3:  je              g4a #1c ~90cc
+ 90a7:  je              g3b #2f ~90cc
+ 90ab:  print           "You tumble down the slide...."
+ 90c4:  new_line        
+ 90c5:  call            530a #1a -> sp
+ 90cb:  ret_popped      
+ 90cc:  je              g4a #1c ~rfalse
+ 90d0:  test_attr       g3b #12 ~90fe
+ 90d4:  print           "The "
+ 90d9:  print_obj       g3b
+ 90db:  print           " falls into the slide and is gone."
+ 90f2:  new_line        
+ 90f3:  je              g3b #25 ~90fa
+ 90f7:  remove_obj      g3b
+ 90f9:  rtrue           
+ 90fa:  insert_obj      g3b "Cellar"
+ 90fd:  rtrue           
+ 90fe:  call            4b90 -> sp
+ 9103:  ret_popped      
+
+Routine 9104, 0 locals ()
+
+ 9105:  jz              g66 9121
+ 9108:  print_ret       "There's not much lake left...."
+ 9121:  je              g4a #15 ~9138
+ 9125:  print_ret       "It's too wide to cross."
+ 9138:  je              g4a #1f ~rfalse
+ 913c:  print           "You can't swim in this lake."
+ 914f:  rtrue           
+
+Routine 9150, 0 locals ()
+
+ 9151:  je              g4a #1f ~915d
+ 9155:  call            32c0 #55 #15 -> sp
+ 915c:  rtrue           
+ 915d:  print_ret       "The gate is protected by an invisible force."
+
+Routine 917e, 0 locals ()
+
+ 917f:  je              g4a #13 #3f ~rfalse
+ 9185:  print_ret       "The door won't budge."
+
+Routine 9192, 0 locals ()
+
+ 9193:  je              g4a #3d ~rfalse
+ 9197:  print_ret       "Some paint chips away, revealing more paint."
+
+Routine 91ba, 0 locals ()
+
+ 91bb:  je              g4a #2b ~91d8
+ 91bf:  print_ret       "There is too much gas to blow away."
+ 91d8:  je              g4a #4a ~rfalse
+ 91dc:  print_ret       "It smells like coal gas in here."
+
+Routine 91f6, 0 locals ()
+
+ 91f7:  je              g4a #0000 #40 ~9219
+ 91fe:  print_ret       "You must specify a direction to go."
+ 9219:  je              g4a #25 ~rfalse
+ 921d:  print_ret       "I can't help you there...."
+
+Routine 9230, 6 locals (0000, 0000, 0000, 0000, 0000, 0000)
+
+ 923d:  store           local1 #00
+ 9240:  inc             local1
+ 9242:  je              local1 local0 ~924c
+ 9246:  store           local2 #01
+ 9249:  jump            927d
+ 924c:  loadw           g1b local1 -> local4
+ 9250:  loadw           local4 #00 -> local3
+ 9254:  test_attr       local3 #1b 925b
+ 9258:  jump            9240
+ 925b:  call            9346 local4 local5 -> local2
+ 9262:  jz              local2 ~926b
+ 9265:  store           local2 #00
+ 9268:  jump            927d
+ 926b:  je              local2 #0000 ~9240
+ 9272:  random          #03 -> sp
+ 9276:  add             #01 sp -> local5
+ 927a:  jump            9240
+ 927d:  jz              local2 rtrue
+ 9280:  jz              local5 rtrue
+ 9283:  dec             [local5]
+ 9285:  jz              local5 ~923d
+ 9289:  rtrue           
+
+Routine 928a, 6 locals (0000, 0000, 0000, 0000, 0000, 0000)
+
+ 9297:  loadw           local0 #00 -> local3
+ 929b:  inc_chk         local4 local3 ~92a2
+ 929f:  jump            92bd
+ 92a2:  loadw           local0 local4 -> local5
+ 92a6:  je              local5 #00 ~92af
+ 92aa:  print_obj       local2
+ 92ac:  jump            929b
+ 92af:  je              local5 #01 ~92b8
+ 92b3:  print_obj       local1
+ 92b5:  jump            929b
+ 92b8:  print_paddr     local5
+ 92ba:  jump            929b
+ 92bd:  new_line        
+ 92be:  rtrue           
+
+Routine 92c0, 2 locals (0001, 0000)
+
+ 92c5:  sub             #07 #02 -> sp
+ 92c9:  div             g45 sp -> sp
+ 92cd:  div             g01 sp -> sp
+ 92d1:  add             #02 sp -> local1
+ 92d5:  jz              local0 92e1
+ 92d8:  get_prop        g22 #0f -> sp
+ 92dc:  add             local1 sp -> sp
+ 92e0:  ret_popped      
+ 92e1:  ret             local1
+
+Routine 92e4, 4 locals (0000, 0000, 0000, 0000)
+
+ 92ed:  loadw           local0 #00 -> local1
+ 92f1:  get_prop        local1 #0f -> local2
+ 92f5:  jl              local2 #00 932b
+ 92f9:  je              local1 #69 ~930a
+ 92fd:  jz              g47 930a
+ 9300:  jg              local2 #02 ~9307
+ 9304:  store           local2 #02
+ 9307:  store           g47 #00
+ 930a:  jz              g0f 932b
+ 930d:  test_attr       g0f #07 ~932b
+ 9311:  loadw           local0 #01 -> sp
+ 9315:  je              sp g0f ~932b
+ 9319:  loadw           local0 #02 -> sp
+ 931d:  sub             local2 sp -> local3
+ 9321:  jl              local3 #01 ~9328
+ 9325:  store           local3 #01
+ 9328:  store           local2 local3
+ 932b:  ret             local2
+
+Routine 932e, 2 locals (0000, 0000)
+
+ 9333:  get_child       local0 -> local1 9337
+ 9337:  jz              local1 rfalse
+ 933a:  test_attr       local1 #07 ~9340
+ 933e:  ret             local1
+ 9340:  get_sibling     local1 -> local1 933a
+ 9345:  rfalse          
+
+Routine 9346, 12 locals (0000, 0000, 0000, 0000, 0000, 0000, 0000, 0000, 0000,
+                         0000, 0000, 0000)
+
+ 935f:  loadw           local0 #00 -> local2
+ 9363:  loadw           local0 #04 -> local3
+ 9367:  clear_attr      g22 #1a
+ 936a:  test_attr       local2 #1a ~938b
+ 936e:  print           "The "
+ 9373:  print_obj       local2
+ 9375:  print           " slowly regains his feet."
+ 9386:  new_line        
+ 9387:  clear_attr      local2 #1a
+ 938a:  rtrue           
+ 938b:  call            92e4 local0 -> sp
+ 9391:  store           local5 sp
+ 9394:  store           local7 #01
+ 9397:  call            92c0 -> local6
+ 939c:  jg              local6 #00 ~rtrue
+ 93a0:  call            92c0 #00 -> local8
+ 93a6:  call            932e g22 -> local4
+ 93ac:  jl              local6 #00 ~93b6
+ 93b0:  store           local10 #03
+ 93b3:  jump            9429
+ 93b6:  je              local6 #01 ~93cc
+ 93ba:  jg              local5 #02 ~93c1
+ 93be:  store           local5 #03
+ 93c1:  sub             local5 #01 -> sp
+ 93c5:  loadw           g51 sp -> local9
+ 93c9:  jump            9407
+ 93cc:  je              local6 #02 ~93e2
+ 93d0:  jg              local5 #03 ~93d7
+ 93d4:  store           local5 #04
+ 93d7:  sub             local5 #01 -> sp
+ 93db:  loadw           g57 sp -> local9
+ 93df:  jump            9407
+ 93e2:  jg              local6 #02 ~9407
+ 93e6:  sub             local5 local6 -> local5
+ 93ea:  jl              local5 #ffff ~93f8
+ 93f0:  store           local5 #fffe
+ 93f5:  jump            93ff
+ 93f8:  jg              local5 #01 ~93ff
+ 93fc:  store           local5 #02
+ 93ff:  add             local5 #02 -> sp
+ 9403:  loadw           g5b sp -> local9
+ 9407:  random          #09 -> sp
+ 940b:  sub             sp #01 -> sp
+ 940f:  loadw           local9 sp -> local10
+ 9413:  sub             local10 #01 -> sp
+ 9417:  loadw           local3 sp -> sp
+ 941b:  call            306c sp -> sp
+ 9421:  call            928a sp g22 local4 -> sp
+ 9429:  je              local10 #01 947c
+ 942e:  je              local10 #08 ~9435
+ 9432:  jump            947c
+ 9435:  je              local10 #03 943d
+ 9439:  je              local10 #09 ~9443
+ 943d:  store           local6 #00
+ 9440:  jump            947c
+ 9443:  je              local10 #04 ~945b
+ 9447:  dec             local6
+ 9449:  jl              local6 #00 ~9450
+ 944d:  store           local6 #00
+ 9450:  jg              g24 #32 ~947c
+ 9454:  sub             g24 #0a -> g24
+ 9458:  jump            947c
+ 945b:  je              local10 #05 ~9475
+ 945f:  sub             local6 #02 -> local6
+ 9463:  jl              local6 #00 ~946a
+ 9467:  store           local6 #00
+ 946a:  jg              g24 #32 ~947c
+ 946e:  sub             g24 #14 -> g24
+ 9472:  jump            947c
+ 9475:  je              local10 #06 ~947c
+ 9479:  set_attr        g22 #1a
+ 947c:  call            9608 local6 local10 local8 -> sp
+ 9484:  ret_popped      
+
+Routine 9486, 12 locals (0000, 0000, 0000, 0000, 0000, 0000, 0000, 0000, 0000,
+                         0000, 0000, 0000)
+
+ 949f:  loadw           g1b #00 -> local11
+ 94a3:  inc             local5
+ 94a5:  je              local5 local11 ~94ac
+ 94a9:  jump            94b9
+ 94ac:  loadw           g1b local5 -> local0
+ 94b0:  loadw           local0 #00 -> sp
+ 94b4:  je              sp g3b ~94a3
+ 94b9:  set_attr        g3b #1b
+ 94bc:  test_attr       g22 #1a ~94fa
+ 94c0:  print           "You are still recovering from that last blow, so your
+attack is ineffective."
+ 94f5:  new_line        
+ 94f6:  clear_attr      g22 #1a
+ 94f9:  rtrue           
+ 94fa:  call            92c0 -> local3
+ 94ff:  jl              local3 #01 ~9506
+ 9503:  store           local3 #01
+ 9506:  store           local6 local3
+ 9509:  loadw           local0 #00 -> local1
+ 950d:  call            92e4 local0 -> sp
+ 9513:  store           local4 sp
+ 9516:  store           local7 #01
+ 9519:  jz              local7 ~9540
+ 951c:  je              g3b g22 ~9528
+ 9520:  call            4906 s198 -> sp
+ 9527:  ret_popped      
+ 9528:  print           "Attacking the "
+ 9533:  print_obj       local1
+ 9535:  print_ret       " is pointless."
+ 9540:  call            932e local1 -> local2
+ 9546:  je              local4 #01 ~955c
+ 954a:  jg              local3 #02 ~9551
+ 954e:  store           local3 #03
+ 9551:  sub             local3 #01 -> sp
+ 9555:  loadw           g51 sp -> local8
+ 9559:  jump            9597
+ 955c:  je              local4 #02 ~9572
+ 9560:  jg              local3 #03 ~9567
+ 9564:  store           local3 #04
+ 9567:  sub             local3 #01 -> sp
+ 956b:  loadw           g57 sp -> local8
+ 956f:  jump            9597
+ 9572:  jg              local4 #02 ~9597
+ 9576:  sub             local3 local4 -> local3
+ 957a:  jl              local3 #ffff ~9588
+ 9580:  store           local3 #fffe
+ 9585:  jump            958f
+ 9588:  jg              local3 #01 ~958f
+ 958c:  store           local3 #02
+ 958f:  add             local3 #02 -> sp
+ 9593:  loadw           g5b sp -> local8
+ 9597:  random          #09 -> sp
+ 959b:  sub             sp #01 -> sp
+ 959f:  loadw           local8 sp -> local9
+ 95a3:  je              local9 #02 ~95aa
+ 95a7:  store           local9 #01
+ 95aa:  sub             local9 #01 -> sp
+ 95ae:  loadw           g12 sp -> sp
+ 95b2:  call            306c sp -> sp
+ 95b8:  call            928a sp g3b g0f -> sp
+ 95c0:  je              local9 #01 #08 ~95c9
+ 95c6:  jump            95fe
+ 95c9:  je              local9 #03 #09 ~95d5
+ 95cf:  store           local4 #00
+ 95d2:  jump            95fe
+ 95d5:  je              local9 #04 ~95e5
+ 95d9:  dec             local4
+ 95db:  jl              local4 #00 ~95fe
+ 95df:  store           local4 #00
+ 95e2:  jump            95fe
+ 95e5:  je              local9 #05 ~95f7
+ 95e9:  sub             local4 #02 -> local4
+ 95ed:  jl              local4 #00 ~95fe
+ 95f1:  store           local4 #00
+ 95f4:  jump            95fe
+ 95f7:  je              local9 #06 ~95fe
+ 95fb:  set_attr        g3b #1a
+ 95fe:  call            965e g3b local4 local9 -> sp
+ 9606:  ret_popped      
+
+Routine 9608, 3 locals (0000, 0000, 0000)
+
+ 960f:  jz              local0 ~9619
+ 9612:  push            #d8f0
+ 9616:  jump            961d
+ 9619:  sub             local0 local2 -> sp
+ 961d:  put_prop        g22 #0f sp
+ 9622:  sub             local0 local2 -> sp
+ 9626:  jl              sp #00 ~9637
+ 962a:  call            307c #4ba4 #1e -> sp
+ 9632:  storew          sp #00 #01
+ 9637:  call            92c0 -> sp
+ 963c:  jg              sp #00 965b
+ 9640:  call            92c0 #00 -> sp
+ 9646:  sub             #00 sp -> sp
+ 964a:  add             #01 sp -> sp
+ 964e:  put_prop        g22 #0f sp
+ 9653:  call            4906 s199 -> sp
+ 965a:  rfalse          
+ 965b:  ret             local1
+
+Routine 965e, 3 locals (0000, 0000, 0000)
+
+ 9665:  put_prop        local0 #0f local1
+ 966a:  jz              local1 ~96f5
+ 966e:  clear_attr      local0 #1b
+ 9671:  print           "Almost as soon as the "
+ 9682:  print_obj       local0
+ 9684:  print           " breathes his last breath, a cloud of sinister black
+fog envelops him, and when the fog lifts, his carcass and weapon have
+disappeared."
+ 96e7:  new_line        
+ 96e8:  remove_obj      local0
+ 96ea:  get_prop        local0 #11 -> sp
+ 96ee:  call            sp #02 -> sp
+ 96f3:  ret             local2
+ 96f5:  ret             local2
+
+Routine 96f8, 3 locals (0000, 0000, 0000)
+
+ 96ff:  get_prop        local0 #0f -> local1
+ 9703:  call            92c0 -> sp
+ 9708:  sub             local1 sp -> local2
+ 970c:  jg              local2 #03 ~9719
+ 9710:  random          #64 -> sp
+ 9714:  jg              #5a sp rtrue
+ 9718:  rfalse          
+ 9719:  jg              local2 #00 ~9726
+ 971d:  random          #64 -> sp
+ 9721:  jg              #4b sp rtrue
+ 9725:  rfalse          
+ 9726:  jz              local2 ~9732
+ 9729:  random          #64 -> sp
+ 972d:  jg              #32 sp rtrue
+ 9731:  rfalse          
+ 9732:  jg              local1 #01 ~973f
+ 9736:  random          #64 -> sp
+ 973a:  jg              #19 sp rtrue
+ 973e:  rfalse          
+ 973f:  random          #64 -> sp
+ 9743:  jg              #0a sp rtrue
+ 9747:  rfalse          
+
+Routine 9748, 1 local (0000)
+
+ 974b:  get_prop        g22 #0f -> local0
+ 974f:  jg              local0 #00 ~975e
+ 9753:  store           local0 #00
+ 9756:  put_prop        g22 #0f local0
+ 975b:  jump            9769
+ 975e:  jl              local0 #00 ~9769
+ 9762:  inc             local0
+ 9764:  put_prop        g22 #0f local0
+ 9769:  jl              local0 #00 ~9783
+ 976d:  jl              g24 g15 ~9775
+ 9771:  add             g24 #0a -> g24
+ 9775:  call            307c #4ba4 #1e -> sp
+ 977d:  storew          sp #00 #01
+ 9782:  rtrue           
+ 9783:  store           g24 g15
+ 9786:  call            3090 #4ba4 -> sp
+ 978d:  storew          sp #00 #00
+ 9792:  rtrue           
+
+Routine 9794, 4 locals (0000, 0000, 0000, 0000)
+
+ 979d:  call            92c0 #00 -> local0
+ 97a3:  get_prop        g22 #0f -> local1
+ 97a7:  add             local0 local1 -> local2
+ 97ab:  call            3090 #4ba4 -> sp
+ 97b2:  loadw           sp #00 -> sp
+ 97b6:  jz              sp ~97bf
+ 97b9:  store           local1 #00
+ 97bc:  jump            97c3
+ 97bf:  sub             #00 local1 -> local1
+ 97c3:  jz              local1 ~97de
+ 97c6:  print           "You are in perfect health."
+ 97db:  jump            9819
+ 97de:  print           "You have wounds which will be cured in "
+ 97f7:  sub             local1 #01 -> sp
+ 97fb:  mul             #1e sp -> local3
+ 97ff:  call            3090 #4ba4 -> sp
+ 9806:  loadw           sp #01 -> sp
+ 980a:  add             local3 sp -> sp
+ 980e:  print_num       sp
+ 9811:  print           " moves."
+ 9818:  new_line        
+ 9819:  new_line        
+ 981a:  jz              local2 ~9835
+ 981d:  print           "You are at death's door."
+ 9832:  jump            98b0
+ 9835:  je              local2 #01 ~9857
+ 9839:  print           "You can be killed by one more wound."
+ 9854:  jump            98b0
+ 9857:  je              local2 #02 ~987b
+ 985b:  print           "You can be killed by a serious wound."
+ 9878:  jump            98b0
+ 987b:  je              local2 #03 ~989b
+ 987f:  print           "You can survive one serious wound."
+ 9898:  jump            98b0
+ 989b:  jg              local2 #03 ~98b0
+ 989f:  print           "You are still strong."
+ 98b0:  new_line        
+ 98b1:  rtrue           
+
+[End of code at 98b2]
+
+[Start of text at 98b2]
+
+ 98b2: S001 "Lying in the corner is a beautifully carved crystal skull."
+ 98de: S002 "From the chain is suspended a basket."
+ 98fa: S003 "A hot pepper sandwich is here."
+ 9910: S004 "At the end of the chain is a basket."
+ 992a: S005 "On the altar is an open prayer book."
+ 9944: S006 "The book contains instructions for using certain noises and
+prayers to  drive away evil."
+ 9982: S007 "An ancient Egyptian sceptre, ornamented with multi-colored jewels,
+is in  the coffin."
+ 99c0: S008 "On the table is an elongated brown sack, smelling of hot peppers."
+ 99f0: S009 "A bottle is sitting on the table."
+ 9a08: S010 "The solid-gold coffin used for the burial of Ramses II is here."
+ 9a36: S011 "There is a huge diamond (perfectly cut) here."
+ 9a56: S012 "There is an exquisite jade figurine here."
+ 9a72: S013 "On the ground is a nasty-looking knife."
+ 9a8e: S014 "The deceased adventurer's burned-out lantern is here."
+ 9ab4: S015 "A bag, bulging with coins, is here."
+ 9acc: S016 "A battery-powered brass lantern is on the trophy case."
+ 9af4: S017 "Hanging on the far wall is a painting of unparalleled beauty."
+ 9b24: S018 "On the ground is a pile of leaves."
+ 9b3c: S019 "There is a folded pile of plastic here which has a small valve
+attached."
+ 9b6c: S020 "At the end of the rainbow is a pot of gold."
+ 9b8a: S021 "There is some water here."
+ 9b98: S022 "A coil of rope is lying in the corner."
+ 9bb2: S023 "There is a precious carved scarab here."
+ 9bce: S024 "The engravings translate to 'This space intentionally left
+blank.'"
+ 9c02: S025 "Above the trophy case hangs an elvish sword of great antiquity."
+ 9c30: S026 "In the trophy case is an ancient parchment which appears to be a
+map."
+ 9c64: S027 "It shows a white house in the middle of a clearing within a vast
+forest,  which lies on the edge of a mighty canyon. The map indicates three
+paths  leaving the clearing--to the north, east, and southwest."
+ 9cec: S028 "  FROBOZZ MAGIC BOAT COMPANY^^   To enter a body of water, say
+'Launch'.^   To get to shore, say 'Land'.^"
+ 9d4e: S029 "There is a suspicious-looking individual, holding a bag, leaning
+against one wall. He is armed with a deadly stiletto."
+ 9da8: S030 "Sitting on the altar is a flaming torch, made of ivory."
+ 9dd2: S031 "A troll, brandishing a bloody axe, blocks all the exits."
+ 9dfa: S032 "Lying half buried in the mud is an old trunk, bulging with
+jewels."
+ 9e28: S033 "There is a golden canary nestled in the egg. Through a crystal
+window  you can see intricate machinery inside. It appears to have wound down."
+ 9e8c: S034 "In the nest is a large egg encrusted with precious jewels and
+inlaid with  gold, apparently scavenged somewhere by a childless songbird."
+ 9ee8: S035 "The door is boarded and you can't remove the boards."
+ 9f0a: S036 "You are east of a massive stone tomb. Through an open door you see
+ darkness within."
+ 9f40: S037 "You are north of the white house. There is no door here, and all
+the  windows are boarded up. To the north a narrow path enters the woods."
+ 9f9c: S038 "The windows are all boarded."
+ 9fb2: S039 "You are south of the white house. There is no door here, and all
+the  windows are boarded."
+ 9fea: S040 "You are on a path in a dimly-lit forest. The path heads west  into
+the heart of the forest, and to the southeast where the trees seem to  thin
+out."
+ a044: S041 "There is no tree here suitable for climbing."
+ a062: S042 "This is a path winding through a dimly-lit forest. The path turns
+a corner  here, heading south and east. One large tree with some low branches
+stands  at the edge of the path."
+ a0d4: S043 "You can't go through the closed grating."
+ a0e4: S044 "You cannot climb any higher."
+ a0f8: S045 "Only Santa Claus climbs down chimneys."
+ a118: S046 "This is the attic. The only exit is a stairway leading down."
+ a144: S047 "The door is nailed shut."
+ a156: S048 "You try to ascend the ramp, but it is impossible, and you slide
+back down."
+ a18e: S049 "This is a small room with passages to the east and south and a
+forbidding hole leading west. Bloodstains and deep scratches mar the walls."
+ a1ea: S050 "The troll fends you off with a menacing gesture."
+ a208: S051 "This appears to have been an artist's studio. The walls and floors
+are  splattered with paint. At the west end of the room is an open door. A 
+narrow chimney leads up from a fireplace; although you might be able to  get up
+it, it seems unlikely you could get back down."
+ a2c4: S052 "This is part of a maze of twisty little passages, all alike."
+ a2f2: S053 "You have come to a dead end in the maze."
+ a30c: S054 "This is part of a maze of twisty little passages, all alike. A
+skeleton, probably the remains of a luckless adventurer, lies here."
+ a36c: S055 "The grating is closed."
+ a376: S056 "The east wall is solid rock."
+ a38a: S057 "The cyclops doesn't look like he'll let you past."
+ a3ac: S058 "This room is full of discarded bags, which crumble at your touch.
+There  is an exit down a staircase."
+ a3f2: S059 "You are not equipped for swimming."
+ a40c: S060 "You are on what used to be a large lake, but which is now a large
+mud pile. There are 'shores' to the north and south."
+ a458: S061 "This is a tiny cave with an entrance on the north, and a 
+forbidding staircase leading down."
+ a49c: S062 "This is a small cave with exits on the east and west."
+ a4bc: S063 "This is a circular stone room with passages in all directions,
+although  several have been blocked by cave-ins."
+ a50a: S064 "Some invisible force prevents you from passing through the gate."
+ a532: S065 "You have entered the Land of the Living Dead. You can hear the
+sounds of thousands of lost souls weeping and moaning. A passage exits to the
+north."
+ a598: S066 "This is a former Egyptian tomb. There is an ascending staircase to
+the west."
+ a5d0: S067 "You cannot go down without fracturing many bones."
+ a5ee: S068 "This is the north end of a large temple. Engraved on the east wall
+is  a prayer in a long-forgotten language. Below the prayer is a staircase 
+leading down."
+ a65e: S069 "You cannot reach the rope."
+ a66e: S070 "You are next to the altar at the south end of the temple. In one
+corner is a small hole in the floor."
+ a6b0: S071 "You haven't a prayer of getting the coffin down that hole."
+ a6d6: S072 "This was maintenance room for Flood Control Dam #3. On the wall is
+an  important-looking button. The west wall contains a door."
+ a734: S073 "You are at the base of the dam, on a bank of the river Frigid."
+ a760: S074 "You are on a quiet section of the Frigid River near the Dam. There
+is  a landing on the west shore."
+ a7a8: S075 "The current prevents upstream travel."
+ a7c4: S076 "The White Cliffs prevent your landing here."
+ a7e4: S077 "The river descends into a valley with a narrow beach on the west
+shore.  In the distance a rumbling can be heard."
+ a82e: S078 "You cannot go upstream due to strong currents."
+ a84c: S079 "You are on a narrow beach at the base of the White Cliffs. A
+passage  leads west into the Cliffs."
+ a894: S080 "The path is too tight."
+ a8a6: S081 "The river is running faster here, and the roar of rushing water is
+almost  unbearable. You can see beaches on both the east and west shores."
+ a902: S082 "You are on a large sandy beach on the east shore of the river. A
+path runs  along the river to the south, and a cave that is partially buried in
+sand  lies to the northeast."
+ a976: S083 "This is a sand-filled cave whose exit is to the southwest."
+ a99e: S084 "It's a long way..."
+ a9ae: S085 "This is a small beach on the Frigid River below the Falls. A
+rainbow  crosses over the falls to the east and a path leads to the southwest."
+ aa08: S086 "You are at the base of a river canyon near the flowing runoff of
+Aragain  Falls. The cliff wall may be climbable, and to the northeast is a
+narrow path."
+ aa7a: S087 "You are atop the west wall of a great canyon. From here there is a
+superb view of the Frigid River as it flows out of a dark cavern, flanked by
+towering white cliffs. Below rainbow-clad Aragain Falls, the river twists  into
+a passage which is impossible to enter. Paths enter the forest to the west and
+north. It is possible to climb down into the canyon from here."
+ ab74: S088 "You are at the entrance of a disused coal mine. Strange squeaky
+sounds  come from a shaft leading into the north wall, and there is another
+exit  to the south."
+ abe2: S089 "This is a large room with exits to the west and north. In the
+middle of  the room is a small shaft descending through the floor into darkness
+below. Constructed over the top of the shaft is a metal framework to which a
+heavy  iron chain is attached. A foul odor comes from the room to the north."
+ ac9a: S090 "You'd never fit."
+ aca8: S091 "This room smells strongly of coal gas. Tunnels lead south and
+east."
+ acd4: S092 "You have come to a dead end in the mine."
+ acf0: S093 "This is a long east-west passage which is cluttered with broken
+timbers.  At the east end of the room, a rickety ladder leads through an
+opening in  the roof. A strong draft comes from the west where the room narrows
+ considerably."
+ ad82: S094 "You cannot fit through this passage with that load."
+ ad9e: S095 "This is a drafty room at the bottom of a long shaft. To the south
+is a  passageway and to the east a very narrow crack. In the shaft can be seen 
+a heavy iron chain."
+ ae12: S096 "The chain is not climbable."
+ ae28: S097 "This is a non-descript part of a coal mine."
+ ae4a: S098 "This is a non-descript part of a coal mine. The top of a  rickety
+ladder pokes through a hole in the floor."
+ ae96: S099 "This is a small chamber, which appears to have been part of a coal
+mine. There are openings to the north and east, and a steep metal slide
+twisting  downward."
+ af02: S100 "Oh, no!  You have walked into the fangs of a lurking grue!"
+ af2c: S101 "  "
+ af2e: S102 "    "
+ af32: S103 "      "
+ af36: S104 "Oh, no!  A lurking grue slithered into the room and devoured you!"
+ af62: S105 "There is nothing to fill it with."
+ af74: S106 "Unfortunately, you were holding it at the time."
+ af96: S107 "kill"
+ af9a: S108 "attack"
+ afa0: S109 "Kicking the "
+ afaa: S110 "Waving the "
+ afb2: S111 "Playing in this way with the "
+ afc4: S112 "Fiddling with the "
+ afd0: S113 "Pushing the "
+ afd8: S114 "Trying to destroy the "
+ afe6: S115 " doesn't work."
+ aff2: S116 " has no effect."
+ affc: S117 "With great effort, you open the window far enough to allow entry."
+ b02a: S118 "The window closes (more easily than it opened)."
+ b04e: S119 "The door reluctantly opens to reveal a rickety staircase
+descending into darkness."
+ b086: S120 "The door closes."
+ b092: S121 "The leaves burn, and so do you."
+ b0aa: S122 "The grating opens."
+ b0b4: S123 "The grating opens to reveal trees above you."
+ b0d0: S124 "The cyclops, tired of all of your games eats you.  The cyclops
+says 'Mmm. Just like Mom used to make 'em.'"
+ b11c: S125 "The cyclops seems agitated."
+ b12e: S126 "The cyclops appears to be getting more agitated."
+ b150: S127 "The cyclops is looking for something."
+ b166: S128 "The cyclops was looking for salt and pepper. I think he is 
+preparing for a snack."
+ b1a0: S129 "The cyclops is moving toward you in an unfriendly manner."
+ b1c6: S130 "You have two choices: 1. Leave  2. Become dinner."
+ b1ee: S131 "There is a worthless canvas here."
+ b206: S132 "The lamp appears a bit dimmer."
+ b21e: S133 "The lamp is definitely dimmer now."
+ b236: S134 "The lamp is nearly out."
+ b246: S135 "Oh dear. It seems that the smell coming from this room was coal
+gas. I would have thought twice about carrying the torch in here."
+ b298: S136 "A valiant attempt."
+ b2a8: S137 "You can't be serious."
+ b2b6: S138 "An interesting idea..."
+ b2ca: S139 "What a concept!"
+ b2d8: S140 "You fight the current for a while, and finally drown."
+ b300: S141 "Unfortunately, a rubber raft doesn't provide much protection from
+the rocks  and boulders at the bottom of many waterfalls. Including this one."
+ b360: S142 "The hole collapses, smothering you."
+ b37a: S143 "You seem to be digging a hole here."
+ b392: S144 "The hole is getting deeper, but that's about it."
+ b3b4: S145 "You are surrounded by a wall of sand on all sides."
+ b3dc: S146 "If you insist.... Poof, you're dead!"
+ b3fa: S147 "Your "
+ b3fe: S148 " misses the "
+ b406: S149 " by an inch."
+ b410: S150 "A good slash, but it misses the "
+ b426: S151 " by a mile."
+ b430: S152 "You charge, but the "
+ b43e: S153 " jumps nimbly aside."
+ b44e: S154 " crashes down, knocking the "
+ b462: S155 " into dreamland."
+ b46e: S156 "The fatal blow strikes the "
+ b482: S157 " square in the heart:  He dies."
+ b498: S158 "The "
+ b49c: S159 " is struck on the arm, blood begins to trickle down."
+ b4c0: S160 " pinks the "
+ b4c8: S161 " on the wrist, but it's not serious."
+ b4e0: S162 " receives a deep gash in his side."
+ b4fa: S163 "A savage blow on the thigh!  The "
+ b514: S164 " is stunned but can still fight!"
+ b52a: S165 " is confused and can't fight back."
+ b542: S166 "The quickness of your thrust knocks the "
+ b55e: S167 " back, stunned."
+ b56a: S168 " is disarmed by a subtle feint past his guard."
+ b58c: S169 "The axe sweeps past as you jump aside."
+ b5aa: S170 "The axe crashes against the rock, throwing sparks!"
+ b5d0: S171 "The flat of the troll's axe hits you delicately on the head,
+knocking you out."
+ b604: S172 "The troll neatly removes your head."
+ b61c: S173 "The axe gets you right in the side. Ouch!"
+ b63c: S174 "The flat of the troll's axe skins across your forearm."
+ b662: S175 "An axe stroke makes a deep wound in your leg."
+ b682: S176 "The troll's axe swings down, gashing your shoulder."
+ b6a6: S177 "The troll hits you with a glancing blow, and you are momentarily
+stunned."
+ b6d8: S178 "You stagger back under a hail of axe strokes."
+ b6fc: S179 "The axe knocks your "
+ b70a: S180 " out of your hand. It falls to the floor."
+ b724: S181 "The troll hesitates, fingering his axe."
+ b740: S182 "Conquering his fears, the troll puts you to death."
+ b762: S183 "The thief stabs nonchalantly with his stiletto and misses."
+ b78a: S184 "You dodge as the thief comes in low."
+ b7a2: S185 "The thief tries to sneak past your guard, but you twist away."
+ b7cc: S186 "The thief knocks you out."
+ b7dc: S187 "The thief bows formally, raises his stiletto, and with a wry grin,
+ends the battle and your life."
+ b820: S188 "The thief draws blood, raking his stiletto across your arm."
+ b84a: S189 "The thief slowly approaches, strikes like a snake, and leaves you
+wounded."
+ b880: S190 "The thief stabs a deep cut in your upper arm."
+ b8a0: S191 "The thief strikes at your wrist, and suddenly your grip is
+slippery with blood."
+ b8d4: S192 "The thief rams the haft of his blade into your stomach, leaving
+you out of breath."
+ b90a: S193 "The thief neatly flips your "
+ b91c: S194 " out of your hands, and it drops to the floor."
+ b93c: S195 "The thief, a man of good breeding, refrains from attacking a
+helpless opponent."
+ b974: S196 "The thief amuses himself by searching your pockets."
+ b998: S197 "The thief, who is essentially a pragmatist, dispatches you as a
+threat to his livelihood."
+ b9da: S198 "Well, you really did it that time. Is suicide painless?"
+ ba04: S199 "It appears that that last blow was too much for you. I'm afraid
+you are dead."
+
+[End of text at ba3c]
+
+[End of file]

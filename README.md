@@ -4,6 +4,13 @@ This repository is designed to provide example story files for [Quendor](https:/
 
 All of the data files were created using the ztools suite. I have provided [Mac and Windows versions of these tools](https://github.com/jeffnyman/quendor_examples/tree/master/tools). Sources and the original binaries for these tools can be found in the [IFArchive ztools repository](https://ifarchive.org/indexes/if-archive/infocom/tools/ztools/).
 
+## Data Files
+
+The files in the [data directory](https://github.com/jeffnyman/quendor_examples/tree/master/data) were generated with the ztools via the following commands:
+
+* `infodump -f file.z5 > file_info.txt`
+* `txd -agn file.z3 > file_z3.txt`
+
 ## Zorks
 
 ### Zork 1 (v1)

@@ -1,0 +1,2574 @@
+
+Story file is minizork_1982.z3
+
+    **** Story file header ****
+
+Z-code version:           3
+Interpreter flags:        Display score/moves
+Release number:           2
+Size of resident memory:  3052
+Start PC:                 3115
+Dictionary address:       2500
+Object table address:     023a
+Global variables address: 1652
+Size of dynamic memory:   1cf6
+Game flags:               None
+Serial number:            840207
+Abbreviations address:    017a
+File size:                0ba3c
+Checksum:                 1ff0
+Inform Version: 0
+
+    **** Story file map ****
+
+ Base    End   Size
+    0     3f     40  Story file header
+   40    179    13a  Abbreviation data
+  17a    239     c0  Abbreviation pointer table
+  23a    868    62f  Object table
+  869   1651    de9  Property data
+ 1652   1831    1e0  Global variables
+ 1832   1cf5    4c4
+ 1cf6   1d9b     a6  Grammar pointer table
+ 1d9c   2351    5b6  Grammar data
+ 2352   2405     b4  Action routine table
+ 2406   24b9     b4  Pre-action routine table
+ 24ba   24ff     46  Preposition table
+ 2500   3051    b52  Dictionary
+ 3052   ba3b   89ea  Paged memory
+
+    **** Abbreviations ****
+
+[ 0] "the"
+[ 1] "str"
+[ 2] "a"
+[ 3] "you"
+[ 4] "is"
+[ 5] "to"
+[ 6] "of"
+[ 7] "and"
+[ 8] "in"
+[ 9] "it"
+[10] "can't"
+[11] "your"
+[12] "are"
+[13] "that"
+[14] "i"
+[15] "room"
+[16] "be"
+[17] "with"
+[18] "there"
+[19] "on"
+[20] "door"
+[21] "open"
+[22] "here"
+[23] "water"
+[24] "not"
+[25] "his"
+[26] "cyclops"
+[27] "from"
+[28] "at"
+[29] "which"
+[30] "now"
+[31] "have"
+[32] "can"
+[33] "but"
+[34] "ground"
+[35] "don't"
+[36] "closed"
+[37] "too"
+[38] "this"
+[39] "thief"
+[40] "an"
+[41] "house"
+[42] "has"
+[43] "dam"
+[44] "west"
+[45] "up"
+[46] "see"
+[47] "rope"
+[48] "large"
+[49] "into"
+[50] "east"
+[51] "already"
+[52] "boat"
+[53] "trap"
+[54] "above"
+[55] "out"
+[56] "nothing"
+[57] "north"
+[58] "no"
+[59] "maze"
+[60] "how"
+[61] "grating"
+[62] "as"
+[63] "by"
+[64] "what"
+[65] "turn"
+[66] "tie"
+[67] "south"
+[68] "go"
+[69] "for"
+[70] "falls"
+[71] "dark"
+[72] "cannot"
+[73] "would"
+[74] "won't"
+[75] "white"
+[76] "small"
+[77] "rug"
+[78] "river"
+[79] "off"
+[80] "must"
+[81] "it's"
+[82] "hear"
+[83] "he"
+[84] "forest"
+[85] "you're"
+[86] "way"
+[87] "all"
+[88] "troll"
+[89] "through"
+[90] "over"
+[91] "one"
+[92] "lamp"
+[93] "behind"
+[94] "its"
+[95] "feet"
+
+    **** Objects ****
+
+  Object count = 169
+
+  1. Attributes: 0, 2
+     Parent object:  76  Sibling object:  67  Child object:   0
+     Property address: 0869
+         Description: "Maze"
+          Properties:
+              [29] 4e 
+              [28] 38 
+              [26] 87 
+              [25] 90 
+              [23] 7c 
+              [22] 1e 
+              [11] 51 62 
+
+  2. Attributes: 2, 3, 20
+     Parent object:  76  Sibling object: 102  Child object:   0
+     Property address: 087e
+         Description: "Behind House"
+          Properties:
+              [31] 99 
+              [30] 37 
+              [29] 60 95 00 00 00 
+              [28] 66 
+              [21] 60 95 00 00 00 
+              [17] 30 18 
+              [ 6] 4b 95 
+
+  3. Attributes: 9, 14, 25
+     Parent object:   5  Sibling object:   0  Child object:  50
+     Property address: 08a2
+         Description: "bird's nest"
+          Properties:
+              [18] 2b 2e 
+              [10] 00 14 
+
+  4. Attributes: 24, 25
+     Parent object:  77  Sibling object: 161  Child object:   0
+     Property address: 08b2
+         Description: "cliff"
+          Properties:
+              [18] 26 b2 
+              [17] 47 ac 
+              [16] b9 b8 
+
+  5. Attributes: 2, 3, 20
+     Parent object:  76  Sibling object:  81  Child object:   6
+     Property address: 08c1
+         Description: "Up a Tree"
+          Properties:
+              [23] 50 72 
+              [22] 51 
+              [17] 45 cc 
+              [ 6] 59 3d 4b 
+
+  6. Attributes: 24, 25
+     Parent object:   5  Sibling object:   3  Child object:   0
+     Property address: 08d7
+         Description: "large tree"
+          Properties:
+              [18] 2f 33 
+              [16] f5 
+
+  7. Attributes: 25
+     Parent object:  42  Sibling object:   0  Child object:   0
+     Property address: 08e4
+         Description: "wooden railing"
+          Properties:
+              [18] 2c 77 2c 70 
+              [16] e4 
+
+  8. Attributes: 2, 3
+     Parent object:  76  Sibling object:  23  Child object:   9
+     Property address: 08f9
+         Description: "End of Rainbow"
+          Properties:
+              [30] 00 66 00 00 
+              [24] 70 
+              [23] 17 66 00 00 
+              [11] 54 d7 
+              [ 6] 7a 46 a1 
+
+  9. Attributes: 18, 29
+     Parent object:   8  Sibling object:   0  Child object:   0
+     Property address: 091a
+         Description: "pot of gold"
+          Properties:
+              [18] 2c 0e 2f 2c 
+              [16] d1 
+              [14] 4d b6 
+              [13] 00 0a 
+              [12] 00 0a 
+              [ 9] 00 0f 
+
+ 10. Attributes: 15, 25
+     Parent object: 147  Sibling object:  41  Child object:   0
+     Property address: 0937
+         Description: "machine"
+          Properties:
+              [18] 2a a2 2a 55 
+              [17] 41 ba 
+              [10] 00 32 
+
+ 11. Attributes: 18
+     Parent object:   0  Sibling object:   0  Child object:   0
+     Property address: 094a
+         Description: "huge diamond"
+          Properties:
+              [18] 27 61 2f 2c 
+              [16] d5 
+              [13] 00 0a 
+              [12] 00 0a 
+              [11] 4d 1b 
+
+ 12. Attributes: 25
+     Parent object: 119  Sibling object:   0  Child object:   0
+     Property address: 0966
+         Description: "dam"
+          Properties:
+              [18] 27 30 28 a3 28 aa 
+              [17] 38 d7 
+
+ 13. Attributes: 2
+     Parent object:  76  Sibling object: 135  Child object: 106
+     Property address: 0974
+         Description: "Cyclops Room"
+          Properties:
+              [31] 5b 
+              [30] 3a 43 51 bb 
+              [23] 0e 7d 51 c5 
+              [17] 3c 7c 
+              [ 6] 63 
+
+ 14. Attributes: 2
+     Parent object:  76  Sibling object:  13  Child object:  72
+     Property address: 0991
+         Description: "Thief's Den"
+          Properties:
+              [22] 0d 
+              [17] 3f 12 
+              [13] 00 19 
+              [11] 51 d6 
+              [ 6] 63 
+
+ 15. Attributes: 14, 20
+     Parent object: 107  Sibling object:  18  Child object:   0
+     Property address: 09aa
+         Description: "tool chest"
+          Properties:
+              [18] 26 a4 2f 09 
+              [16] de 
+
+ 16. Attributes: 26, 27, 28, 29, 30, 31
+     Parent object:   0  Sibling object:   0  Child object:  77
+     Property address: 09bb
+         Description: ""
+          Properties:
+
+ 17. Attributes: 2
+     Parent object:  76  Sibling object:  65  Child object:   0
+     Property address: 09bd
+         Description: "Coal Mine"
+          Properties:
+              [28] 24 
+              [27] 11 
+              [26] 41 
+              [11] 57 14 
+
+ 18. Attributes: 8, 18
+     Parent object: 107  Sibling object: 160  Child object:   0
+     Property address: 09d0
+         Description: "wrench"
+          Properties:
+              [18] 30 36 
+              [ 9] 00 0a 
+
+ 19. Attributes: 24, 25
+     Parent object:  77  Sibling object:   4  Child object:   0
+     Property address: 09dc
+         Description: "white cliffs"
+          Properties:
+              [18] 26 b2 26 b9 
+              [17] 47 9a 
+              [16] f6 
+
+ 20. Attributes: 9, 10, 18
+     Parent object:  21  Sibling object:   0  Child object:   0
+     Property address: 09f0
+         Description: "tan label"
+          Properties:
+              [18] 2a 08 
+              [16] bf 
+              [ 9] 00 02 
+              [ 8] 4e 76 
+
+ 21. Attributes: 5, 9, 14, 18
+     Parent object:   0  Sibling object:   0  Child object:  20
+     Property address: 0a05
+         Description: "inflated boat"
+          Properties:
+              [18] 25 f5 
+              [17] 43 d0 
+              [16] c9 c8 c7 
+              [10] 00 64 
+              [ 9] 00 14 
+              [ 7] 00 1f 
+
+ 22. Attributes: 2, 3, 20
+     Parent object:  76  Sibling object:  64  Child object: 167
+     Property address: 0a22
+         Description: "West of House"
+          Properties:
+              [31] 99 
+              [30] 4f 74 
+              [28] 66 
+              [24] 74 2a 00 00 
+              [17] 2f e9 
+              [ 6] 4b 6f 
+
+ 23. Attributes: 2, 20
+     Parent object:  76  Sibling object:  83  Child object:   0
+     Property address: 0a40
+         Description: "Aragain Falls"
+          Properties:
+              [31] 1c 
+              [29] 08 66 00 00 
+              [23] 08 66 00 00 
+              [22] 54 cf 
+              [17] 42 b0 
+              [ 6] 7a a1 46 
+
+ 24. Attributes: 20, 31
+     Parent object:  76  Sibling object: 151  Child object:   0
+     Property address: 0a64
+         Description: "Frigid River"
+          Properties:
+              [30] 1c 
+              [23] 54 17 
+              [19] 1c 
+              [17] 00 00 
+              [11] 54 53 
+              [ 6] 7a a1 
+
+ 25. Attributes: 2
+     Parent object:  76  Sibling object:  31  Child object:   0
+     Property address: 0a82
+         Description: "Windy Cave"
+          Properties:
+              [31] 68 
+              [22] 23 
+              [11] 52 2c 
+              [ 6] 63 
+
+ 26. Attributes: 2
+     Parent object:  76  Sibling object:  58  Child object:   0
+     Property address: 0a97
+         Description: "Cellar"
+          Properties:
+              [31] 5c 
+              [30] 54 
+              [29] 50 ab 
+              [23] 3a 21 00 00 00 
+              [17] 32 77 
+              [13] 00 19 
+              [ 6] 21 6c 63 
+
+ 27. Attributes: 18, 29
+     Parent object:  83  Sibling object:   0  Child object:   0
+     Property address: 0ab6
+         Description: "scarab"
+          Properties:
+              [18] 2d 0a 2f 2c 
+              [16] c4 c3 
+              [13] 00 05 
+              [12] 00 05 
+              [11] 4d d9 
+              [ 9] 00 08 
+
+ 28. Attributes: 2, 20
+     Parent object:  76  Sibling object:  24  Child object:  69
+     Property address: 0ad2
+         Description: "Sandy Beach"
+          Properties:
+              [28] 17 
+              [27] 53 
+              [11] 54 81 
+              [ 6] 7a a1 
+
+ 29. Attributes: None
+     Parent object:   0  Sibling object:   0  Child object: 115
+     Property address: 0ae8
+         Description: ""
+          Properties:
+
+ 30. Attributes: 0, 2
+     Parent object:  76  Sibling object:  66  Child object:  51
+     Property address: 0aea
+         Description: "Maze"
+          Properties:
+              [31] 43 
+              [26] 31 
+              [24] 01 
+              [11] 51 86 
+
+ 31. Attributes: 2
+     Parent object:  76  Sibling object: 155  Child object:  95
+     Property address: 0af9
+         Description: "Reservoir North"
+          Properties:
+              [28] 9b 
+              [23] 98 
+              [17] 39 87 
+              [ 6] 7a 63 
+              [ 5] 2a 0f 48 82 
+
+ 32. Attributes: 22, 25
+     Parent object: 116  Sibling object: 133  Child object:   0
+     Property address: 0b16
+         Description: "stone door"
+          Properties:
+              [18] 27 84 
+              [16] d5 ff 
+
+ 33. Attributes: 22, 25, 29
+     Parent object:  58  Sibling object:  79  Child object:   0
+     Property address: 0b24
+         Description: "trap door"
+          Properties:
+              [18] 27 84 2f 25 
+              [17] 32 41 
+              [16] d8 
+
+ 34. Attributes: 11, 14, 15, 25
+     Parent object:  96  Sibling object:   0  Child object:  74
+     Property address: 0b34
+         Description: "kitchen table"
+          Properties:
+              [18] 2e 92 
+              [16] f4 
+              [10] 00 1e 
+
+ 35. Attributes: 2, 3
+     Parent object:  76  Sibling object: 104  Child object: 141
+     Property address: 0b48
+         Description: "Entrance to Hades"
+          Properties:
+              [28] 8c 4d 52 85 
+              [23] 19 
+              [21] 8c 4d 52 85 
+              [17] 36 4b 
+              [ 5] 28 a3 48 a8 
+
+ 36. Attributes: 2
+     Parent object:  76  Sibling object:  17  Child object:   0
+     Property address: 0b6c
+         Description: "Coal Mine"
+          Properties:
+              [30] 11 
+              [29] 24 
+              [22] 56 
+              [11] 57 25 
+
+ 37. Attributes: 18, 23
+     Parent object: 162  Sibling object:   0  Child object:   0
+     Property address: 0b7f
+         Description: "quantity of water"
+          Properties:
+              [18] 2f e2 2c 62 
+              [17] 3a 1c 
+              [11] 4d c5 
+              [ 9] 00 04 
+
+ 38. Attributes: 9, 18
+     Parent object: 137  Sibling object:   0  Child object:   0
+     Property address: 0b99
+         Description: "pile of plastic"
+          Properties:
+              [18] 25 f5 2b f2 2c 00 2f 95 
+              [17] 44 56 
+              [16] c7 c9 
+              [11] 4d 9e 
+              [ 9] 00 14 
+
+ 39. Attributes: 2, 20
+     Parent object:  76  Sibling object:  86  Child object:  60
+     Property address: 0bbc
+         Description: "Drafty Room"
+          Properties:
+              [30] 56 44 56 c1 
+              [28] 93 
+              [23] 57 09 
+              [20] 56 44 56 c1 
+              [17] 42 47 
+              [11] 56 cf 
+
+ 40. Attributes: 25
+     Parent object:  16  Sibling object:   0  Child object:   0
+     Property address: 0bdd
+         Description: "random object"
+          Properties:
+              [18] 29 bb 2e ae 2e ca 29 44 
+
+ 41. Attributes: 12, 25
+     Parent object: 147  Sibling object:   0  Child object:   0
+     Property address: 0bf2
+         Description: "switch"
+          Properties:
+              [18] 2e 84 
+              [17] 41 ef 
+
+ 42. Attributes: 2
+     Parent object:  76  Sibling object: 132  Child object:   7
+     Property address: 0bfe
+         Description: "Dome Room"
+          Properties:
+              [26] 2a 
+              [22] 00 6f 52 e8 
+              [17] 36 07 
+              [ 6] 80 
+
+ 43. Attributes: 18
+     Parent object:  30  Sibling object:   0  Child object:   0
+     Property address: 0c14
+         Description: "burned-out lantern"
+          Properties:
+              [18] 2a 24 2a 16 
+              [16] ca 
+              [14] 4d 47 
+              [ 9] 00 14 
+
+ 44. Attributes: 7, 18
+     Parent object: 131  Sibling object: 114  Child object:   0
+     Property address: 0c31
+         Description: "nasty knife"
+          Properties:
+              [18] 29 f3 
+              [16] cc cb 
+              [14] 4d 39 
+
+ 45. Attributes: 25
+     Parent object:   0  Sibling object:   0  Child object:   0
+     Property address: 0c46
+         Description: "boarded window"
+          Properties:
+              [18] 30 21 
+              [16] d7 
+
+ 46. Attributes: 18
+     Parent object: 139  Sibling object:   0  Child object:   0
+     Property address: 0c57
+         Description: "brass bell"
+          Properties:
+              [18] 25 b6 
+              [16] ea 
+
+ 47. Attributes: 21
+     Parent object:  16  Sibling object: 142  Child object:   0
+     Property address: 0c66
+         Description: "you"
+          Properties:
+              [18] 2a c5 2a f6 2d 57 27 06 
+              [17] 45 77 
+
+ 48. Attributes: 2
+     Parent object:  76  Sibling object:  14  Child object:   0
+     Property address: 0c76
+         Description: "Reservoir South"
+          Properties:
+              [31] 9b 76 51 f9 
+              [30] 77 
+              [28] 68 
+              [24] 5c 
+              [17] 39 14 
+              [ 6] 7a 
+              [ 5] 2a 0f 48 82 
+
+ 49. Attributes: 0, 2
+     Parent object:  76  Sibling object: 101  Child object:   0
+     Property address: 0c99
+         Description: "Maze"
+          Properties:
+              [31] 65 
+              [29] 31 
+              [25] 43 
+              [22] 1e 
+              [11] 51 62 
+
+ 50. Attributes: 15, 18
+     Parent object:   3  Sibling object:   0  Child object:  68
+     Property address: 0caa
+         Description: "jewel-encrusted egg"
+          Properties:
+              [18] 27 d1 2f 2c 
+              [17] 46 42 
+              [16] b3 b2 
+              [14] 4f 46 
+              [13] 00 05 
+              [12] 00 05 
+              [10] 00 06 
+
+ 51. Attributes: 13, 25
+     Parent object:  30  Sibling object:  93  Child object:   0
+     Property address: 0cd1
+         Description: "skeleton"
+          Properties:
+              [18] 26 0a 2d 9d 25 fc 
+
+ 52. Attributes: 10, 16, 22, 25
+     Parent object:  58  Sibling object: 130  Child object: 163
+     Property address: 0ce0
+         Description: "wooden door"
+          Properties:
+              [18] 27 84 2a 4e 
+              [17] 3f 79 
+              [16] e4 c2 c1 
+              [ 8] 4d e7 
+
+ 53. Attributes: 25
+     Parent object: 107  Sibling object:   0  Child object:   0
+     Property address: 0cf7
+         Description: "button"
+          Properties:
+              [18] 26 6c 
+              [17] 38 9f 
+
+ 54. Attributes: 25
+     Parent object:  16  Sibling object:  40  Child object:   0
+     Property address: 0d03
+         Description: "way"
+          Properties:
+              [18] 2b c1 26 ff 28 10 2b c8 
+              [17] 48 fb 
+              [16] fc fb fa f9 
+
+ 55. Attributes: 2, 3, 20
+     Parent object:  76  Sibling object: 112  Child object:   0
+     Property address: 0d18
+         Description: "Canyon View"
+          Properties:
+              [31] 88 
+              [29] 02 
+              [22] 00 
+              [11] 55 3d 
+              [ 6] 04 a1 
+
+ 56. Attributes: 0, 2
+     Parent object:  76  Sibling object:  91  Child object:   0
+     Property address: 0d30
+         Description: "Maze"
+          Properties:
+              [28] 5b 
+              [27] 4e 
+              [26] 90 
+              [24] 01 
+              [11] 51 62 
+
+ 57. Attributes: 22, 25, 29
+     Parent object:  77  Sibling object: 108  Child object:   0
+     Property address: 0d41
+         Description: "grating"
+          Properties:
+              [18] 28 f7 28 fe 2a 71 
+              [17] 35 59 
+
+ 58. Attributes: 1, 2, 3, 20
+     Parent object:  76  Sibling object: 131  Child object: 118
+     Property address: 0d4f
+         Description: "Living Room"
+          Properties:
+              [30] 60 
+              [29] 0d 43 50 a2 
+              [22] 32 ec 00 
+              [17] 31 79 
+              [ 6] 63 
+
+ 59. Attributes: 12, 25
+     Parent object: 119  Sibling object: 103  Child object:   0
+     Property address: 0d6b
+         Description: "bolt"
+          Properties:
+              [18] 26 03 
+              [17] 38 62 
+              [16] e8 f5 
+
+ 60. Attributes: None
+     Parent object:  39  Sibling object:   0  Child object:   0
+     Property address: 0d7a
+         Description: "basket"
+          Properties:
+              [18] 25 93 
+              [17] 40 ee 
+              [11] 4c 6f 
+
+ 61. Attributes: 25
+     Parent object:  77  Sibling object: 111  Child object:   0
+     Property address: 0d8b
+         Description: "song bird"
+          Properties:
+              [18] 25 bd 
+              [17] 47 6a 
+              [16] f7 
+
+ 62. Attributes: None
+     Parent object:  16  Sibling object: 123  Child object:   0
+     Property address: 0d9b
+         Description: "ground"
+          Properties:
+              [18] 29 05 27 bc 2c f5 27 6f 
+              [17] 44 af 
+
+ 63. Attributes: None
+     Parent object:   0  Sibling object:   0  Child object:   0
+     Property address: 0dab
+         Description: "pseudo"
+          Properties:
+              [17] 00 00 
+
+ 64. Attributes: 2
+     Parent object:  76  Sibling object:  36  Child object:   0
+     Property address: 0db4
+         Description: "Slide Room"
+          Properties:
+              [31] 64 
+              [30] 98 
+              [22] 1a 
+              [11] 57 4b 
+              [ 6] 6c 
+
+ 65. Attributes: 2
+     Parent object:  76  Sibling object: 147  Child object:   0
+     Property address: 0dcb
+         Description: "Coal Mine"
+          Properties:
+              [31] 11 
+              [29] 96 
+              [28] 41 
+              [11] 57 14 
+
+ 66. Attributes: 0, 2
+     Parent object:  76  Sibling object:   1  Child object:   0
+     Property address: 0dde
+         Description: "Dead End"
+          Properties:
+              [22] 43 
+              [11] 51 79 
+
+ 67. Attributes: 0, 2
+     Parent object:  76  Sibling object:  49  Child object:   0
+     Property address: 0ded
+         Description: "Maze"
+          Properties:
+              [31] 65 
+              [30] 42 
+              [29] 31 
+              [23] 1e 
+              [11] 51 62 
+
+ 68. Attributes: 18
+     Parent object:  50  Sibling object:   0  Child object:   0
+     Property address: 0dfe
+         Description: "golden canary"
+          Properties:
+              [18] 26 73 
+              [17] 46 af 
+              [16] d1 b6 
+              [14] 4f 14 
+              [13] 00 06 
+              [12] 00 04 
+
+ 69. Attributes: 8, 18
+     Parent object:  28  Sibling object:   0  Child object:   0
+     Property address: 0e1c
+         Description: "shovel"
+          Properties:
+              [18] 2d 7a 
+              [ 9] 00 0f 
+
+ 70. Attributes: 24, 25
+     Parent object:  77  Sibling object: 128  Child object:   0
+     Property address: 0e28
+         Description: "rainbow"
+          Properties:
+              [18] 2c 7e 
+              [17] 42 fc 
+
+ 71. Attributes: 9, 18
+     Parent object:  84  Sibling object:   0  Child object:   0
+     Property address: 0e36
+         Description: "painting"
+          Properties:
+              [18] 2b ac 2f 2c 
+              [17] 3f ba 
+              [14] 4d 7a 
+              [13] 00 04 
+              [12] 00 06 
+              [ 9] 00 0f 
+
+ 72. Attributes: 18
+     Parent object:  14  Sibling object:   0  Child object:   0
+     Property address: 0e52
+         Description: "silver chalice"
+          Properties:
+              [18] 26 9d 2d 8f 2f 2c 
+              [17] 3e fc 
+              [16] db 
+              [13] 00 0a 
+              [12] 00 05 
+              [ 9] 00 0a 
+
+ 73. Attributes: 9, 10, 12, 15, 18
+     Parent object: 165  Sibling object: 146  Child object:   0
+     Property address: 0e75
+         Description: "prayer book"
+          Properties:
+              [18] 26 11 
+              [17] 3f 9e 
+              [16] e7 
+              [14] 4c 95 
+              [ 9] 00 0a 
+              [ 8] 4c a2 
+
+ 74. Attributes: 9, 15, 18
+     Parent object:  34  Sibling object: 162  Child object:  87
+     Property address: 0e90
+         Description: "brown sack"
+          Properties:
+              [18] 25 7e 2c ee 
+              [16] e1 e0 df 
+              [14] 4c e0 
+              [10] 00 0f 
+              [ 9] 00 03 
+
+ 75. Attributes: 25
+     Parent object:  77  Sibling object:  61  Child object:   0
+     Property address: 0eac
+         Description: "white house"
+          Properties:
+              [18] 29 60 
+              [17] 34 3d 
+              [16] f6 
+
+ 76. Attributes: None
+     Parent object:   0  Sibling object:   0  Child object:  22
+     Property address: 0eba
+         Description: ""
+          Properties:
+
+ 77. Attributes: None
+     Parent object:  16  Sibling object: 138  Child object:  99
+     Property address: 0ebc
+         Description: ""
+          Properties:
+              [18] 2a da 
+
+ 78. Attributes: 0, 2
+     Parent object:  76  Sibling object: 144  Child object:   0
+     Property address: 0ec1
+         Description: "Maze"
+          Properties:
+              [31] 4e 
+              [30] 5b 
+              [25] 38 
+              [23] 01 
+              [11] 51 62 
+
+ 79. Attributes: 13, 25
+     Parent object:  58  Sibling object:   0  Child object:   0
+     Property address: 0ed2
+         Description: "carpet"
+          Properties:
+              [18] 2c d9 26 7a 
+              [17] 33 00 
+              [16] f5 dc 
+
+ 80. Attributes: 2
+     Parent object:  76  Sibling object: 121  Child object: 148
+     Property address: 0ee5
+         Description: "Shaft Room"
+          Properties:
+              [31] 00 
+              [29] 79 
+              [22] 56 4d 
+              [11] 55 f1 
+
+ 81. Attributes: 2, 3, 20
+     Parent object:  76  Sibling object: 136  Child object:   0
+     Property address: 0efb
+         Description: "Forest Path"
+          Properties:
+              [30] 88 
+              [28] 99 
+              [23] 05 
+              [22] 87 39 50 6a 00 
+              [17] 47 59 
+              [11] 50 31 
+              [ 6] a8 3d 4b 59 
+
+ 82. Attributes: 10, 18, 29
+     Parent object: 118  Sibling object:   0  Child object:   0
+     Property address: 0f1e
+         Description: "ancient map"
+          Properties:
+              [18] 2b ba 2a b7 
+              [16] e5 
+              [14] 4e 18 
+              [ 9] 00 02 
+              [ 8] 4e 32 
+
+ 83. Attributes: 2
+     Parent object:  76  Sibling object:  28  Child object: 127
+     Property address: 0f3a
+         Description: "Sandy Cave"
+          Properties:
+              [24] 1c 
+              [11] 54 bb 
+
+ 84. Attributes: 2
+     Parent object:  76  Sibling object:  92  Child object:  71
+     Property address: 0f4b
+         Description: "Studio"
+          Properties:
+              [29] 1a 
+              [23] 32 bd 00 
+              [11] 51 04 
+              [ 6] 6e 
+              [ 5] 27 84 48 bf 2b a5 48 c9 
+
+ 85. Attributes: 22, 25
+     Parent object:  22  Sibling object:   0  Child object:   0
+     Property address: 0f67
+         Description: "door"
+          Properties:
+              [18] 27 84 
+              [17] 3f 79 
+              [16] d6 d7 
+
+ 86. Attributes: 2, 20
+     Parent object:  76  Sibling object: 158  Child object: 164
+     Property address: 0f74
+         Description: "Timber Room"
+          Properties:
+              [29] 27 44 56 c1 
+              [23] 24 
+              [17] 42 47 
+              [11] 56 78 
+
+ 87. Attributes: 17, 18
+     Parent object:  74  Sibling object: 117  Child object:   0
+     Property address: 0f8d
+         Description: "lunch"
+          Properties:
+              [18] 28 56 2c fc 2a 8d 
+              [16] ee ed 
+              [11] 4c 7d 
+
+ 88. Attributes: 18
+     Parent object: 140  Sibling object:   0  Child object:   0
+     Property address: 0fa0
+         Description: "crystal skull"
+          Properties:
+              [18] 2d a4 2f 2c 
+              [16] ef 
+              [14] 4c 59 
+              [13] 00 0a 
+              [12] 00 0a 
+
+ 89. Attributes: 25
+     Parent object:  77  Sibling object:  75  Child object:   0
+     Property address: 0fbc
+         Description: "forest"
+          Properties:
+              [18] 28 79 2f 3a 
+              [17] 47 64 
+
+ 90. Attributes: 20, 31
+     Parent object:  76  Sibling object: 137  Child object:   0
+     Property address: 0fc8
+         Description: "Frigid River"
+          Properties:
+              [30] 53 e2 
+              [29] 89 
+              [23] 53 d4 
+              [22] 8f 
+              [19] 89 
+              [11] 53 b0 
+              [ 6] 7a a1 
+
+ 91. Attributes: 0, 2
+     Parent object:  76  Sibling object:  78  Child object:   0
+     Property address: 0fe8
+         Description: "Maze"
+          Properties:
+              [31] 4e 
+              [28] 38 
+              [25] 0d 
+              [11] 51 62 
+
+ 92. Attributes: 2
+     Parent object:  76  Sibling object:  26  Child object:  98
+     Property address: 0ff7
+         Description: "The Troll Room"
+          Properties:
+              [30] 68 33 50 f5 
+              [29] 65 33 50 f5 
+              [28] 1a 
+              [27] 30 33 50 f5 
+              [11] 50 c7 
+
+ 93. Attributes: 18
+     Parent object:  30  Sibling object:  43  Child object:   0
+     Property address: 1019
+         Description: "bag of coins"
+          Properties:
+              [18] 25 7e 26 ea 2f 2c 
+              [13] 00 0a 
+              [12] 00 05 
+              [11] 4d 5a 
+              [ 9] 00 0f 
+
+ 94. Attributes: 18
+     Parent object: 121  Sibling object:   0  Child object:   0
+     Property address: 1038
+         Description: "jade figurine"
+          Properties:
+              [18] 28 3a 2f 2c 
+              [16] cd 
+              [13] 00 05 
+              [12] 00 05 
+              [11] 4d 2b 
+              [ 9] 00 0a 
+
+ 95. Attributes: 8, 18
+     Parent object:  31  Sibling object:   0  Child object:   0
+     Property address: 1057
+         Description: "hand-held air pump"
+          Properties:
+              [18] 2c 46 25 38 
+              [16] d0 cf ce 
+
+ 96. Attributes: 1, 2, 3, 20
+     Parent object:  76  Sibling object:   5  Child object:  34
+     Property address: 1070
+         Description: "Kitchen"
+          Properties:
+              [30] 02 95 00 00 00 
+              [29] 3a 
+              [23] 83 
+              [22] 50 7c 
+              [20] 02 95 00 00 00 
+              [17] 30 a3 
+              [13] 00 0a 
+              [ 6] 95 6e 63 
+
+ 97. Attributes: 18
+     Parent object: 109  Sibling object:   0  Child object:   0
+     Property address: 1095
+         Description: "sceptre"
+          Properties:
+              [18] 2d 11 2f 2c 
+              [17] 42 7b 
+              [16] e6 e5 
+              [14] 4c c1 
+              [13] 00 04 
+              [12] 00 06 
+              [ 9] 00 03 
+
+ 98. Attributes: 14, 19, 21
+     Parent object:  92  Sibling object:   0  Child object: 120
+     Property address: 10b4
+         Description: "troll"
+          Properties:
+              [18] 2f 41 
+              [17] 33 9d 
+              [15] 00 02 
+              [11] 4e e9 
+
+ 99. Attributes: 24, 25
+     Parent object:  77  Sibling object:  19  Child object:   0
+     Property address: 10c4
+         Description: "stairs"
+          Properties:
+              [18] 2e 22 2e 3e 2e 1b 2e 29 
+              [16] ff fe fd 
+
+100. Attributes: 2
+     Parent object:  76  Sibling object:  55  Child object:   0
+     Property address: 10d9
+         Description: "Mine Entrance"
+          Properties:
+              [31] 79 
+              [28] 40 
+              [21] 79 
+              [11] 55 ba 
+
+101. Attributes: 0, 2
+     Parent object:  76  Sibling object:  84  Child object:   0
+     Property address: 10f0
+         Description: "Maze"
+          Properties:
+              [30] 5c 
+              [29] 43 
+              [27] 65 
+              [26] 31 
+              [11] 51 62 
+
+102. Attributes: 2, 3, 20
+     Parent object:  76  Sibling object: 153  Child object:   0
+     Property address: 1101
+         Description: "South of House"
+          Properties:
+              [31] 4f ce 
+              [30] 02 
+              [29] 16 
+              [11] 4f d9 
+              [ 6] 2d 6f 4b 
+
+103. Attributes: 25
+     Parent object: 119  Sibling object:  12  Child object:   0
+     Property address: 111b
+         Description: "control panel"
+          Properties:
+              [18] 2b b3 
+              [16] b7 
+
+104. Attributes: 2
+     Parent object:  76  Sibling object: 152  Child object: 105
+     Property address: 112c
+         Description: "Round Room"
+          Properties:
+              [31] 30 
+              [30] 97 
+              [29] 5c 
+              [28] 19 
+              [25] 2a 
+              [11] 52 5e 
+
+105. Attributes: 14, 19, 21, 29
+     Parent object: 104  Sibling object:   0  Child object: 157
+     Property address: 1143
+         Description: "thief"
+          Properties:
+              [18] 2e c3 2c b6 29 8a 
+              [17] 3e 2f 
+              [16] be bd bc 
+              [15] 00 05 
+              [11] 4e a7 
+
+106. Attributes: 19, 21, 25
+     Parent object:  13  Sibling object:   0  Child object:   0
+     Property address: 115b
+         Description: "cyclops"
+          Properties:
+              [18] 27 22 
+              [17] 3b 1a 
+              [16] da d9 
+              [15] 27 10 
+
+107. Attributes: 2
+     Parent object:  76  Sibling object: 119  Child object:  15
+     Property address: 116b
+         Description: "Maintenance Room"
+          Properties:
+              [29] 77 
+              [11] 53 6b 
+
+108. Attributes: 24
+     Parent object:  77  Sibling object: 110  Child object:   0
+     Property address: 1180
+         Description: "slide"
+          Properties:
+              [18] 2d b9 
+              [17] 48 4f 
+              [16] fd e8 e2 
+
+109. Attributes: 15, 18, 20
+     Parent object: 132  Sibling object:   0  Child object:  97
+     Property address: 1190
+         Description: "gold coffin"
+          Properties:
+              [18] 26 dc 2f 2c 
+              [16] d2 d1 
+              [13] 00 0a 
+              [12] 00 0f 
+              [11] 4d 04 
+              [10] 00 23 
+              [ 9] 00 37 
+
+110. Attributes: 24, 25
+     Parent object:  77  Sibling object: 149  Child object:   0
+     Property address: 11b1
+         Description: "chimney"
+          Properties:
+              [18] 26 ab 
+              [16] f2 fb 
+
+111. Attributes: 25
+     Parent object:  77  Sibling object:   0  Child object:   0
+     Property address: 11bf
+         Description: "board"
+          Properties:
+              [18] 25 ee 25 e0 
+
+112. Attributes: 2, 3, 20
+     Parent object:  76  Sibling object:   8  Child object:   0
+     Property address: 11ca
+         Description: "Canyon Bottom"
+          Properties:
+              [27] 08 
+              [23] 37 
+              [11] 55 04 
+              [ 6] 7a 04 a1 
+
+113. Attributes: 18
+     Parent object:   0  Sibling object:   0  Child object:   0
+     Property address: 11e3
+         Description: "brass bauble"
+          Properties:
+              [18] 25 a1 
+              [16] ea b5 
+              [13] 00 01 
+              [12] 00 01 
+
+114. Attributes: 13, 18, 20
+     Parent object: 131  Sibling object:   0  Child object:   0
+     Property address: 11fb
+         Description: "rope"
+          Properties:
+              [18] 2c cb 26 e3 
+              [17] 47 c2 
+              [14] 4d cc 
+              [ 9] 00 0a 
+
+115. Attributes: 9, 13, 18
+     Parent object:  29  Sibling object:   0  Child object:   0
+     Property address: 120d
+         Description: "pile of leaves"
+          Properties:
+              [18] 2a 47 2b f2 
+              [17] 34 08 
+              [11] 4d 92 
+              [ 9] 00 19 
+
+116. Attributes: 2, 3, 20
+     Parent object:  76  Sibling object:   0  Child object:  32
+     Property address: 1229
+         Description: "Stone Barrow"
+          Properties:
+              [27] 16 
+              [17] 30 f7 
+              [11] 4f 85 
+
+117. Attributes: 17, 18
+     Parent object:  74  Sibling object:   0  Child object:   0
+     Property address: 123d
+         Description: "clove of garlic"
+          Properties:
+              [18] 28 95 26 ce 
+
+118. Attributes: 15, 16, 25
+     Parent object:  58  Sibling object: 156  Child object:  82
+     Property address: 1250
+         Description: "trophy case"
+          Properties:
+              [18] 26 8f 
+              [17] 00 00 
+              [16] dd 
+              [10] 27 10 
+
+119. Attributes: 2, 3
+     Parent object:  76  Sibling object: 134  Child object:  59
+     Property address: 1265
+         Description: "Dam"
+          Properties:
+              [31] 6b 
+              [29] 30 
+              [22] 89 
+              [17] 37 ad 
+              [ 6] 7a 
+
+120. Attributes: 13, 25
+     Parent object:  98  Sibling object:   0  Child object:   0
+     Property address: 1276
+         Description: "bloody axe"
+          Properties:
+              [18] 25 77 
+              [17] 33 68 
+              [16] e9 
+              [ 9] 00 19 
+
+121. Attributes: 2, 20
+     Parent object:  76  Sibling object: 100  Child object: 166
+     Property address: 128b
+         Description: "Bat Room"
+          Properties:
+              [30] 50 
+              [28] 64 
+              [17] 40 74 
+
+122. Attributes: 23
+     Parent object:  77  Sibling object: 168  Child object:   0
+     Property address: 129c
+         Description: "water"
+          Properties:
+              [18] 2f e2 2c 62 
+              [17] 3a 1c 
+
+123. Attributes: None
+     Parent object:  16  Sibling object:  54  Child object:   0
+     Property address: 12a8
+         Description: "wall"
+          Properties:
+              [18] 2f d4 2f db 
+
+124. Attributes: 0, 2
+     Parent object:  76  Sibling object: 125  Child object:   0
+     Property address: 12b3
+         Description: "Maze"
+          Properties:
+              [29] 7d 
+              [25] 01 
+              [23] 7c 
+              [22] 31 
+              [11] 51 62 
+
+125. Attributes: 0, 2
+     Parent object:  76  Sibling object:  30  Child object:   0
+     Property address: 12c4
+         Description: "Dead End"
+          Properties:
+              [28] 7c 
+              [11] 51 79 
+
+126. Attributes: 18, 29
+     Parent object: 155  Sibling object:   0  Child object:   0
+     Property address: 12d3
+         Description: "trunk of jewels"
+          Properties:
+              [18] 2f 4f 2f 2c 
+              [14] 4e fd 
+              [13] 00 0f 
+              [12] 00 05 
+              [ 9] 00 23 
+
+127. Attributes: 25
+     Parent object:  83  Sibling object:  27  Child object:   0
+     Property address: 12f0
+         Description: "sand"
+          Properties:
+              [18] 2c f5 
+              [17] 44 cc 
+
+128. Attributes: 25
+     Parent object:  77  Sibling object:  57  Child object:   0
+     Property address: 12fc
+         Description: "dome"
+          Properties:
+              [18] 27 7d 
+
+129. Attributes: 15
+     Parent object:  22  Sibling object:  85  Child object:   0
+     Property address: 1305
+         Description: "mailbox"
+          Properties:
+              [18] 2a b0 26 1f 
+              [10] 00 0a 
+
+130. Attributes: 6, 18
+     Parent object:  58  Sibling object:  33  Child object:   0
+     Property address: 1315
+         Description: "lamp"
+          Properties:
+              [18] 2a 16 2a 24 2a 63 
+              [17] 3f d0 
+              [16] ea 
+              [14] 4d 66 
+              [ 9] 00 0f 
+
+131. Attributes: 1, 2, 20
+     Parent object:  76  Sibling object:  96  Child object:  44
+     Property address: 132b
+         Description: "Attic"
+          Properties:
+              [22] 60 
+              [11] 50 8c 
+              [ 6] 63 
+
+132. Attributes: 2
+     Parent object:  76  Sibling object: 140  Child object: 109
+     Property address: 133a
+         Description: "Egyptian Room"
+          Properties:
+              [29] 8b 
+              [23] 8b 
+              [11] 52 cc 
+              [ 6] 63 
+
+133. Attributes: 25
+     Parent object: 116  Sibling object:   0  Child object:   0
+     Property address: 1351
+         Description: "stone barrow"
+          Properties:
+              [18] 25 8c 2e fb 
+              [17] 31 72 
+              [16] d4 ff 
+
+134. Attributes: 2, 3, 20
+     Parent object:  76  Sibling object: 139  Child object: 165
+     Property address: 1368
+         Description: "Altar"
+          Properties:
+              [31] 8b 
+              [22] 23 7c 53 58 
+              [17] 42 66 
+              [11] 53 37 
+
+135. Attributes: 2
+     Parent object:  76  Sibling object:  56  Child object:   0
+     Property address: 137d
+         Description: "Grating Room"
+          Properties:
+              [28] 01 
+              [23] 51 39 51 b6 00 
+              [17] 35 1b 
+              [ 6] 39 
+
+136. Attributes: 2, 3, 20
+     Parent object:  76  Sibling object:   2  Child object:   0
+     Property address: 1396
+         Description: "Forest Edge"
+          Properties:
+              [29] 51 
+              [25] 37 
+              [23] 50 22 
+              [17] 47 59 
+              [11] 4f f5 
+              [ 6] a8 3d 4b 59 
+
+137. Attributes: 2, 3, 20
+     Parent object:  76  Sibling object: 107  Child object:  38
+     Property address: 13b4
+         Description: "Dam Base"
+          Properties:
+              [23] 77 
+              [11] 53 9a 
+              [ 6] 7a a1 
+
+138. Attributes: 25
+     Parent object:  16  Sibling object:  47  Child object:   0
+     Property address: 13c6
+         Description: ""
+          Properties:
+              [18] 2b 9e 
+
+139. Attributes: 2, 3, 20
+     Parent object:  76  Sibling object:  42  Child object:  46
+     Property address: 13cb
+         Description: "Temple"
+          Properties:
+              [30] 84 
+              [28] 86 
+              [23] 53 2f 
+              [22] 84 
+              [17] 00 00 
+              [11] 52 f7 
+              [ 6] 80 63 
+
+140. Attributes: 2, 3
+     Parent object:  76  Sibling object:  35  Child object:  88
+     Property address: 13e5
+         Description: "Land of the Dead"
+          Properties:
+              [31] 23 
+              [20] 23 
+              [11] 52 99 
+
+141. Attributes: 19, 25
+     Parent object:  35  Sibling object:   0  Child object:   0
+     Property address: 13fc
+         Description: "number of ghosts"
+          Properties:
+              [18] 28 bf 2e 0d 28 6b 
+              [17] 37 76 
+              [16] f1 f0 
+
+142. Attributes: 25
+     Parent object:  16  Sibling object: 169  Child object:   0
+     Property address: 1417
+         Description: "air"
+          Properties:
+              [18] 2a 94 25 31 2a e1 26 3b 
+
+143. Attributes: 20, 31
+     Parent object:  76  Sibling object:  90  Child object:   0
+     Property address: 1426
+         Description: "Frigid River"
+          Properties:
+              [29] 97 
+              [23] 54 17 
+              [22] 18 
+              [19] 97 
+              [11] 53 f2 
+              [ 6] 7a a1 
+
+144. Attributes: 0, 2
+     Parent object:  76  Sibling object: 124  Child object:   0
+     Property address: 1443
+         Description: ""
+          Properties:
+              [29] 01 
+              [23] 38 
+              [22] 1e 
+              [11] 51 62 
+
+145. Attributes: 13, 18
+     Parent object:   0  Sibling object:   0  Child object:   0
+     Property address: 144e
+         Description: "piece of vitreous slag"
+          Properties:
+              [18] 29 13 2b e4 2d ab 
+              [17] 42 36 
+              [16] b4 
+              [ 9] 00 0a 
+
+146. Attributes: 3, 4, 6, 18, 20
+     Parent object: 165  Sibling object:   0  Child object:   0
+     Property address: 146f
+         Description: "torch"
+          Properties:
+              [18] 2f 10 2f 2c 
+              [17] 35 9d 
+              [16] bb ba 
+              [14] 4e d4 
+              [13] 00 0e 
+              [12] 00 06 
+              [ 9] 00 14 
+
+147. Attributes: 2
+     Parent object:  76  Sibling object:  39  Child object:  10
+     Property address: 148c
+         Description: "Machine Room"
+          Properties:
+              [31] 27 
+              [17] 41 60 
+
+148. Attributes: 14, 15, 16
+     Parent object:  80  Sibling object:   0  Child object:   0
+     Property address: 149d
+         Description: "basket"
+          Properties:
+              [18] 25 93 
+              [17] 40 ee 
+              [11] 4c 88 
+              [10] 00 32 
+
+149. Attributes: 22, 25
+     Parent object:  77  Sibling object: 122  Child object:   0
+     Property address: 14b1
+         Description: "kitchen window"
+          Properties:
+              [18] 30 21 
+              [17] 30 51 
+              [16] f4 f3 
+
+150. Attributes: 2, 20
+     Parent object:  76  Sibling object:  80  Child object:   0
+     Property address: 14c6
+         Description: "Gas Room"
+          Properties:
+              [30] 41 
+              [28] 50 
+              [17] 40 5c 
+              [11] 56 54 
+              [ 6] 63 
+              [ 5] 28 9c 48 dd 2b 58 48 dd 
+
+151. Attributes: 2, 20
+     Parent object:  76  Sibling object: 143  Child object:   0
+     Property address: 14e5
+         Description: "White Cliffs Beach"
+          Properties:
+              [29] 68 38 54 4a 
+              [17] 42 72 
+              [11] 54 26 
+              [ 6] 7a 13 a1 
+
+152. Attributes: 2
+     Parent object:  76  Sibling object:  25  Child object:   0
+     Property address: 1506
+         Description: "Dusty Cave"
+          Properties:
+              [30] 1f 
+              [29] 40 
+              [11] 52 4e 
+
+153. Attributes: 2, 3, 20
+     Parent object:  76  Sibling object: 116  Child object:   0
+     Property address: 1519
+         Description: "North of House"
+          Properties:
+              [31] 51 
+              [30] 02 
+              [29] 16 
+              [28] 4f ce 
+              [11] 4f a0 
+              [ 6] 2d 6f 4b 
+
+154. Attributes: 14, 15, 18
+     Parent object:   0  Sibling object:   0  Child object:   0
+     Property address: 1537
+         Description: "broken egg"
+          Properties:
+              [18] 27 d1 
+              [16] e3 
+              [12] 00 02 
+              [10] 00 06 
+
+155. Attributes: 31
+     Parent object:  76  Sibling object:  48  Child object: 126
+     Property address: 154c
+         Description: "Reservoir"
+          Properties:
+              [31] 1f 
+              [28] 30 
+              [11] 52 06 
+              [ 6] 7a 
+
+156. Attributes: 7, 13, 18
+     Parent object:  58  Sibling object:  52  Child object:   0
+     Property address: 155f
+         Description: "sword"
+          Properties:
+              [18] 2e 8b 
+              [17] 40 50 
+              [16] c0 
+              [14] 4e 01 
+              [12] 00 00 
+              [ 9] 00 1e 
+
+157. Attributes: 18, 25
+     Parent object: 105  Sibling object:   0  Child object:   0
+     Property address: 1576
+         Description: "stiletto"
+          Properties:
+              [18] 2e 45 
+              [17] 33 6e 
+              [ 9] 00 0a 
+
+158. Attributes: 2
+     Parent object:  76  Sibling object: 150  Child object: 159
+     Property address: 1587
+         Description: "Dead End"
+          Properties:
+              [31] 56 
+              [11] 56 6a 
+
+159. Attributes: 9, 18
+     Parent object: 158  Sibling object:   0  Child object:   0
+     Property address: 1596
+         Description: "small pile of coal"
+          Properties:
+              [18] 26 d5 2b f2 
+              [16] f3 
+              [ 9] 00 14 
+
+160. Attributes: 8, 18
+     Parent object: 107  Sibling object:  53  Child object:   0
+     Property address: 15ae
+         Description: "screwdriver"
+          Properties:
+              [18] 2d 2d 27 a7 
+              [16] c5 
+
+161. Attributes: 25
+     Parent object:  77  Sibling object:  70  Child object:   0
+     Property address: 15bd
+         Description: "river"
+          Properties:
+              [18] 2c af 
+              [17] 43 26 
+              [16] c6 
+
+162. Attributes: 15, 16, 18
+     Parent object:  34  Sibling object:   0  Child object:  37
+     Property address: 15c9
+         Description: "glass bottle"
+          Properties:
+              [18] 26 18 
+              [17] 39 d2 
+              [16] d3 
+              [14] 4c f8 
+              [10] 00 04 
+
+163. Attributes: 25
+     Parent object:  52  Sibling object:   0  Child object:   0
+     Property address: 15e3
+         Description: "nail"
+          Properties:
+              [18] 2b 0b 2b 04 
+
+164. Attributes: 18
+     Parent object:  86  Sibling object:   0  Child object:   0
+     Property address: 15ee
+         Description: "broken timber"
+          Properties:
+              [18] 2e ed 2b f2 
+              [16] e4 e3 
+              [ 9] 00 32 
+
+165. Attributes: 11, 14, 15, 25
+     Parent object: 134  Sibling object:   0  Child object:  73
+     Property address: 1605
+         Description: "altar"
+          Properties:
+              [18] 25 46 
+              [10] 00 32 
+
+166. Attributes: 13, 25
+     Parent object: 121  Sibling object:  94  Child object:   0
+     Property address: 1613
+         Description: "bat"
+          Properties:
+              [18] 25 9a 2f 9c 
+              [17] 40 b8 
+              [16] ec eb 
+
+167. Attributes: 20, 21, 25, 29
+     Parent object:  22  Sibling object: 129  Child object:   0
+     Property address: 1624
+         Description: "cretin"
+          Properties:
+              [18] 25 23 
+              [17] 00 00 
+              [15] 00 00 
+
+168. Attributes: 25
+     Parent object:  77  Sibling object:  89  Child object:   0
+     Property address: 1633
+         Description: "tree"
+          Properties:
+              [18] 2f 33 2f 3a 
+              [16] f5 
+
+169. Attributes: None
+     Parent object:  16  Sibling object:  62  Child object:   0
+     Property address: 1640
+         Description: "lurking grue"
+          Properties:
+              [18] 29 0c 
+              [17] 44 f4 
+              [16] f8 
+
+    **** Object tree ****
+
+[ 11] "huge diamond"
+[ 16] ""
+ . [ 77] ""
+ .  . [ 99] "stairs"
+ .  . [ 19] "white cliffs"
+ .  . [  4] "cliff"
+ .  . [161] "river"
+ .  . [ 70] "rainbow"
+ .  . [128] "dome"
+ .  . [ 57] "grating"
+ .  . [108] "slide"
+ .  . [110] "chimney"
+ .  . [149] "kitchen window"
+ .  . [122] "water"
+ .  . [168] "tree"
+ .  . [ 89] "forest"
+ .  . [ 75] "white house"
+ .  . [ 61] "song bird"
+ .  . [111] "board"
+ . [138] ""
+ . [ 47] "you"
+ . [142] "air"
+ . [169] "lurking grue"
+ . [ 62] "ground"
+ . [123] "wall"
+ . [ 54] "way"
+ . [ 40] "random object"
+[ 21] "inflated boat"
+ . [ 20] "tan label"
+[ 29] ""
+ . [115] "pile of leaves"
+[ 45] "boarded window"
+[ 63] "pseudo"
+[ 76] ""
+ . [ 22] "West of House"
+ .  . [167] "cretin"
+ .  . [129] "mailbox"
+ .  . [ 85] "door"
+ . [ 64] "Slide Room"
+ . [ 36] "Coal Mine"
+ . [ 17] "Coal Mine"
+ . [ 65] "Coal Mine"
+ . [147] "Machine Room"
+ .  . [ 10] "machine"
+ .  . [ 41] "switch"
+ . [ 39] "Drafty Room"
+ .  . [ 60] "basket"
+ . [ 86] "Timber Room"
+ .  . [164] "broken timber"
+ . [158] "Dead End"
+ .  . [159] "small pile of coal"
+ . [150] "Gas Room"
+ . [ 80] "Shaft Room"
+ .  . [148] "basket"
+ . [121] "Bat Room"
+ .  . [166] "bat"
+ .  . [ 94] "jade figurine"
+ . [100] "Mine Entrance"
+ . [ 55] "Canyon View"
+ . [112] "Canyon Bottom"
+ . [  8] "End of Rainbow"
+ .  . [  9] "pot of gold"
+ . [ 23] "Aragain Falls"
+ . [ 83] "Sandy Cave"
+ .  . [127] "sand"
+ .  . [ 27] "scarab"
+ . [ 28] "Sandy Beach"
+ .  . [ 69] "shovel"
+ . [ 24] "Frigid River"
+ . [151] "White Cliffs Beach"
+ . [143] "Frigid River"
+ . [ 90] "Frigid River"
+ . [137] "Dam Base"
+ .  . [ 38] "pile of plastic"
+ . [107] "Maintenance Room"
+ .  . [ 15] "tool chest"
+ .  . [ 18] "wrench"
+ .  . [160] "screwdriver"
+ .  . [ 53] "button"
+ . [119] "Dam"
+ .  . [ 59] "bolt"
+ .  . [103] "control panel"
+ .  . [ 12] "dam"
+ . [134] "Altar"
+ .  . [165] "altar"
+ .  .  . [ 73] "prayer book"
+ .  .  . [146] "torch"
+ . [139] "Temple"
+ .  . [ 46] "brass bell"
+ . [ 42] "Dome Room"
+ .  . [  7] "wooden railing"
+ . [132] "Egyptian Room"
+ .  . [109] "gold coffin"
+ .  .  . [ 97] "sceptre"
+ . [140] "Land of the Dead"
+ .  . [ 88] "crystal skull"
+ . [ 35] "Entrance to Hades"
+ .  . [141] "number of ghosts"
+ . [104] "Round Room"
+ .  . [105] "thief"
+ .  .  . [157] "stiletto"
+ . [152] "Dusty Cave"
+ . [ 25] "Windy Cave"
+ . [ 31] "Reservoir North"
+ .  . [ 95] "hand-held air pump"
+ . [155] "Reservoir"
+ .  . [126] "trunk of jewels"
+ . [ 48] "Reservoir South"
+ . [ 14] "Thief's Den"
+ .  . [ 72] "silver chalice"
+ . [ 13] "Cyclops Room"
+ .  . [106] "cyclops"
+ . [135] "Grating Room"
+ . [ 56] "Maze"
+ . [ 91] "Maze"
+ . [ 78] "Maze"
+ . [144] ""
+ . [124] "Maze"
+ . [125] "Dead End"
+ . [ 30] "Maze"
+ .  . [ 51] "skeleton"
+ .  . [ 93] "bag of coins"
+ .  . [ 43] "burned-out lantern"
+ . [ 66] "Dead End"
+ . [  1] "Maze"
+ . [ 67] "Maze"
+ . [ 49] "Maze"
+ . [101] "Maze"
+ . [ 84] "Studio"
+ .  . [ 71] "painting"
+ . [ 92] "The Troll Room"
+ .  . [ 98] "troll"
+ .  .  . [120] "bloody axe"
+ . [ 26] "Cellar"
+ . [ 58] "Living Room"
+ .  . [118] "trophy case"
+ .  .  . [ 82] "ancient map"
+ .  . [156] "sword"
+ .  . [ 52] "wooden door"
+ .  .  . [163] "nail"
+ .  . [130] "lamp"
+ .  . [ 33] "trap door"
+ .  . [ 79] "carpet"
+ . [131] "Attic"
+ .  . [ 44] "nasty knife"
+ .  . [114] "rope"
+ . [ 96] "Kitchen"
+ .  . [ 34] "kitchen table"
+ .  .  . [ 74] "brown sack"
+ .  .  .  . [ 87] "lunch"
+ .  .  .  . [117] "clove of garlic"
+ .  .  . [162] "glass bottle"
+ .  .  .  . [ 37] "quantity of water"
+ . [  5] "Up a Tree"
+ .  . [  6] "large tree"
+ .  . [  3] "bird's nest"
+ .  .  . [ 50] "jewel-encrusted egg"
+ .  .  .  . [ 68] "golden canary"
+ . [ 81] "Forest Path"
+ . [136] "Forest Edge"
+ . [  2] "Behind House"
+ . [102] "South of House"
+ . [153] "North of House"
+ . [116] "Stone Barrow"
+ .  . [ 32] "stone door"
+ .  . [133] "stone barrow"
+[113] "brass bauble"
+[145] "piece of vitreous slag"
+[154] "broken egg"
+
+    **** Parse tables ****
+
+  Verb entries = 83
+
+255. 2 entries, verb = "fasten", synonyms = "tie"
+    [02 fd ff 13 08 30 f2 50] "fasten up OBJ with OBJ"
+    [02 00 f8 00 00 00 00 4f] "fasten OBJ to OBJ"
+
+254. 6 entries, verb = "throw"
+    [02 00 f7 00 00 c2 00 1c] "throw OBJ over OBJ"
+    [02 00 fb 00 00 c2 00 1c] "throw OBJ on OBJ"
+    [02 00 fc 00 00 c2 00 1c] "throw OBJ in OBJ"
+    [02 00 00 00 00 00 00 4e] "throw OBJ OBJ"
+    [02 00 ff 00 13 c2 30 4d] "throw OBJ with OBJ"
+    [02 00 f5 00 13 c2 30 4d] "throw OBJ at OBJ"
+
+253. 1 entry, verb = "roll"
+    [01 fd 00 00 00 30 00 3b] "roll up OBJ"
+
+252. 3 entries, verb = "banish", synonyms = "cast", "drive", "exorci"
+    [01 f9 00 15 00 00 00 22] "banish away OBJ"
+    [01 fa 00 15 00 00 00 22] "banish out OBJ"
+    [01 00 00 00 00 00 00 22] "banish OBJ"
+
+251. 1 entry, verb = "verbos"
+    [00 00 00 00 00 00 00 0a] "verbos"
+
+250. 2 entries, verb = "untie"
+    [02 00 ef 00 00 f0 00 52] "untie OBJ from OBJ"
+    [01 00 00 00 00 f0 00 52] "untie OBJ"
+
+249. 1 entry, verb = "read"
+    [01 00 00 0a 00 f8 00 37] "read OBJ"
+
+248. 1 entry, verb = "again"
+    [00 00 00 00 00 00 00 0b] "again"
+
+247. 1 entry, verb = "save"
+    [00 00 00 00 00 00 00 07] "save"
+
+246. 1 entry, verb = "diagno"
+    [00 00 00 00 00 00 00 02] "diagno"
+
+245. 7 entries, verb = "carry", synonyms = "get", "hold", "remove", "take"
+    [02 00 ef 12 00 64 00 40] "carry OBJ from OBJ"
+    [02 00 f0 12 00 64 00 40] "carry OBJ off OBJ"
+    [02 00 fa 12 00 64 00 40] "carry OBJ out OBJ"
+    [01 fb 00 05 00 30 00 12] "carry on OBJ"
+    [01 fa 00 05 00 30 00 19] "carry out OBJ"
+    [01 fc 00 05 00 30 00 0d] "carry in OBJ"
+    [01 00 00 12 00 14 00 40] "carry OBJ"
+
+244. 2 entries, verb = "light"
+    [02 00 ff 06 04 f0 ca 0e] "light OBJ with OBJ"
+    [01 00 00 06 00 fa 00 32] "light OBJ"
+
+243. 1 entry, verb = "cut", synonyms = "pierce", "slice"
+    [02 00 ff 00 07 00 c0 16] "cut OBJ with OBJ"
+
+242. 3 entries, verb = "strike"
+    [01 00 00 00 00 f0 00 32] "strike OBJ"
+    [01 00 00 13 00 30 00 0c] "strike OBJ"
+    [02 00 ff 13 07 30 f2 0c] "strike OBJ with OBJ"
+
+241. 2 entries, verb = "peal", synonyms = "ring"
+    [02 00 ff 00 00 08 00 47] "peal OBJ with OBJ"
+    [01 00 00 00 00 08 00 47] "peal OBJ"
+
+240. 1 entry, verb = "restor"
+    [00 00 00 00 00 00 00 06] "restor"
+
+239. 2 entries, verb = "lift", synonyms = "raise"
+    [01 fd 00 00 00 00 00 46] "lift up OBJ"
+    [01 00 00 00 00 00 00 46] "lift OBJ"
+
+238. 11 entries, verb = "gaze", synonyms = "l", "look", "stare"
+    [01 f4 00 00 00 00 00 25] "gaze for OBJ"
+    [02 f5 ff 00 00 f4 00 37] "gaze at OBJ with OBJ"
+    [01 fc 00 00 00 f4 00 21] "gaze in OBJ"
+    [01 f1 00 00 00 00 00 36] "gaze behind OBJ"
+    [01 f2 00 00 00 00 00 35] "gaze under OBJ"
+    [01 ff 00 00 00 00 00 21] "gaze with OBJ"
+    [01 f5 00 00 00 f4 00 20] "gaze at OBJ"
+    [01 fe 00 1f 00 00 00 34] "gaze down OBJ"
+    [01 fd 00 1f 00 00 00 34] "gaze up OBJ"
+    [01 f3 00 1f 00 00 00 34] "gaze around OBJ"
+    [00 00 00 00 00 00 00 34] "gaze"
+
+237. 1 entry, verb = "kill", synonyms = "stab"
+    [02 00 ff 15 07 30 c2 2e] "kill OBJ with OBJ"
+
+236. 2 entries, verb = "enter"
+    [01 00 00 00 00 00 00 1f] "enter OBJ"
+    [00 00 00 00 00 00 00 1e] "enter"
+
+235. 1 entry, verb = "attack", synonyms = "fight", "hit"
+    [02 00 ff 15 07 30 c2 0c] "attack OBJ with OBJ"
+
+234. 3 entries, verb = "press", synonyms = "push"
+    [02 00 f2 00 00 00 00 45] "press OBJ under OBJ"
+    [01 fb 00 00 00 34 00 44] "press on OBJ"
+    [01 00 00 00 00 34 00 44] "press OBJ"
+
+233. 1 entry, verb = "blind", synonyms = "poke"
+    [02 00 ff 15 07 30 c2 3d] "blind OBJ with OBJ"
+
+232. 4 entries, verb = "jump", synonyms = "leap"
+    [01 fc 00 00 00 00 00 2c] "jump in OBJ"
+    [01 f6 00 00 00 00 00 2c] "jump across OBJ"
+    [01 f7 00 00 00 00 00 2c] "jump over OBJ"
+    [00 00 00 00 00 00 00 2c] "jump"
+
+231. 1 entry, verb = "douse", synonyms = "exting"
+    [01 00 00 06 00 fe 00 23] "douse OBJ"
+
+230. 1 entry, verb = "drink"
+    [01 00 00 17 00 f0 00 1a] "drink OBJ"
+
+229. 1 entry, verb = "deflat"
+    [01 00 00 00 00 00 00 17] "deflat OBJ"
+
+228. 1 entry, verb = "i", synonyms = "invent"
+    [00 00 00 00 00 00 00 03] "i"
+
+227. 3 entries, verb = "spill"
+    [02 00 fb 00 00 c0 00 41] "spill OBJ on OBJ"
+    [02 00 fc 00 00 c0 00 1b] "spill OBJ in OBJ"
+    [01 00 00 00 00 c0 00 1b] "spill OBJ"
+
+226. 1 entry, verb = "versio"
+    [00 00 00 00 00 00 00 09] "versio"
+
+225. 2 entries, verb = "wind"
+    [01 fd 00 00 00 00 00 58] "wind up OBJ"
+    [01 00 00 00 00 00 00 58] "wind OBJ"
+
+224. 1 entry, verb = "melt"
+    [02 00 ff 00 04 00 f0 3a] "melt OBJ with OBJ"
+
+223. 1 entry, verb = "bite", synonyms = "kick"
+    [01 00 00 00 00 00 00 2d] "bite OBJ"
+
+222. 1 entry, verb = "inflat"
+    [02 00 ff 00 08 00 f0 29] "inflat OBJ with OBJ"
+
+221. 1 entry, verb = "find", synonyms = "see", "seek", "where"
+    [01 00 00 00 00 00 00 25] "find OBJ"
+
+220. 2 entries, verb = "descri", synonyms = "examin", "what", "whats"
+    [01 fc 00 00 00 f4 00 21] "descri in OBJ"
+    [01 00 00 00 00 f4 00 20] "descri OBJ"
+
+219. 1 entry, verb = "board"
+    [01 00 00 05 00 30 00 0d] "board OBJ"
+
+218. 1 entry, verb = "brief"
+    [00 00 00 00 00 00 00 00] "brief"
+
+217. 2 entries, verb = "swim"
+    [01 fc 00 00 00 00 00 4b] "swim in OBJ"
+    [00 00 00 00 00 00 00 4b] "swim"
+
+216. 1 entry, verb = "pray"
+    [00 00 00 00 00 00 00 42] "pray"
+
+215. 1 entry, verb = "move"
+    [01 00 00 00 00 30 00 3b] "move OBJ"
+
+214. 1 entry, verb = "scream", synonyms = "shout", "yell"
+    [00 00 00 00 00 00 00 59] "scream"
+
+213. 3 entries, verb = "open"
+    [02 00 ff 16 08 f0 f2 3f] "open OBJ with OBJ"
+    [01 fd 00 16 00 f0 00 3f] "open up OBJ"
+    [01 00 00 16 00 f0 00 3f] "open OBJ"
+
+212. 1 entry, verb = "count"
+    [01 00 00 00 00 00 00 14] "count OBJ"
+
+211. 1 entry, verb = "restar"
+    [00 00 00 00 00 00 00 05] "restar"
+
+210. 1 entry, verb = "brandi", synonyms = "wave"
+    [01 00 00 00 00 c0 00 57] "brandi OBJ"
+
+209. 1 entry, verb = "wait"
+    [00 00 00 00 00 00 00 53] "wait"
+
+208. 1 entry, verb = "smell", synonyms = "sniff"
+    [01 00 00 00 00 00 00 4a] "smell OBJ"
+
+207. 4 entries, verb = "place", synonyms = "put"
+    [02 00 f2 00 00 00 00 45] "place OBJ under OBJ"
+    [01 fe 00 00 00 84 00 1b] "place down OBJ"
+    [02 00 fb 00 00 86 00 1c] "place OBJ on OBJ"
+    [02 00 fc 00 00 86 00 1c] "place OBJ in OBJ"
+
+206. 2 entries, verb = "pump"
+    [02 fd ff 00 00 00 00 43] "pump up OBJ with OBJ"
+    [01 fd 00 00 00 00 00 43] "pump up OBJ"
+
+205. 2 entries, verb = "listen"
+    [01 f4 00 00 00 00 00 33] "listen for OBJ"
+    [01 f8 00 00 00 00 00 33] "listen to OBJ"
+
+204. 2 entries, verb = "give"
+    [02 00 00 13 00 10 04 27] "give OBJ OBJ"
+    [02 00 f8 00 13 f4 10 26] "give OBJ to OBJ"
+
+203. 1 entry, verb = "eat", synonyms = "taste"
+    [01 00 00 11 00 fc 00 1d] "eat OBJ"
+
+202. 1 entry, verb = "close"
+    [01 00 00 16 00 f0 00 13] "close OBJ"
+
+201. 1 entry, verb = "q", synonyms = "quit"
+    [00 00 00 00 00 00 00 04] "q"
+
+200. 6 entries, verb = "go", synonyms = "procee", "run", "walk"
+    [01 fe 00 18 00 30 00 10] "go down OBJ"
+    [01 fd 00 18 00 30 00 0f] "go up OBJ"
+    [01 f3 00 00 00 00 00 56] "go around OBJ"
+    [01 ff 00 00 00 00 00 1f] "go with OBJ"
+    [01 fc 00 00 00 00 00 1f] "go in OBJ"
+    [01 f9 00 00 00 00 00 55] "go away OBJ"
+
+199. 3 entries, verb = "shut", synonyms = "turn"
+    [01 f0 00 06 00 fa 00 23] "shut off OBJ"
+    [01 fb 00 06 00 fa 00 32] "shut on OBJ"
+    [02 00 ff 0c 08 f0 f2 51] "shut OBJ with OBJ"
+
+198. 1 entry, verb = "slide"
+    [02 00 f2 00 00 00 00 45] "slide OBJ under OBJ"
+
+197. 2 entries, verb = "break", synonyms = "destro", "smash"
+    [02 fe ff 00 00 f0 c8 3d] "break down OBJ with OBJ"
+    [02 00 ff 00 00 f0 c8 3d] "break OBJ with OBJ"
+
+196. 1 entry, verb = "mumble", synonyms = "sigh"
+    [00 00 00 00 00 00 00 3c] "mumble"
+
+195. 3 entries, verb = "search"
+    [01 f4 00 00 00 00 00 25] "search for OBJ"
+    [01 fc 00 00 00 00 00 38] "search in OBJ"
+    [01 00 00 00 00 00 00 38] "search OBJ"
+
+194. 1 entry, verb = "launch"
+    [01 00 00 05 00 00 00 30] "launch OBJ"
+
+193. 5 entries, verb = "climb", synonyms = "hatch", "sit"
+    [01 fb 00 05 00 30 00 12] "climb on OBJ"
+    [01 fc 00 05 00 30 00 0d] "climb in OBJ"
+    [01 00 00 18 00 30 00 11] "climb OBJ"
+    [01 fe 00 18 00 30 00 10] "climb down OBJ"
+    [01 fd 00 18 00 30 00 0f] "climb up OBJ"
+
+192. 2 entries, verb = "wake"
+    [01 fd 00 13 00 30 00 54] "wake up OBJ"
+    [01 00 00 13 00 30 00 54] "wake OBJ"
+
+191. 1 entry, verb = "shake"
+    [01 00 00 00 00 00 00 49] "shake OBJ"
+
+190. 1 entry, verb = "odysse", synonyms = "ulysse"
+    [00 00 00 00 00 00 00 3e] "odysse"
+
+189. 1 entry, verb = "lower"
+    [01 00 00 00 00 00 00 39] "lower OBJ"
+
+188. 4 entries, verb = "drop", synonyms = "pour"
+    [02 00 fb 00 00 86 00 1c] "drop OBJ on OBJ"
+    [02 00 fc 00 00 86 00 1c] "drop OBJ in OBJ"
+    [02 00 fe 00 00 86 00 1c] "drop OBJ down OBJ"
+    [01 00 00 00 00 86 00 1b] "drop OBJ"
+
+187. 2 entries, verb = "burn", synonyms = "ignite"
+    [02 fe ff 09 04 f0 f2 0e] "burn down OBJ with OBJ"
+    [02 00 ff 09 04 f0 f2 0e] "burn OBJ with OBJ"
+
+186. 1 entry, verb = "score"
+    [00 00 00 00 00 00 00 08] "score"
+
+185. 2 entries, verb = "feel", synonyms = "rub", "touch"
+    [02 00 ff 00 00 00 00 48] "feel OBJ with OBJ"
+    [01 00 00 00 00 00 00 48] "feel OBJ"
+
+184. 1 entry, verb = "pick"
+    [01 fd 00 12 00 14 00 40] "pick up OBJ"
+
+183. 2 entries, verb = "pull", synonyms = "tug"
+    [01 fb 00 00 00 30 00 3b] "pull on OBJ"
+    [01 00 00 00 00 30 00 3b] "pull OBJ"
+
+182. 4 entries, verb = "blow"
+    [01 fc 00 00 00 00 00 2b] "blow in OBJ"
+    [01 fd 00 00 00 00 00 2a] "blow up OBJ"
+    [02 fd ff 00 08 00 f0 29] "blow up OBJ with OBJ"
+    [01 fa 00 00 00 00 00 23] "blow out OBJ"
+
+181. 2 entries, verb = "hello", synonyms = "hi"
+    [01 00 00 00 00 00 00 28] "hello OBJ"
+    [00 00 00 00 00 00 00 28] "hello"
+
+180. 2 entries, verb = "fill"
+    [01 00 00 0f 00 f0 00 24] "fill OBJ"
+    [02 00 ff 0f 00 f0 00 24] "fill OBJ with OBJ"
+
+179. 1 entry, verb = "disemb"
+    [01 00 00 05 00 30 00 19] "disemb OBJ"
+
+178. 1 entry, verb = "cross", synonyms = "ford"
+    [01 00 00 00 00 00 00 15] "cross OBJ"
+
+177. 1 entry, verb = "super"
+    [00 00 00 00 00 00 00 01] "super"
+
+176. 1 entry, verb = "swing", synonyms = "thrust"
+    [02 00 f5 07 15 c2 30 4c] "swing OBJ at OBJ"
+
+175. 2 entries, verb = "leave"
+    [01 00 00 00 00 00 00 1b] "leave OBJ"
+    [00 00 00 00 00 00 00 31] "leave"
+
+174. 3 entries, verb = "knock"
+    [01 fe 00 13 00 30 00 0c] "knock down OBJ"
+    [01 fb 00 00 00 00 00 2f] "knock on OBJ"
+    [01 f5 00 00 00 00 00 2f] "knock at OBJ"
+
+173. 2 entries, verb = "dig"
+    [02 fc ff 00 08 30 c2 18] "dig in OBJ with OBJ"
+    [02 00 ff 00 08 30 c2 18] "dig OBJ with OBJ"
+
+    **** Verb action routines ****
+
+  Action table entries = 90
+
+action# pre-action-routine action-routine "verb..."
+
+  0.     0  43ea  "brief"
+  1.     0  4402  "super"
+  2.     0  9794  "diagno"
+  3.     0  4cb0  "i"
+  4.     0  47e0  "q"
+  5.     0  4b50  "restar"
+  6.     0  4b26  "restor"
+  7.     0  4b3e  "save"
+  8.     0  4794  "score"
+  9.     0  4838  "versio"
+ 10.     0  43d2  "verbos"
+ 11.     0  48bc  "again"
+ 12.     0  5a8c  "strike OBJ"
+                  "strike OBJ with OBJ"
+                  "attack OBJ with OBJ"
+                  "knock down OBJ"
+ 13.  5234  527a  "carry in OBJ"
+                  "board OBJ"
+                  "climb in OBJ"
+ 14.  5892  58ac  "light OBJ with OBJ"
+                  "burn down OBJ with OBJ"
+                  "burn OBJ with OBJ"
+ 15.     0  5e70  "go up OBJ"
+                  "climb up OBJ"
+ 16.     0  5ed4  "go down OBJ"
+                  "climb down OBJ"
+ 17.     0  5e66  "climb OBJ"
+ 18.     0  5e42  "carry on OBJ"
+                  "climb on OBJ"
+ 19.     0  50b4  "close OBJ"
+ 20.     0  5ef2  "count OBJ"
+ 21.     0  5f9e  "cross OBJ"
+ 22.     0  5992  "cut OBJ with OBJ"
+ 23.     0  598a  "deflat OBJ"
+ 24.  5c18  5c50  "dig in OBJ with OBJ"
+                  "dig OBJ with OBJ"
+ 25.     0  52a0  "carry out OBJ"
+                  "disemb OBJ"
+ 26.     0  556a  "drink OBJ"
+ 27.     0  4f54  "spill OBJ in OBJ"
+                  "spill OBJ"
+                  "place down OBJ"
+                  "drop OBJ"
+                  "leave OBJ"
+ 28.  4e3c  4e4c  "throw OBJ over OBJ"
+                  "throw OBJ on OBJ"
+                  "throw OBJ in OBJ"
+                  "place OBJ on OBJ"
+                  "place OBJ in OBJ"
+                  "drop OBJ on OBJ"
+                  "drop OBJ in OBJ"
+                  "drop OBJ down OBJ"
+ 29.     0  5572  "eat OBJ"
+ 30.     0  5f26  "enter"
+ 31.     0  5f30  "enter OBJ"
+                  "go with OBJ"
+                  "go in OBJ"
+ 32.     0  4440  "gaze at OBJ"
+                  "descri OBJ"
+ 33.     0  57f4  "gaze in OBJ"
+                  "gaze with OBJ"
+                  "descri in OBJ"
+ 34.     0  5bba  "banish away OBJ"
+                  "banish out OBJ"
+                  "banish OBJ"
+ 35.     0  51a6  "douse OBJ"
+                  "shut off OBJ"
+                  "blow out OBJ"
+ 36.     0  54a8  "fill OBJ"
+                  "fill OBJ with OBJ"
+ 37.     0  5fbe  "gaze for OBJ"
+                  "find OBJ"
+                  "search for OBJ"
+ 38.     0  4f1a  "give OBJ to OBJ"
+ 39.     0  4f4a  "give OBJ OBJ"
+ 40.     0  570a  "hello OBJ"
+                  "hello"
+ 41.     0  5982  "inflat OBJ with OBJ"
+                  "blow up OBJ with OBJ"
+ 42.     0     0  "blow up OBJ"
+ 43.     0  5300  "blow in OBJ"
+ 44.     0  5680  "jump in OBJ"
+                  "jump across OBJ"
+                  "jump over OBJ"
+                  "jump"
+ 45.     0  5aaa  "bite OBJ"
+ 46.     0  59e0  "kill OBJ with OBJ"
+ 47.     0  5b88  "knock on OBJ"
+                  "knock at OBJ"
+ 48.     0  4b88  "launch OBJ"
+ 49.     0  5700  "leave"
+ 50.     0  515e  "light OBJ"
+                  "strike OBJ"
+                  "shut on OBJ"
+ 51.     0  563e  "listen for OBJ"
+                  "listen to OBJ"
+ 52.     0  441c  "gaze down OBJ"
+                  "gaze up OBJ"
+                  "gaze around OBJ"
+                  "gaze"
+ 53.     0  57ca  "gaze under OBJ"
+ 54.     0  57de  "gaze behind OBJ"
+ 55.  5792  57a8  "read OBJ"
+                  "gaze at OBJ with OBJ"
+ 56.     0  5fac  "search in OBJ"
+                  "search OBJ"
+ 57.     0  5ac8  "lower OBJ"
+ 58.     0  5d86  "melt OBJ with OBJ"
+ 59.  511a  5130  "roll up OBJ"
+                  "move OBJ"
+                  "pull on OBJ"
+                  "pull OBJ"
+ 60.     0  5d96  "mumble"
+ 61.  5ae6  5b4c  "blind OBJ with OBJ"
+                  "break down OBJ with OBJ"
+                  "break OBJ with OBJ"
+ 62.     0  54ca  "odysse"
+ 63.     0  4fe8  "open OBJ with OBJ"
+                  "open up OBJ"
+                  "open OBJ"
+ 64.  4cd0  4d3c  "carry OBJ from OBJ"
+                  "carry OBJ off OBJ"
+                  "carry OBJ out OBJ"
+                  "carry OBJ"
+                  "pick up OBJ"
+ 65.  53f6  5402  "spill OBJ on OBJ"
+ 66.     0  5654  "pray"
+ 67.     0  594c  "pump up OBJ with OBJ"
+                  "pump up OBJ"
+ 68.     0  5adc  "press on OBJ"
+                  "press OBJ"
+ 69.     0  5f1a  "press OBJ under OBJ"
+                  "place OBJ under OBJ"
+                  "slide OBJ under OBJ"
+ 70.     0  5abe  "lift up OBJ"
+                  "lift OBJ"
+ 71.     0  5550  "peal OBJ with OBJ"
+                  "peal OBJ"
+ 72.     0  5ad2  "feel OBJ with OBJ"
+                  "feel OBJ"
+ 73.     0  5bd0  "shake OBJ"
+ 74.     0  5c52  "smell OBJ"
+ 75.     0  5c82  "swim in OBJ"
+                  "swim"
+ 76.     0  5a96  "swing OBJ at OBJ"
+ 77.     0  4f66  "throw OBJ with OBJ"
+                  "throw OBJ at OBJ"
+ 78.     0  4f76  "throw OBJ OBJ"
+ 79.  5cb6  5cec  "fasten OBJ to OBJ"
+ 80.     0  5d02  "fasten up OBJ with OBJ"
+ 81.  5902  593c  "shut OBJ with OBJ"
+ 82.  5ca2  5cb4  "untie OBJ from OBJ"
+                  "untie OBJ"
+ 83.     0  5206  "wait"
+ 84.     0  5da2  "wake up OBJ"
+                  "wake OBJ"
+ 85.     0  4bda  "go away OBJ"
+ 86.     0  4b74  "go around OBJ"
+ 87.     0  5ab4  "brandi OBJ"
+ 88.     0  5edc  "wind up OBJ"
+                  "wind OBJ"
+ 89.     0  5ba8  "scream"
+
+    **** Prepositions ****
+
+  Table entries = 17
+
+239. "from"
+240. "off"
+241. "behind"
+242. "under"
+243. "around"
+244. "for"
+245. "at"
+246. "across"
+247. "over"
+248. "to"
+249. "away"
+250. "out"
+251. "on"
+252. "in"
+253. "up"
+254. "down"
+255. "with", synonyms = "throug", "using"
+
+    **** Dictionary ****
+
+  Word separators = ",.""
+  Word count = 413, word size = 7
+
+[   1] .       [   2] ,       [   3] a       [   4] across  [   5] advent  
+[   6] again   [   7] air     [   8] air-p   [   9] all     [  10] altar   
+[  11] ancien  [  12] and     [  13] around  [  14] at      [  15] attack  
+[  16] away    [  17] axe     [  18] bag     [  19] banish  [  20] barrow  
+[  21] basket  [  22] bat     [  23] bauble  [  24] beauti  [  25] behind  
+[  26] bell    [  27] bird    [  28] bite    [  29] blind   [  30] bloody  
+[  31] blow    [  32] board   [  33] boarde  [  34] boards  [  35] boat    
+[  36] body    [  37] bolt    [  38] bones   [  39] book    [  40] bottle  
+[  41] box     [  42] brandi  [  43] brass   [  44] break   [  45] breath  
+[  46] brief   [  47] broken  [  48] brown   [  49] burn    [  50] burned  
+[  51] but     [  52] button  [  53] canary  [  54] carpet  [  55] carry   
+[  56] carved  [  57] case    [  58] cast    [  59] chalic  [  60] chest   
+[  61] chimne  [  62] cliff   [  63] cliffs  [  64] climb   [  65] close   
+[  66] clove   [  67] coal    [  68] coffin  [  69] coil    [  70] coins   
+[  71] contro  [  72] count   [  73] crawlw  [  74] cretin  [  75] cross   
+[  76] crysta  [  77] cut     [  78] cyclop  [  79] d       [  80] dam     
+[  81] dark    [  82] deflat  [  83] derang  [  84] descri  [  85] destro  
+[  86] diagno  [  87] diamon  [  88] dig     [  89] dirt    [  90] disemb  
+[  91] dome    [  92] door    [  93] douse   [  94] down    [  95] drink   
+[  96] drive   [  97] driver  [  98] drop    [  99] e       [ 100] earth   
+[ 101] east    [ 102] eat     [ 103] egg     [ 104] egypti  [ 105] elonga  
+[ 106] elvish  [ 107] encrus  [ 108] enter   [ 109] evil    [ 110] examin  
+[ 111] except  [ 112] exit    [ 113] exorci  [ 114] exting  [ 115] fasten  
+[ 116] feel    [ 117] fight   [ 118] figuri  [ 119] fill    [ 120] find    
+[ 121] flamin  [ 122] food    [ 123] for     [ 124] forbid  [ 125] force   
+[ 126] ford    [ 127] forest  [ 128] frigid  [ 129] from    [ 130] front   
+[ 131] garlic  [ 132] gas     [ 133] gate    [ 134] gates   [ 135] gaze    
+[ 136] get     [ 137] ghosts  [ 138] giant   [ 139] give    [ 140] glass   
+[ 141] go      [ 142] gold    [ 143] golden  [ 144] gothic  [ 145] grate   
+[ 146] gratin  [ 147] ground  [ 148] grue    [ 149] gunk    [ 150] hand    
+[ 151] hand-   [ 152] hatch   [ 153] held    [ 154] hello   [ 155] hi      
+[ 156] him     [ 157] hit     [ 158] hold    [ 159] hot     [ 160] house   
+[ 161] huge    [ 162] hungry  [ 163] i       [ 164] ignite  [ 165] in      
+[ 166] indivi  [ 167] inflat  [ 168] inside  [ 169] into    [ 170] invent  
+[ 171] invisi  [ 172] is      [ 173] it      [ 174] ivory   [ 175] jade    
+[ 176] jewele  [ 177] jump    [ 178] kick    [ 179] kill    [ 180] kitche  
+[ 181] knife   [ 182] knock   [ 183] l       [ 184] label   [ 185] lake    
+[ 186] lamp    [ 187] land    [ 188] lanter  [ 189] large   [ 190] launch  
+[ 191] leap    [ 192] leave   [ 193] leaves  [ 194] letter  [ 195] lid     
+[ 196] lift    [ 197] light   [ 198] listen  [ 199] lock    [ 200] long    
+[ 201] look    [ 202] lower   [ 203] lunch   [ 204] lungs   [ 205] lurkin  
+[ 206] machin  [ 207] magic   [ 208] mailbo  [ 209] map     [ 210] massiv  
+[ 211] me      [ 212] melt    [ 213] metal   [ 214] mgckjk  [ 215] mouth   
+[ 216] move    [ 217] mumble  [ 218] myself  [ 219] n       [ 220] nail    
+[ 221] nails   [ 222] narrow  [ 223] nasty   [ 224] nasty   [ 225] ne      
+[ 226] nest    [ 227] no      [ 228] north   [ 229] northe  [ 230] northw  
+[ 231] nw      [ 232] odor    [ 233] odysse  [ 234] of      [ 235] off     
+[ 236] on      [ 237] one     [ 238] open    [ 239] orient  [ 240] out     
+[ 241] over    [ 242] overbo  [ 243] paint   [ 244] painti  [ 245] panel   
+[ 246] parchm  [ 247] passag  [ 248] path    [ 249] peal    [ 250] pepper  
+[ 251] pick    [ 252] piece   [ 253] pierce  [ 254] pile    [ 255] place   
+[ 256] plasti  [ 257] poke    [ 258] pot     [ 259] pour    [ 260] pray    
+[ 261] prayer  [ 262] precio  [ 263] press   [ 264] procee  [ 265] pull    
+[ 266] pump    [ 267] push    [ 268] put     [ 269] q       [ 270] quanti  
+[ 271] quit    [ 272] rail    [ 273] railin  [ 274] rainbo  [ 275] raise   
+[ 276] read    [ 277] remove  [ 278] restar  [ 279] restor  [ 280] ring    
+[ 281] river   [ 282] robber  [ 283] rocky   [ 284] roll    [ 285] rope    
+[ 286] rub     [ 287] rug     [ 288] run     [ 289] s       [ 290] sack    
+[ 291] sand    [ 292] sandwi  [ 293] save    [ 294] scarab  [ 295] sceptr  
+[ 296] score   [ 297] scream  [ 298] screw   [ 299] screwd  [ 300] se      
+[ 301] search  [ 302] see     [ 303] seedy   [ 304] seek    [ 305] self    
+[ 306] shady   [ 307] shake   [ 308] sheer   [ 309] shout   [ 310] shovel  
+[ 311] shut    [ 312] sigh    [ 313] silver  [ 314] sit     [ 315] skelet  
+[ 316] skull   [ 317] slag    [ 318] slice   [ 319] slide   [ 320] small   
+[ 321] smash   [ 322] smell   [ 323] smelly  [ 324] sniff   [ 325] solid   
+[ 326] song    [ 327] south   [ 328] southe  [ 329] southw  [ 330] spill   
+[ 331] spirit  [ 332] stab    [ 333] stairc  [ 334] stairs  [ 335] stairw  
+[ 336] stare   [ 337] steep   [ 338] steps   [ 339] stilet  [ 340] stone   
+[ 341] strang  [ 342] strike  [ 343] super   [ 344] suspic  [ 345] sw      
+[ 346] swim    [ 347] swing   [ 348] switch  [ 349] sword   [ 350] table   
+[ 351] take    [ 352] tan     [ 353] taste   [ 354] that    [ 355] the     
+[ 356] then    [ 357] thief   [ 358] this    [ 359] throug  [ 360] throw   
+[ 361] thrust  [ 362] tie     [ 363] timber  [ 364] to      [ 365] tomb    
+[ 366] tool    [ 367] toolch  [ 368] torch   [ 369] touch   [ 370] trap    
+[ 371] trap-   [ 372] treasu  [ 373] tree    [ 374] trees   [ 375] troll   
+[ 376] trophy  [ 377] trunk   [ 378] tug     [ 379] turn    [ 380] twisti  
+[ 381] u       [ 382] ulysse  [ 383] under   [ 384] untie   [ 385] up      
+[ 386] using   [ 387] valve   [ 388] vampir  [ 389] verbos  [ 390] versio  
+[ 391] vitreo  [ 392] w       [ 393] wait    [ 394] wake    [ 395] walk    
+[ 396] wall    [ 397] walls   [ 398] water   [ 399] wave    [ 400] west    
+[ 401] what    [ 402] whats   [ 403] where   [ 404] white   [ 405] wind    
+[ 406] windin  [ 407] window  [ 408] with    [ 409] wooden  [ 410] wrench  
+[ 411] y       [ 412] yell    [ 413] yes     
