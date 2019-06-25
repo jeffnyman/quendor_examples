@@ -9,7 +9,7 @@ All of the data files were created using the ztools suite. I have provided [Mac 
 The files in the [data directory](https://github.com/jeffnyman/quendor_examples/tree/master/data) were generated with the ztools via the following commands:
 
 * `infodump -f file.z5 > file_info.txt`
-* `txd -agn file.z3 > file_z3.txt`
+* `txd -agn file.z3 > file_txd.txt`
 
 ## Zorks
 
