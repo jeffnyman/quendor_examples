@@ -1,0 +1,42 @@
+Resident data ends at 496, program starts at 496, file ends at 4fa
+
+Starting analysis pass at address 495
+
+End of analysis pass, low address = 496, high address = 4af
+
+[Start of code at 496]
+
+Main routine 496, 0 locals ()
+
+  497:  call            49e -> gef
+  49c:  quit            
+
+Routine 49e, 2 locals (0000, 0000)
+
+  4a3:  store           local1 #02
+  4a6:  add             #03 local1 -> sp
+  4aa:  sub             sp #01 -> local0
+  4ae:  rtrue           
+
+Routine 4b0, 2 locals (0000, 0000)
+
+  4b5:  rfalse          
+
+[End of code at 4b6]
+
+[Start of text at 4b6]
+
+  4b6: S001 "<unknown attribute>"
+  4c8: S002 "name"
+  4cc: S003 "create"
+  4d0: S004 "recreate"
+  4d6: S005 "destroy"
+  4dc: S006 "remaining"
+  4e2: S007 "copy"
+  4e6: S008 "call"
+  4ea: S009 "print"
+  4ee: S010 "print_to_array"
+
+[End of text at 4fa]
+
+[End of file]

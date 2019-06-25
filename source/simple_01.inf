@@ -1,0 +1,4 @@
+[ Main result value;
+  value = 2;
+  result = 3 + value - 1;
+];

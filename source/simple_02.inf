@@ -1,0 +1,4 @@
+[ Main value;
+  value = 2;
+  "The answer is ", 3 + value - 1;
+];

@@ -1,0 +1,188 @@
+
+Story file is simple_02.z3
+
+    **** Story file header ****
+
+Z-code version:           3
+Interpreter flags:        Display score/moves
+Release number:           1
+Size of resident memory:  0496
+Start PC:                 0497
+Dictionary address:       048e
+Object table address:     010a
+Global variables address: 02ac
+Size of dynamic memory:   048c
+Game flags:               None
+Serial number:            190607
+Abbreviations address:    0042
+File size:                00506
+Checksum:                 495d
+Header extension address: 0102
+Inform Version:           6.33
+Header extension length:  0003
+Unicode table address:    0000
+Inform Version: 633
+
+    **** Story file map ****
+
+ Base    End   Size
+    0     3f     40  Story file header
+   40     41      2  Abbreviation data
+   42    101     c0  Abbreviation pointer table
+  102    109      8  Header extension table
+  10a    16b     62  Object table
+  16c    1a7     3c  Property data
+  1a8    1a9      2  Class Prototype Object Numbers
+  1aa  201a9  20000  Property Names Table
+  2ac    48b    1e0  Global variables
+  48c    48d      2
+  48e    494      7  Dictionary
+  495    495      1
+  496    505     70  Paged memory
+  506  201a9  1fca4
+201aa  20209     60  Attribute Names Table
+
+    **** Abbreviations ****
+
+[ 0] "   "
+[ 1] "   "
+[ 2] "   "
+[ 3] "   "
+[ 4] "   "
+[ 5] "   "
+[ 6] "   "
+[ 7] "   "
+[ 8] "   "
+[ 9] "   "
+[10] "   "
+[11] "   "
+[12] "   "
+[13] "   "
+[14] "   "
+[15] "   "
+[16] "   "
+[17] "   "
+[18] "   "
+[19] "   "
+[20] "   "
+[21] "   "
+[22] "   "
+[23] "   "
+[24] "   "
+[25] "   "
+[26] "   "
+[27] "   "
+[28] "   "
+[29] "   "
+[30] "   "
+[31] "   "
+[32] "   "
+[33] "   "
+[34] "   "
+[35] "   "
+[36] "   "
+[37] "   "
+[38] "   "
+[39] "   "
+[40] "   "
+[41] "   "
+[42] "   "
+[43] "   "
+[44] "   "
+[45] "   "
+[46] "   "
+[47] "   "
+[48] "   "
+[49] "   "
+[50] "   "
+[51] "   "
+[52] "   "
+[53] "   "
+[54] "   "
+[55] "   "
+[56] "   "
+[57] "   "
+[58] "   "
+[59] "   "
+[60] "   "
+[61] "   "
+[62] "   "
+[63] "   "
+[64] "   "
+[65] "   "
+[66] "   "
+[67] "   "
+[68] "   "
+[69] "   "
+[70] "   "
+[71] "   "
+[72] "   "
+[73] "   "
+[74] "   "
+[75] "   "
+[76] "   "
+[77] "   "
+[78] "   "
+[79] "   "
+[80] "   "
+[81] "   "
+[82] "   "
+[83] "   "
+[84] "   "
+[85] "   "
+[86] "   "
+[87] "   "
+[88] "   "
+[89] "   "
+[90] "   "
+[91] "   "
+[92] "   "
+[93] "   "
+[94] "   "
+[95] "   "
+
+    **** Objects ****
+
+  Object count = 4
+
+  1. Attributes: None
+     Parent object:   0  Sibling object:   0  Child object:   0
+     Property address: 016c
+         Description: "Class"
+          Properties:
+
+  2. Attributes: None
+     Parent object:   0  Sibling object:   0  Child object:   0
+     Property address: 017c
+         Description: "Object"
+          Properties:
+
+  3. Attributes: None
+     Parent object:   0  Sibling object:   0  Child object:   0
+     Property address: 018e
+         Description: "Routine"
+          Properties:
+
+  4. Attributes: None
+     Parent object:   0  Sibling object:   0  Child object:   0
+     Property address: 01a0
+         Description: "String"
+          Properties:
+
+    **** Object tree ****
+
+[  1] "Class"
+[  2] "Object"
+[  3] "Routine"
+[  4] "String"
+
+    **** There are no parse tables ****
+
+  Verb entries = 0
+
+
+    **** Dictionary ****
+
+  Word separators = ".,""
+  Word count = 0, word size = 7
+
